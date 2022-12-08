@@ -1,0 +1,7 @@
+Running: xsim.dir/axis_capture_behav/xsimk.exe -simmode gui -wdb axis_capture_behav.wdb -simrunnum 0 -socket 52253
+Design successfully loaded
+Design Loading Memory Usage: 8676 KB (Peak: 8676 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 9200 KB (Peak: 9200 KB)
+Simulation CPU Usage: 46 ms

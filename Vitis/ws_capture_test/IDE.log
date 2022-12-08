@@ -1,0 +1,16 @@
+18:39:55 INFO  : Platform repository initialization has completed.
+18:39:55 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\EBAZ4205_Spectrum\Vitis\ws_capture_test\temp_xsdb_launch_script.tcl
+18:39:55 INFO  : Registering command handlers for Vitis TCF services
+18:39:57 INFO  : XSCT server has started successfully.
+18:39:57 INFO  : plnx-install-location is set to ''
+18:39:57 INFO  : Successfully done setting XSCT server connection channel  
+18:39:57 INFO  : Successfully done query RDI_DATADIR 
+18:39:57 INFO  : Successfully done setting workspace for the tool. 
+18:42:34 INFO  : Result from executing command 'getProjects': EBAZ4205_Spectrum
+18:42:34 INFO  : Result from executing command 'getPlatforms': 
+18:49:13 INFO  : Result from executing command 'removePlatformRepo': 
+18:49:22 INFO  : Result from executing command 'getProjects': EBAZ4205_Spectrum
+18:49:22 INFO  : Result from executing command 'getPlatforms': 
+18:53:17 INFO  : Result from executing command 'removePlatformRepo': 
+18:53:24 INFO  : Result from executing command 'getProjects': EBAZ4205_Spectrum
+18:53:24 INFO  : Result from executing command 'getPlatforms': 

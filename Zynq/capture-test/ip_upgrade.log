@@ -1,0 +1,67 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Wed Oct  5 20:35:25 2022
+| Host         : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ebaz4205_axis_capture_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ebaz4205_axis_capture_0_1 (xilinx.com:user:axis_capture:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Wed Oct  5 20:06:16 2022
+| Host         : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ebaz4205_axis_capture_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ebaz4205_axis_capture_0_1 (xilinx.com:user:axis_capture:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Wed Oct  5 11:53:43 2022
+| Host         : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ebaz4205_axis_capture_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of ebaz4205_axis_capture_0_1 (xilinx.com:user:axis_capture:1.0) from (Rev. 2) to (Rev. 3)
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'ebaz4205_axis_capture_0_1'.
+
+
+-Upgrade has added interface 'capture' (xilinx.com:interface:axis:1.0)
+
+

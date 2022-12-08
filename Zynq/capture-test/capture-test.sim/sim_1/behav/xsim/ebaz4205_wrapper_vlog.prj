@@ -1,0 +1,26 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" --include "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" --include "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlslice_0_0/sim/ebaz4205_xlslice_0_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlslice_1_0/sim/ebaz4205_xlslice_1_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_processing_system7_0_0/sim/ebaz4205_processing_system7_0_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconcat_0_0/sim/ebaz4205_xlconcat_0_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xbar_0/sim/ebaz4205_xbar_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_auto_pc_0/sim/ebaz4205_auto_pc_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/sim/ebaz4205_xlconcat_0_1.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconcat_1_0/sim/ebaz4205_xlconcat_1_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconstant_0_0/sim/ebaz4205_xlconstant_0_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconstant_1_0/sim/ebaz4205_xlconstant_1_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_axis_mux_0_0/sim/ebaz4205_axis_mux_0_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconcat_2_0/sim/ebaz4205_xlconcat_2_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconstant_2_0/sim/ebaz4205_xlconstant_2_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlslice_0_1/sim/ebaz4205_xlslice_0_1.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/sim/ebaz4205_xlconcat_3_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_xlconstant_3_0/sim/ebaz4205_xlconstant_3_0.v" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v" \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/hdl/ebaz4205_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

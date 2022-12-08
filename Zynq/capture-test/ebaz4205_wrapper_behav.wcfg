@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ebaz4205_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="ebaz4205_wrapper" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="std" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="772.934291 us"></ZoomStartTime>
+      <ZoomEndTime time="785.954292 us"></ZoomEndTime>
+      <Cursor1Time time="775.901217 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="39" />
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_addr" type="array">
+      <obj_property name="ElementShortName">DDR_addr[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_addr[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_ba" type="array">
+      <obj_property name="ElementShortName">DDR_ba[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_ba[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_cas_n" type="logic">
+      <obj_property name="ElementShortName">DDR_cas_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_cas_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_ck_n" type="logic">
+      <obj_property name="ElementShortName">DDR_ck_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_ck_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_ck_p" type="logic">
+      <obj_property name="ElementShortName">DDR_ck_p</obj_property>
+      <obj_property name="ObjectShortName">DDR_ck_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_cke" type="logic">
+      <obj_property name="ElementShortName">DDR_cke</obj_property>
+      <obj_property name="ObjectShortName">DDR_cke</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_cs_n" type="logic">
+      <obj_property name="ElementShortName">DDR_cs_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_cs_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_dm" type="array">
+      <obj_property name="ElementShortName">DDR_dm[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dm[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_dq" type="array">
+      <obj_property name="ElementShortName">DDR_dq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_dqs_n" type="array">
+      <obj_property name="ElementShortName">DDR_dqs_n[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dqs_n[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_dqs_p" type="array">
+      <obj_property name="ElementShortName">DDR_dqs_p[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DDR_dqs_p[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_odt" type="logic">
+      <obj_property name="ElementShortName">DDR_odt</obj_property>
+      <obj_property name="ObjectShortName">DDR_odt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_ras_n" type="logic">
+      <obj_property name="ElementShortName">DDR_ras_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_ras_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_reset_n" type="logic">
+      <obj_property name="ElementShortName">DDR_reset_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/DDR_we_n" type="logic">
+      <obj_property name="ElementShortName">DDR_we_n</obj_property>
+      <obj_property name="ObjectShortName">DDR_we_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ENET0_GMII_RX_CLK_0" type="logic">
+      <obj_property name="ElementShortName">ENET0_GMII_RX_CLK_0</obj_property>
+      <obj_property name="ObjectShortName">ENET0_GMII_RX_CLK_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ENET0_GMII_RX_DV_0" type="logic">
+      <obj_property name="ElementShortName">ENET0_GMII_RX_DV_0</obj_property>
+      <obj_property name="ObjectShortName">ENET0_GMII_RX_DV_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ENET0_GMII_TX_CLK_0" type="logic">
+      <obj_property name="ElementShortName">ENET0_GMII_TX_CLK_0</obj_property>
+      <obj_property name="ObjectShortName">ENET0_GMII_TX_CLK_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ENET0_GMII_TX_EN_0" type="array">
+      <obj_property name="ElementShortName">ENET0_GMII_TX_EN_0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">ENET0_GMII_TX_EN_0[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/FCLK_CLK0" type="logic">
+      <obj_property name="ElementShortName">FCLK_CLK0</obj_property>
+      <obj_property name="ObjectShortName">FCLK_CLK0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/FCLK_CLK1" type="logic">
+      <obj_property name="ElementShortName">FCLK_CLK1</obj_property>
+      <obj_property name="ObjectShortName">FCLK_CLK1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FCLK_CLK3_0" type="logic">
+      <obj_property name="ElementShortName">FCLK_CLK3_0</obj_property>
+      <obj_property name="ObjectShortName">FCLK_CLK3_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_ddr_vrn" type="logic">
+      <obj_property name="ElementShortName">FIXED_IO_ddr_vrn</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ddr_vrn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_ddr_vrp" type="logic">
+      <obj_property name="ElementShortName">FIXED_IO_ddr_vrp</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ddr_vrp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_mio" type="array">
+      <obj_property name="ElementShortName">FIXED_IO_mio[53:0]</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_mio[53:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_ps_clk" type="logic">
+      <obj_property name="ElementShortName">FIXED_IO_ps_clk</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_ps_porb" type="logic">
+      <obj_property name="ElementShortName">FIXED_IO_ps_porb</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_porb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/FIXED_IO_ps_srstb" type="logic">
+      <obj_property name="ElementShortName">FIXED_IO_ps_srstb</obj_property>
+      <obj_property name="ObjectShortName">FIXED_IO_ps_srstb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/LED" type="array">
+      <obj_property name="ElementShortName">LED[1:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/MDIO_ETHERNET_0_0_mdc" type="logic">
+      <obj_property name="ElementShortName">MDIO_ETHERNET_0_0_mdc</obj_property>
+      <obj_property name="ObjectShortName">MDIO_ETHERNET_0_0_mdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/MDIO_ETHERNET_0_0_mdio_i" type="logic">
+      <obj_property name="ElementShortName">MDIO_ETHERNET_0_0_mdio_i</obj_property>
+      <obj_property name="ObjectShortName">MDIO_ETHERNET_0_0_mdio_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/MDIO_ETHERNET_0_0_mdio_io" type="logic">
+      <obj_property name="ElementShortName">MDIO_ETHERNET_0_0_mdio_io</obj_property>
+      <obj_property name="ObjectShortName">MDIO_ETHERNET_0_0_mdio_io</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/MDIO_ETHERNET_0_0_mdio_o" type="logic">
+      <obj_property name="ElementShortName">MDIO_ETHERNET_0_0_mdio_o</obj_property>
+      <obj_property name="ObjectShortName">MDIO_ETHERNET_0_0_mdio_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/MDIO_ETHERNET_0_0_mdio_t" type="logic">
+      <obj_property name="ElementShortName">MDIO_ETHERNET_0_0_mdio_t</obj_property>
+      <obj_property name="ObjectShortName">MDIO_ETHERNET_0_0_mdio_t</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/enet0_gmii_rxd" type="array">
+      <obj_property name="ElementShortName">enet0_gmii_rxd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">enet0_gmii_rxd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/enet0_gmii_txd" type="array">
+      <obj_property name="ElementShortName">enet0_gmii_txd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">enet0_gmii_txd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/RF_test_1MHz/s_axis_config_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_config_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/RF_test_1MHz/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">-72504.7</obj_property>
+      <obj_property name="AnalogYRRangeMax">124096</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/axis_mux_0/select_input" type="logic">
+      <obj_property name="ElementShortName">select_input</obj_property>
+      <obj_property name="ObjectShortName">select_input</obj_property>
+   </wvobject>
+</wave_config>

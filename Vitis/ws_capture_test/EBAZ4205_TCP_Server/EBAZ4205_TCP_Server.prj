@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="EBAZ4205_TCP_Server" location="D:/EBAZ4205_Spectrum/Vitis/ws_capture_test/EBAZ4205_TCP_Server" platform="D:/EBAZ4205_Spectrum/Vitis/ws_capture_test/EBAZ4205_Spectrum/export/EBAZ4205_Spectrum/EBAZ4205_Spectrum.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="EBAZ4205_TCP_Server_system" sysConfig="EBAZ4205_Spectrum" runtime="C/C++" cpu="linux_domain" cpuInstance="cortex-a9" os="linux" language="CPP">
+  <configuration name="Debug" id="xilinx.gnu.armv7.linux.exe.debug.1625869987">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.linux.exe.release.26722892" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

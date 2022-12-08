@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../axis-capture.srcs/sources_1/new/dp_ram_1r_1w_2clk.vhd" \
+"../../../../axis-capture.srcs/sources_1/new/axis_capture_logic.vhd" \
+"../../../../axis-capture.srcs/sources_1/new/axis_capture.vhd" \
+
+# Do not sort compile order
+nosort
