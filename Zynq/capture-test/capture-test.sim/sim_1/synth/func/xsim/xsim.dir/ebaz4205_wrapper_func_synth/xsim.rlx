@@ -1,0 +1,12 @@
+
+{ 
+    crc :  5644147337251489316  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L secureip --snapshot ebaz4205_wrapper_func_synth xil_defaultlib.ebaz4205_wrapper xil_defaultlib.glbl" , 
+    buildDate : "Oct 19 2021" , 
+    buildTime : "03:16:22" , 
+    linkCmd : "D:\\Xilinx\\Vivado\\2021.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/ebaz4205_wrapper_func_synth/xsimk.exe\"   \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_0.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_1.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_2.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_3.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_4.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_5.win64.obj\" \"xsim.dir/ebaz4205_wrapper_func_synth/obj/xsim_6.win64.obj\" -L\"D:\\Xilinx\\Vivado\\2021.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

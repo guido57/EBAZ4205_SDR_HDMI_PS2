@@ -15,15 +15,20 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="772.934291 us"></ZoomStartTime>
-      <ZoomEndTime time="785.954292 us"></ZoomEndTime>
-      <Cursor1Time time="775.901217 us"></Cursor1Time>
+      <ZoomStartTime time="896.571211 us"></ZoomStartTime>
+      <ZoomEndTime time="910.871212 us"></ZoomEndTime>
+      <Cursor1Time time="900.155000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="39" />
+   <WVObjectSize size="42" />
+   <wave_markers>
+      <marker time="748480000" label="" />
+      <marker time="748440000" label="" />
+      <marker time="433125000" label="" />
+   </wave_markers>
    <wvobject fp_name="/ebaz4205_wrapper/DDR_addr" type="array">
       <obj_property name="ElementShortName">DDR_addr[14:0]</obj_property>
       <obj_property name="ObjectShortName">DDR_addr[14:0]</obj_property>
@@ -100,11 +105,11 @@
       <obj_property name="ElementShortName">ENET0_GMII_TX_EN_0[0:0]</obj_property>
       <obj_property name="ObjectShortName">ENET0_GMII_TX_EN_0[0:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/FCLK_CLK0" type="logic">
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/processing_system7_0/FCLK_CLK0" type="logic">
       <obj_property name="ElementShortName">FCLK_CLK0</obj_property>
       <obj_property name="ObjectShortName">FCLK_CLK0</obj_property>
    </wvobject>
-   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/FCLK_CLK1" type="logic">
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/PS/processing_system7_0/FCLK_CLK1" type="logic">
       <obj_property name="ElementShortName">FCLK_CLK1</obj_property>
       <obj_property name="ObjectShortName">FCLK_CLK1</obj_property>
    </wvobject>
@@ -168,22 +173,37 @@
       <obj_property name="ElementShortName">enet0_gmii_txd[3:0]</obj_property>
       <obj_property name="ObjectShortName">enet0_gmii_txd[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/RF_test_1MHz/s_axis_config_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis_config_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_config_tdata[31:0]</obj_property>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/I2S/I2S_Transmitter_0/mclk" type="logic">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
    </wvobject>
-   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/RF_test_1MHz/m_axis_data_tdata" type="array">
-      <obj_property name="ElementShortName">m_axis_data_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axis_data_tdata[15:0]</obj_property>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/I2S/I2S_Transmitter_0/bclk" type="logic">
+      <obj_property name="ElementShortName">bclk</obj_property>
+      <obj_property name="ObjectShortName">bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/I2S/I2S_Transmitter_0/lrclk" type="logic">
+      <obj_property name="ElementShortName">lrclk</obj_property>
+      <obj_property name="ObjectShortName">lrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/LocalOscillator/DDS_LO/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[31:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
-      <obj_property name="AnalogYRangeMin">-72504.7</obj_property>
-      <obj_property name="AnalogYRRangeMax">124096</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
    </wvobject>
-   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/axis_mux_0/select_input" type="logic">
-      <obj_property name="ElementShortName">select_input</obj_property>
-      <obj_property name="ObjectShortName">select_input</obj_property>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/mult_cos/P" type="array">
+      <obj_property name="ElementShortName">P[31:0]</obj_property>
+      <obj_property name="ObjectShortName">P[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ebaz4205_wrapper/ebaz4205_i/mult_sin/P" type="array">
+      <obj_property name="ElementShortName">P[31:0]</obj_property>
+      <obj_property name="ObjectShortName">P[31:0]</obj_property>
    </wvobject>
 </wave_config>

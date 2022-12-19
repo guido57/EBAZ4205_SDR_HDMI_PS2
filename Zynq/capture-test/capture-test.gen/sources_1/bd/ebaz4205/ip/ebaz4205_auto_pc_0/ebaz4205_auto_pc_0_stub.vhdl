@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Mon Oct 24 22:05:48 2022
+-- Date        : Thu Oct  6 19:30:06 2022
 -- Host        : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top ebaz4205_auto_pc_0 -prefix
 --               ebaz4205_auto_pc_0_ ebaz4205_auto_pc_0_stub.vhdl

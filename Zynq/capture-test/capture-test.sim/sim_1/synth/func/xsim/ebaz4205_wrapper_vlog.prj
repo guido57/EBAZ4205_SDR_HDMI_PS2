@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../EBAZ4205_clock_gen_eth_acq.gen/sources_1/bd/ebaz4205/ipshared/62b6" --include "../../../../../EBAZ4205_clock_gen_eth_acq.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" --include "../../../../../EBAZ4205_clock_gen_eth_acq.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" --include "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+verilog xil_defaultlib  --include "../../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" --include "../../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" --include "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
 "ebaz4205_wrapper_func_synth.v" \
 
 # Do not sort compile order
