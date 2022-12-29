@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Tue Dec 13 15:30:27 2022
+-- Date        : Sun Dec 25 20:49:29 2022
 -- Host        : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_stub.vhdl

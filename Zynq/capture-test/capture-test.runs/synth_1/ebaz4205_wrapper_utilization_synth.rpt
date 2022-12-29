@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Dec 13 15:31:07 2022
+| Date         : Wed Dec 28 22:19:17 2022
 | Host         : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file ebaz4205_wrapper_utilization_synth.rpt -pb ebaz4205_wrapper_utilization_synth.pb
 | Design       : ebaz4205_wrapper
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   99 |     0 |          0 |       100 | 99.00 |
+| Bonded IOB                  |   34 |     0 |          0 |       100 | 34.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         2 |  0.00 |
@@ -147,8 +147,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   78 |                  IO |
 | IBUF     |   21 |                  IO |
+| OBUF     |   13 |                  IO |
 | OBUFT    |    1 |                  IO |
 +----------+------+---------------------+
 
@@ -160,22 +160,48 @@ Table of Contents
 |                 Ref Name                | Used |
 +-----------------------------------------+------+
 | ebaz4205_xbar_0                         |    1 |
+| ebaz4205_sqrt32_0_0                     |    1 |
+| ebaz4205_rst_ps7_0_64M_0                |    1 |
 | ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0 |    1 |
 | ebaz4205_processing_system7_0_0         |    1 |
 | ebaz4205_proc_sys_reset_0_0             |    1 |
 | ebaz4205_mult_sin_0                     |    1 |
+| ebaz4205_mult_gen_1_0                   |    1 |
+| ebaz4205_mult_gen_0_3                   |    1 |
+| ebaz4205_mult_gen_0_2                   |    1 |
+| ebaz4205_mult_gen_0_1                   |    1 |
 | ebaz4205_mult_gen_0_0                   |    1 |
+| ebaz4205_mult_by_4_0                    |    1 |
+| ebaz4205_fir_compiler_0_1               |    1 |
+| ebaz4205_fir_compiler_0_0               |    1 |
+| ebaz4205_dds_compiler_0_2               |    1 |
 | ebaz4205_dds_compiler_0_1               |    1 |
 | ebaz4205_dds_compiler_0_0               |    1 |
+| ebaz4205_dds_axi_interface_0_2          |    1 |
+| ebaz4205_dds_axi_interface_0_1          |    1 |
+| ebaz4205_dds_axi_interface_0_0          |    1 |
+| ebaz4205_cic_compiler_0_1               |    1 |
+| ebaz4205_cic_compiler_0_0               |    1 |
+| ebaz4205_c_addsub_0_1                   |    1 |
+| ebaz4205_c_addsub_0_0                   |    1 |
 | ebaz4205_axis_mux_0_0                   |    1 |
 | ebaz4205_axis_capture_0_4               |    1 |
-| ebaz4205_axi_gpio_dds_0                 |    1 |
+| ebaz4205_axi_interface_DEC_RATE_Q_0     |    1 |
 | ebaz4205_axi_gpio_1_0                   |    1 |
+| ebaz4205_axi_gpio_0_1                   |    1 |
 | ebaz4205_axi_gpio_0_0                   |    1 |
+| ebaz4205_axi_axis_writer_DDS_GEN_0      |    1 |
 | ebaz4205_auto_pc_0                      |    1 |
+| ebaz4205_auto_cc_4                      |    1 |
+| ebaz4205_auto_cc_3                      |    1 |
+| ebaz4205_auto_cc_2                      |    1 |
+| ebaz4205_auto_cc_1                      |    1 |
+| ebaz4205_auto_cc_0                      |    1 |
 | ebaz4205_RF_test_1MHz_0                 |    1 |
+| ebaz4205_I2S_Transmitter_0_2            |    1 |
 | ebaz4205_I2S_Transmitter_0_1            |    1 |
 | ebaz4205_DivideBy2N_0_0                 |    1 |
+| ebaz4205_DivideBy10_0                   |    1 |
 +-----------------------------------------+------+
 
 

@@ -57,11 +57,11 @@ module ebaz4205_xlconstant_3_0 (
   dout
 );
 
-output wire [3 : 0] dout;
+output wire [15 : 0] dout;
 
   xlconstant_v1_1_7_xlconstant #(
-    .CONST_WIDTH(4),
-    .CONST_VAL(4'H0)
+    .CONST_WIDTH(16),
+    .CONST_VAL(16'H0800)
   ) inst (
     .dout(dout)
   );

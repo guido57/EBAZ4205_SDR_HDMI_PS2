@@ -21,6 +21,38 @@
   <key id="VT" for="node" attr.name="vert_type" attr.type="string"/>
   <graph id="G" edgedefault="undirected" parse.nodeids="canonical" parse.edgeids="canonical" parse.order="nodesfirst">
     <node id="n0">
+      <data key="BA">0x43C10000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x43C1FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/PS/processing_system7_0</data>
+      <data key="MI">M_AXI_GP0</data>
+      <data key="MS">SEG_axi_axis_writer_0_reg0</data>
+      <data key="MV">xilinx.com:ip:processing_system7:5.5</data>
+      <data key="TM">both</data>
+      <data key="SX">/DDC/LO/axi_axis_writer_DDS_LO</data>
+      <data key="SI">s_axi</data>
+      <data key="SS">reg0</data>
+      <data key="SV">xilinx.com:module_ref:axi_axis_writer:1.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n1">
+      <data key="VM">ebaz4205</data>
+      <data key="VT">BC</data>
+    </node>
+    <node id="n2">
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
+    </node>
+    <node id="n3">
+      <data key="VH">2</data>
+      <data key="VM">ebaz4205</data>
+      <data key="VT">VR</data>
+    </node>
+    <node id="n4">
       <data key="BA">0x41200000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x4120FFFF</data>
@@ -38,34 +70,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n1">
-      <data key="BA">0x41220000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x4122FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/PS/processing_system7_0</data>
-      <data key="MI">M_AXI_GP0</data>
-      <data key="MS">SEG_axi_gpio_dds_Reg_1</data>
-      <data key="MV">xilinx.com:ip:processing_system7:5.5</data>
-      <data key="TM">both</data>
-      <data key="SX">/LocalOscillator/axi_gpio_dds</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n2">
-      <data key="VM">ebaz4205</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n3">
-      <data key="TU">active</data>
-      <data key="VH">2</data>
-      <data key="VT">PM</data>
-    </node>
-    <node id="n4">
+    <node id="n5">
       <data key="BA">0x43C00000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x43C0FFFF</data>
@@ -83,7 +88,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n5">
+    <node id="n6">
       <data key="BA">0x41210000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x4121FFFF</data>
@@ -101,23 +106,18 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n6">
-      <data key="VH">2</data>
-      <data key="VM">ebaz4205</data>
-      <data key="VT">VR</data>
-    </node>
-    <edge id="e0" source="n2" target="n6"/>
-    <edge id="e1" source="n6" target="n3"/>
-    <edge id="e2" source="n4" target="n3">
+    <edge id="e0" source="n1" target="n3"/>
+    <edge id="e1" source="n3" target="n2"/>
+    <edge id="e2" source="n5" target="n2">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n0" target="n3">
+    <edge id="e3" source="n4" target="n2">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n5" target="n3">
+    <edge id="e4" source="n6" target="n2">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n1" target="n3">
+    <edge id="e5" source="n0" target="n2">
       <data key="EH">2</data>
     </edge>
   </graph>

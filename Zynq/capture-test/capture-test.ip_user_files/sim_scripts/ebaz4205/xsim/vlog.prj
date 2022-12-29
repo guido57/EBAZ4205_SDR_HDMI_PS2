@@ -10,16 +10,23 @@ verilog xil_defaultlib --include "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/includ
 "../../../bd/ebaz4205/ip/ebaz4205_xlconcat_2_0/sim/ebaz4205_xlconcat_2_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlconstant_1_0/sim/ebaz4205_xlconstant_1_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlconstant_3_0/sim/ebaz4205_xlconstant_3_0.v" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_1/sim/ebaz4205_xlslice_0_1.v" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/sim/ebaz4205_xlconcat_3_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/sim/ebaz4205_xlconcat_0_1.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_DivideBy2N_0_0/sim/ebaz4205_DivideBy2N_0_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_1/sim/ebaz4205_I2S_Transmitter_0_1.v" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_axi_axis_writer_0_0/sim/ebaz4205_axi_axis_writer_0_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/sim/ebaz4205_xlslice_sin_0.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_4/sim/ebaz4205_xlslice_0_4.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_0_1/sim/ebaz4205_xlconstant_0_1.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_sqrt32_0_0/sim/ebaz4205_sqrt32_0_0.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_2/sim/ebaz4205_I2S_Transmitter_0_2.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconcat_0_2/sim/ebaz4205_xlconcat_0_2.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_DivideBy10_0/sim/ebaz4205_DivideBy10_0.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_1_1/sim/ebaz4205_xlconstant_1_1.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_2_1/sim/ebaz4205_xlconstant_2_1.v" \
 "../../../bd/ebaz4205/sim/ebaz4205.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_auto_pc_0/sim/ebaz4205_auto_pc_0.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_auto_cc_0/sim/ebaz4205_auto_cc_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

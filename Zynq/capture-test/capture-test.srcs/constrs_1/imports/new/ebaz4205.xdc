@@ -44,12 +44,12 @@ set_property PACKAGE_PIN W15 [get_ports MDIO_ETHERNET_0_0_mdc]
 set_property PACKAGE_PIN Y14 [get_ports MDIO_ETHERNET_0_0_mdio_io]
 
 # Green LED
-set_property IOSTANDARD LVCMOS33 [get_ports {LED[1]}]
-set_property PACKAGE_PIN W13 [get_ports {LED[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_GREEN[0]}]
+set_property PACKAGE_PIN W13 [get_ports {LED_GREEN[0]}]
 
 # Red LED
-set_property IOSTANDARD LVCMOS33 [get_ports {LED[0]}]
-set_property PACKAGE_PIN W14 [get_ports {LED[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {LED_RED[0]}]
+set_property PACKAGE_PIN W14 [get_ports {LED_RED[0]}]
 
 ##DATA1
 #set_property -dict { PACKAGE_PIN A20   IOSTANDARD LVCMOS33 } [get_ports { DATA1_5 }]; 

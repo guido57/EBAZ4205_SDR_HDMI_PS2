@@ -1,6 +1,6 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_2 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_11 -L processing_system7_vip_v1_0_13 -L xlconcat_v2_1_4 -L generic_baseblocks_v2_1_0 -L axi_register_slice_v2_1_25 -L fifo_generator_v13_2_6 -L axi_data_fifo_v2_1_24 -L axi_crossbar_v2_1_26 -L xlconstant_v1_1_7 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L dds_compiler_v6_0_21 -L axi_lite_ipif_v3_0_4 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_27 -L axi_protocol_converter_v2_1_25 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ebaz4205_wrapper_behav xil_defaultlib.ebaz4205_wrapper xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlslice_v1_0_2 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_11 -L processing_system7_vip_v1_0_13 -L xlconcat_v2_1_4 -L generic_baseblocks_v2_1_0 -L axi_register_slice_v2_1_25 -L fifo_generator_v13_2_6 -L axi_data_fifo_v2_1_24 -L axi_crossbar_v2_1_26 -L axi_protocol_converter_v2_1_25 -L axi_clock_converter_v2_1_24 -L xlconstant_v1_1_7 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L dds_compiler_v6_0_21 -L axi_lite_ipif_v3_0_4 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_27 -L c_reg_fd_v12_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L fir_compiler_v7_2_17 -L cic_compiler_v4_0_15 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ebaz4205_wrapper_behav xil_defaultlib.ebaz4205_wrapper xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -22,12 +22,16 @@ WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for
 WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_bid' [/wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7157]
 WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_rid' [/wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7175]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7176]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 12 for port 'm_axi_arprot' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2707]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 12 for port 'm_axi_awprot' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2711]
-WARNING: [VRFC 10-5021] port 'gpio_io_t' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:290]
-WARNING: [VRFC 10-5021] port 'm_axis_data_tvalid' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:411]
-WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:1045]
-WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:1295]
+WARNING: [VRFC 10-5021] port 's_axis_config_tready' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2003]
+WARNING: [VRFC 10-5021] port 's_axis_config_tready' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2011]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2045]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2050]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:2262]
+WARNING: [VRFC 10-5021] port 'm_axis_data_tvalid' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:1724]
+WARNING: [VRFC 10-5021] port 'm_axis_data_tvalid' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:600]
+WARNING: [VRFC 10-5021] port 'gpio_io_t' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:491]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:1306]
+WARNING: [VRFC 10-5021] port 'mb_reset' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/sim/ebaz4205.v:1576]
 WARNING: [VRFC 10-5021] port 'ENET0_GMII_RXD' is not connected on this instance [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_processing_system7_0_0/sim/ebaz4205_processing_system7_0_0.v:315]
 WARNING: [VRFC 10-3027] 'ocm_wr_strb_port0' was previously declared with a different range [/wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:3809]
 WARNING: [VRFC 10-5021] port 'aclk2x' is not connected on this instance [/wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xilinx/axi_protocol_converter_v2_1/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4376]
@@ -72,8 +76,21 @@ Compiling package axi_lite_ipif_v3_0_4.ipif_pkg
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_viv_comp
+Compiling package xbip_addsub_v3_0_6.xbip_addsub_v3_0_6_viv_comp
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg
+Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg_legacy
+Compiling package c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv_comp
 Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_viv_comp
 Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_pkg
+Compiling package cic_compiler_v4_0_15.cic_compiler_v4_0_15_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package cic_compiler_v4_0_15.toolbox_pkg
+Compiling package cic_compiler_v4_0_15.cic_compiler_v4_0_15_pkg
+Compiling package cic_compiler_v4_0_15.cic_compiler_v4_0_15_hdl_comps
+Compiling package fir_compiler_v7_2_17.fir_compiler_v7_2_17_viv_comp
+Compiling package fir_compiler_v7_2_17.globals_pkg
+Compiling package fir_compiler_v7_2_17.components
 Compiling package xilinx_vip.axi_vip_pkg
 Compiling package xilinx_vip.xil_common_vip_pkg
 Compiling package std.std
@@ -111,14 +128,40 @@ Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sy
 Compiling architecture imp of entity axi_gpio_v2_0_27.GPIO_Core [\GPIO_Core(c_aw=9,c_gpio2_width=...]
 Compiling architecture imp of entity axi_gpio_v2_0_27.axi_gpio [\axi_gpio(c_family="zynq",c_gpio...]
 Compiling architecture ebaz4205_axi_gpio_1_0_arch of entity xil_defaultlib.ebaz4205_axi_gpio_1_0 [ebaz4205_axi_gpio_1_0_default]
-Compiling module xlconcat_v2_1_4.xlconcat_v2_1_4_xlconcat(IN0_WID...
-Compiling module xil_defaultlib.ebaz4205_xlconcat_3_0
+Compiling architecture structural of entity c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv [\c_reg_fd_v12_0_6_viv(c_width=16...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_14.c_addsub_v12_0_14_lut6_legacy [\c_addsub_v12_0_14_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_fabric_legacy [\c_addsub_v12_0_14_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_legacy [\c_addsub_v12_0_14_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_viv [\c_addsub_v12_0_14_viv(c_xdevice...]
+Compiling architecture xilinx of entity c_addsub_v12_0_14.c_addsub_v12_0_14 [\c_addsub_v12_0_14(c_xdevicefami...]
+Compiling architecture ebaz4205_c_addsub_0_1_arch of entity xil_defaultlib.ebaz4205_c_addsub_0_1 [ebaz4205_c_addsub_0_1_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.pipe_add [\pipe_add(c_width=28,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.accum [\accum(c_xdevicefamily="zynq",c_...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_core [\dds_compiler_v6_0_21_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_viv [\dds_compiler_v6_0_21_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21 [\dds_compiler_v6_0_21(c_xdevicef...]
+Compiling architecture ebaz4205_dds_compiler_0_2_arch of entity xil_defaultlib.ebaz4205_dds_compiler_0_2 [ebaz4205_dds_compiler_0_2_defaul...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000011111111000011...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111010111011111010...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111111111111000000...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.three_input_adder [\three_input_adder(c_a_width=32,...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111100000000111100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="001111001100001111...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000011111111111111...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.three_input_adder [\three_input_adder(c_a_width=32,...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.multmxn_lut6 [\multmxn_lut6(c_xdevicefamily="z...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17_viv [\mult_gen_v12_0_17_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17 [\mult_gen_v12_0_17(c_optimize_go...]
+Compiling architecture ebaz4205_mult_gen_0_2_arch of entity xil_defaultlib.ebaz4205_mult_gen_0_2 [ebaz4205_mult_gen_0_2_default]
 Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant
 Compiling module xil_defaultlib.ebaz4205_xlconstant_1_0
 Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
 Compiling module xil_defaultlib.ebaz4205_xlconstant_3_0
-Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_WIDTH...
-Compiling module xil_defaultlib.ebaz4205_xlslice_0_1
 Compiling module xil_defaultlib.TestGen_imp_12Z2PFB
 Compiling architecture behavioral of entity xil_defaultlib.axis_mux [axis_mux_default]
 Compiling module xil_defaultlib.ebaz4205_axis_mux_0_0
@@ -126,22 +169,118 @@ Compiling module xlconcat_v2_1_4.xlconcat_v2_1_4_xlconcat(IN0_WID...
 Compiling module xil_defaultlib.ebaz4205_xlconcat_1_0
 Compiling module xlconcat_v2_1_4.xlconcat_v2_1_4_xlconcat(IN1_WID...
 Compiling module xil_defaultlib.ebaz4205_xlconcat_2_0
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
 Compiling module xil_defaultlib.ebaz4205_xlconstant_0_0
 Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
 Compiling module xil_defaultlib.ebaz4205_xlconstant_2_0
 Compiling module xil_defaultlib.ADC_TestGen_imp_QGE54V
-Compiling module xil_defaultlib.DivideBy2N(N=5)
-Compiling module xil_defaultlib.ebaz4205_DivideBy2N_0_0
-Compiling module xil_defaultlib.I2S_Transmitter
-Compiling module xil_defaultlib.ebaz4205_I2S_Transmitter_0_1
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.op_resize [\op_resize(ao_width=19,bo_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.luts [\luts(c_xdevicefamily="zynq",c_a...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17_viv [\mult_gen_v12_0_17_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17 [\mult_gen_v12_0_17(c_xdevicefami...]
+Compiling architecture ebaz4205_mult_gen_0_1_arch of entity xil_defaultlib.ebaz4205_mult_gen_0_1 [ebaz4205_mult_gen_0_1_default]
+Compiling architecture ebaz4205_mult_gen_1_0_arch of entity xil_defaultlib.ebaz4205_mult_gen_1_0 [ebaz4205_mult_gen_1_0_default]
+Compiling architecture structural of entity c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv [\c_reg_fd_v12_0_6_viv(c_width=32...]
+Compiling architecture rtl of entity c_addsub_v12_0_14.c_addsub_v12_0_14_lut6_legacy [\c_addsub_v12_0_14_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_fabric_legacy [\c_addsub_v12_0_14_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_legacy [\c_addsub_v12_0_14_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_14.c_addsub_v12_0_14_viv [\c_addsub_v12_0_14_viv(c_xdevice...]
+Compiling architecture xilinx of entity c_addsub_v12_0_14.c_addsub_v12_0_14 [\c_addsub_v12_0_14(c_xdevicefami...]
+Compiling architecture ebaz4205_c_addsub_0_0_arch of entity xil_defaultlib.ebaz4205_c_addsub_0_0 [ebaz4205_c_addsub_0_0_default]
+Compiling architecture circuits of entity xil_defaultlib.S0 [s0_default]
+Compiling architecture circuits of entity xil_defaultlib.S1 [s1_default]
+Compiling architecture circuits of entity xil_defaultlib.Sm [sm_default]
+Compiling architecture circuits of entity xil_defaultlib.Sn [sn_default]
+Compiling architecture circuits of entity xil_defaultlib.S0b [s0b_default]
+Compiling architecture circuits of entity xil_defaultlib.S1b [s1b_default]
+Compiling architecture circuits of entity xil_defaultlib.Sb [sb_default]
+Compiling architecture circuits of entity xil_defaultlib.sqrt32 [sqrt32_default]
+Compiling module xil_defaultlib.ebaz4205_sqrt32_0_0
+Compiling module xil_defaultlib.AM_demodulator_imp_UCGGQS
+Compiling architecture synth of entity cic_compiler_v4_0_15.dec_shifter [\dec_shifter(in_width=82,shft_ra...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.dec_scaler [\dec_scaler(in_width=82,rate_wid...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=2,family=(p...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1111111111001010")(0...]
+Compiling architecture fdrse_v of entity unisim.FDRSE [fdrse_default]
+Compiling architecture muxcy_l_v of entity unisim.MUXCY_L [muxcy_l_default]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=0,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=0,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=1,family=(p...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_unfolded [\int_comb_stage_unfolded(c_int_o...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_section [\int_comb_section(c_int_or_comb=...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=2,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=5,family=(p...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_folded [\int_comb_stage_folded(c_int_or_...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture structural of entity cic_compiler_v4_0_15.add_sub [\add_sub(family=(p_mult18s,true,...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=1,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.emb_calc [\emb_calc(param=((p_mult18s,true...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=0,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay [\delay(delay_len=2,family=(p_mul...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_15.delay_bit [\delay_bit(delay_len=3,family=(p...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_stage_folded [\int_comb_stage_folded(c_int_or_...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.int_comb_section [\int_comb_section(c_int_or_comb=...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.decimate [\decimate(c_num_stages=6,c_rate=...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.cic_compiler_v4_0_15_viv [\cic_compiler_v4_0_15_viv(c_comp...]
+Compiling architecture xilinx of entity cic_compiler_v4_0_15.cic_compiler_v4_0_15 [\cic_compiler_v4_0_15(c_componen...]
+Compiling architecture ebaz4205_cic_compiler_0_0_arch of entity xil_defaultlib.ebaz4205_cic_compiler_0_0 [ebaz4205_cic_compiler_0_0_defaul...]
+Compiling architecture synth of entity cic_compiler_v4_0_15.cic_compiler_v4_0_15_viv [\cic_compiler_v4_0_15_viv(c_comp...]
+Compiling architecture xilinx of entity cic_compiler_v4_0_15.cic_compiler_v4_0_15 [\cic_compiler_v4_0_15(c_componen...]
+Compiling architecture ebaz4205_cic_compiler_0_1_arch of entity xil_defaultlib.ebaz4205_cic_compiler_0_1 [ebaz4205_cic_compiler_0_1_defaul...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.op_resize [\op_resize(ai_width=12,swap_oper...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.luts [\luts(c_xdevicefamily="zynq",c_a...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17_viv [\mult_gen_v12_0_17_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17 [\mult_gen_v12_0_17(c_xdevicefami...]
+Compiling architecture ebaz4205_mult_sin_0_arch of entity xil_defaultlib.ebaz4205_mult_sin_0 [ebaz4205_mult_sin_0_default]
+Compiling architecture ebaz4205_mult_gen_0_0_arch of entity xil_defaultlib.ebaz4205_mult_gen_0_0 [ebaz4205_mult_gen_0_0_default]
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_FROM=...
+Compiling module xil_defaultlib.ebaz4205_xlslice_0_3
+Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_FROM=...
+Compiling module xil_defaultlib.ebaz4205_xlslice_sin_0
+Compiling module xil_defaultlib.ComplexMult_imp_2GTPFV
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_rdy [\dds_compiler_v6_0_21_rdy(c_has_...]
 Compiling architecture synth of entity dds_compiler_v6_0_21.dither_wrap [\dither_wrap(ci_phase_err_width=...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture synth of entity dds_compiler_v6_0_21.pipe_add [\pipe_add(c_width=28,c_seg_width...]
 Compiling architecture synth of entity dds_compiler_v6_0_21.accum [\accum(c_xdevicefamily="zynq",c_...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
@@ -152,25 +291,134 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_core [\dds_compiler_v6_0_21_core(c_xde...]
 Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_viv [\dds_compiler_v6_0_21_viv(c_xdev...]
 Compiling architecture xilinx of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21 [\dds_compiler_v6_0_21(c_xdevicef...]
+Compiling architecture ebaz4205_rf_test_1mhz_0_arch of entity xil_defaultlib.ebaz4205_RF_test_1MHz_0 [ebaz4205_rf_test_1mhz_0_default]
+Compiling module xil_defaultlib.axi_axis_writer
+Compiling module xil_defaultlib.ebaz4205_axi_axis_writer_0_0
+Compiling module xil_defaultlib.LO_imp_1P3EDMO
+Compiling module xil_defaultlib.DDC_imp_9GECP5
+Compiling module xil_defaultlib.DivideBy2N(N=5)
+Compiling module xil_defaultlib.ebaz4205_DivideBy10_0
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=27,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=26,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=25,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=24,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=23,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=22,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=21,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=20,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=19,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=18,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=17,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=16,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=15,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=12,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=11,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.wrap_buff [\wrap_buff(c_xdevicefamily="zynq...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=30,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.delay [\delay(c_delay_len=32,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.polyphase_decimation [\polyphase_decimation(c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.fir_compiler_v7_2_17_viv [\fir_compiler_v7_2_17_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_17.fir_compiler_v7_2_17 [\fir_compiler_v7_2_17(c_xdevicef...]
+Compiling architecture ebaz4205_fir_compiler_0_0_arch of entity xil_defaultlib.ebaz4205_fir_compiler_0_0 [ebaz4205_fir_compiler_0_0_defaul...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.polyphase_decimation [\polyphase_decimation(c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_17.fir_compiler_v7_2_17_viv [\fir_compiler_v7_2_17_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_17.fir_compiler_v7_2_17 [\fir_compiler_v7_2_17(c_xdevicef...]
+Compiling architecture ebaz4205_fir_compiler_0_1_arch of entity xil_defaultlib.ebaz4205_fir_compiler_0_1 [ebaz4205_fir_compiler_0_1_defaul...]
+Compiling module xil_defaultlib.ebaz4205_DivideBy2N_0_0
+Compiling module xil_defaultlib.I2S_Transmitter
+Compiling module xil_defaultlib.ebaz4205_I2S_Transmitter_0_1
+Compiling architecture synth of entity dds_compiler_v6_0_21.dither_wrap [\dither_wrap(ci_phase_err_width=...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.accum [\accum(c_xdevicefamily="zynq",c_...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_core [\dds_compiler_v6_0_21_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_viv [\dds_compiler_v6_0_21_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21 [\dds_compiler_v6_0_21(c_xdevicef...]
 Compiling architecture ebaz4205_dds_compiler_0_1_arch of entity xil_defaultlib.ebaz4205_dds_compiler_0_1 [ebaz4205_dds_compiler_0_1_defaul...]
 Compiling module xil_defaultlib.I2S_imp_1GQSHGG
+Compiling module xil_defaultlib.ebaz4205_I2S_Transmitter_0_2
 Compiling architecture imp of entity axi_gpio_v2_0_27.GPIO_Core [\GPIO_Core(c_aw=9,c_gpio_width=1...]
 Compiling architecture imp of entity axi_gpio_v2_0_27.axi_gpio [\axi_gpio(c_family="zynq",c_gpio...]
 Compiling architecture ebaz4205_axi_gpio_0_0_arch of entity xil_defaultlib.ebaz4205_axi_gpio_0_0 [ebaz4205_axi_gpio_0_0_default]
 Compiling module xlconcat_v2_1_4.xlconcat_v2_1_4_xlconcat_default
 Compiling module xil_defaultlib.ebaz4205_xlconcat_0_1
 Compiling module xil_defaultlib.LEDdriver_imp_DEC1BF
-Compiling architecture synth of entity dds_compiler_v6_0_21.sin_cos [\sin_cos(c_xdevicefamily="zynq",...]
-Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_core [\dds_compiler_v6_0_21_core(c_xde...]
-Compiling architecture synth of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21_viv [\dds_compiler_v6_0_21_viv(c_xdev...]
-Compiling architecture xilinx of entity dds_compiler_v6_0_21.dds_compiler_v6_0_21 [\dds_compiler_v6_0_21(c_xdevicef...]
-Compiling architecture ebaz4205_rf_test_1mhz_0_arch of entity xil_defaultlib.ebaz4205_RF_test_1MHz_0 [ebaz4205_rf_test_1mhz_0_default]
-Compiling architecture ebaz4205_axi_gpio_dds_0_arch of entity xil_defaultlib.ebaz4205_axi_gpio_dds_0 [ebaz4205_axi_gpio_dds_0_default]
-Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_FROM=...
-Compiling module xil_defaultlib.ebaz4205_xlslice_0_3
-Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_FROM=...
-Compiling module xil_defaultlib.ebaz4205_xlslice_sin_0
-Compiling module xil_defaultlib.LocalOscillator_imp_1ERZMJH
 Compiling architecture fdre_v of entity unisim.FDRE [\FDRE(init='1')\]
 Compiling architecture implementation of entity lib_cdc_v1_0_2.cdc_sync [\cdc_sync(c_vector_width=2,c_mtb...]
 Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E(init="1111111111111111")...]
@@ -240,6 +488,20 @@ Compiling module xil_defaultlib.m01_couplers_imp_LPPMGU
 Compiling module xil_defaultlib.m02_couplers_imp_19PTQCC
 Compiling module xil_defaultlib.m03_couplers_imp_KZ096L
 Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_axi2ve...
+Compiling module xpm.xpm_cdc_single(DEST_SYNC_FF=3,SR...
+Compiling module xpm.xpm_cdc_handshake(DEST_SYNC_FF=3...
+Compiling module axi_clock_converter_v2_1_24.axi_clock_converter_v2_1_24_lite...
+Compiling module xpm.xpm_cdc_handshake(DEST_SYNC_FF=3...
+Compiling module axi_clock_converter_v2_1_24.axi_clock_converter_v2_1_24_lite...
+Compiling module xpm.xpm_cdc_handshake(DEST_SYNC_FF=3...
+Compiling module axi_clock_converter_v2_1_24.axi_clock_converter_v2_1_24_lite...
+Compiling module xpm.xpm_cdc_handshake(DEST_SYNC_FF=3...
+Compiling module axi_clock_converter_v2_1_24.axi_clock_converter_v2_1_24_lite...
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_vector...
+Compiling module axi_clock_converter_v2_1_24.axi_clock_converter_v2_1_24_axi_...
+Compiling module xil_defaultlib.ebaz4205_auto_cc_0
+Compiling module xil_defaultlib.m04_couplers_imp_1BD9HQX
+Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_axi2ve...
 Compiling module axi_infrastructure_v1_1_0.axi_infrastructure_v1_1_0_vector...
 Compiling module axi_register_slice_v2_1_25.axi_register_slice_v2_1_25_axic_...
 Compiling module axi_register_slice_v2_1_25.axi_register_slice_v2_1_25_axic_...
@@ -299,16 +561,17 @@ Compiling architecture syn of entity xil_defaultlib.dp_ram_1r_1w_2clk [\dp_ram_1
 Compiling architecture arch_imp of entity xil_defaultlib.axis_capture_logic [\axis_capture_logic(c_capture_nu...]
 Compiling architecture arch_imp of entity xil_defaultlib.axis_capture [\axis_capture(c_capture_num_word...]
 Compiling architecture ebaz4205_axis_capture_0_4_arch of entity xil_defaultlib.ebaz4205_axis_capture_0_4 [ebaz4205_axis_capture_0_4_defaul...]
-Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
-Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
-Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
-Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
-Compiling architecture xilinx of entity mult_gen_v12_0_17.op_resize [\op_resize(ai_width=12,swap_oper...]
-Compiling architecture xilinx of entity mult_gen_v12_0_17.luts [\luts(c_xdevicefamily="zynq",c_a...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_17.ccm [\ccm(c_xdevicefamily="zynq",c_a_...]
 Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17_viv [\mult_gen_v12_0_17_viv(c_verbosi...]
 Compiling architecture xilinx of entity mult_gen_v12_0_17.mult_gen_v12_0_17 [\mult_gen_v12_0_17(c_xdevicefami...]
-Compiling architecture ebaz4205_mult_sin_0_arch of entity xil_defaultlib.ebaz4205_mult_sin_0 [ebaz4205_mult_sin_0_default]
-Compiling architecture ebaz4205_mult_gen_0_0_arch of entity xil_defaultlib.ebaz4205_mult_gen_0_0 [ebaz4205_mult_gen_0_0_default]
+Compiling architecture ebaz4205_mult_gen_0_3_arch of entity xil_defaultlib.ebaz4205_mult_gen_0_3 [ebaz4205_mult_gen_0_3_default]
+Compiling architecture ebaz4205_mult_by_4_0_arch of entity xil_defaultlib.ebaz4205_mult_by_4_0 [ebaz4205_mult_by_4_0_default]
+Compiling architecture ebaz4205_rst_ps7_0_64m_0_arch of entity xil_defaultlib.ebaz4205_rst_ps7_0_64M_0 [ebaz4205_rst_ps7_0_64m_0_default]
+Compiling module xil_defaultlib.ebaz4205_xlconcat_0_2
+Compiling module xil_defaultlib.ebaz4205_xlconstant_0_1
+Compiling module xil_defaultlib.ebaz4205_xlconstant_1_1
+Compiling module xil_defaultlib.ebaz4205_xlconstant_2_1
 Compiling module xlslice_v1_0_2.xlslice_v1_0_2_xlslice(DIN_FROM=...
 Compiling module xil_defaultlib.ebaz4205_xlslice_0_4
 Compiling module xil_defaultlib.ebaz4205

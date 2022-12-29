@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -88,6 +90,7 @@ set_property ip_output_repo d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files D:/EBAZ4205_SDR/matlab/mycoefile.coe
 read_verilog -library xil_defaultlib D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/hdl/ebaz4205_wrapper.v
 add_files D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.srcs/sources_1/bd/ebaz4205/ebaz4205.bd
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_proc_sys_reset_0_0/ebaz4205_proc_sys_reset_0_0_board.xdc]
@@ -102,17 +105,47 @@ set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/c
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/ebaz4205_dds_compiler_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/ebaz4205_c_addsub_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/ebaz4205_mult_gen_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_1/ebaz4205_dds_compiler_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_dds_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_dds_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_dds_0.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_sin_0/ebaz4205_mult_sin_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/ebaz4205_cic_compiler_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/constraints/fir_compiler_v7_2.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/ebaz4205_fir_compiler_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/ebaz4205_mult_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/ebaz4205_c_addsub_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/ebaz4205_mult_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/ebaz4205_rst_ps7_0_64M_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/ebaz4205_rst_ps7_0_64M_0.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/ebaz4205_rst_ps7_0_64M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_0/ebaz4205_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_0/ebaz4205_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_0/ebaz4205_auto_cc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_1/ebaz4205_auto_cc_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_1/ebaz4205_auto_cc_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_1/ebaz4205_auto_cc_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_2/ebaz4205_auto_cc_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_2/ebaz4205_auto_cc_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_2/ebaz4205_auto_cc_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ebaz4205_ooc.xdc]
 
 OPTRACE "Adding files" END { }

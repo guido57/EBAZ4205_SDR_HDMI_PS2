@@ -52,17 +52,17 @@
 
 (* X_CORE_INFO = "xlconstant_v1_1_7_xlconstant,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "ebaz4205_xlconstant_3_0,xlconstant_v1_1_7_xlconstant,{}" *)
-(* CORE_GENERATION_INFO = "ebaz4205_xlconstant_3_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CONST_WIDTH=4,CONST_VAL=0x0}" *)
+(* CORE_GENERATION_INFO = "ebaz4205_xlconstant_3_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CONST_WIDTH=16,CONST_VAL=0x0800}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module ebaz4205_xlconstant_3_0 (
   dout
 );
 
-output wire [3 : 0] dout;
+output wire [15 : 0] dout;
 
   xlconstant_v1_1_7_xlconstant #(
-    .CONST_WIDTH(4),
-    .CONST_VAL(4'H0)
+    .CONST_WIDTH(16),
+    .CONST_VAL(16'H0800)
   ) inst (
     .dout(dout)
   );

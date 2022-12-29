@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-// Date        : Sat Nov  5 19:52:50 2022
+// Date        : Sun Dec 25 20:49:22 2022
 // Host        : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_sim_netlist.v
@@ -93,7 +93,7 @@ module ebaz4205_axi_gpio_1_0
   (* C_ALL_INPUTS_2 = "0" *) 
   (* C_ALL_OUTPUTS = "1" *) 
   (* C_ALL_OUTPUTS_2 = "1" *) 
-  (* C_DOUT_DEFAULT = "1048576" *) 
+  (* C_DOUT_DEFAULT = "10485760" *) 
   (* C_DOUT_DEFAULT_2 = "0" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_GPIO2_WIDTH = "1" *) 
@@ -503,22 +503,22 @@ module ebaz4205_axi_gpio_1_0_GPIO_Core
         .D(D[31]),
         .Q(gpio_io_o[31]),
         .R(bus2ip_reset));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \Dual.gpio_Data_Out_reg[10] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(D[21]),
         .Q(gpio_io_o[21]),
-        .R(bus2ip_reset));
-  FDSE #(
-    .INIT(1'b1)) 
+        .S(bus2ip_reset));
+  FDRE #(
+    .INIT(1'b0)) 
     \Dual.gpio_Data_Out_reg[11] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(D[20]),
         .Q(gpio_io_o[20]),
-        .S(bus2ip_reset));
+        .R(bus2ip_reset));
   FDRE #(
     .INIT(1'b0)) 
     \Dual.gpio_Data_Out_reg[12] 
@@ -735,14 +735,14 @@ module ebaz4205_axi_gpio_1_0_GPIO_Core
         .D(D[24]),
         .Q(gpio_io_o[24]),
         .R(bus2ip_reset));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \Dual.gpio_Data_Out_reg[8] 
        (.C(s_axi_aclk),
         .CE(E),
         .D(D[23]),
         .Q(gpio_io_o[23]),
-        .R(bus2ip_reset));
+        .S(bus2ip_reset));
   FDRE #(
     .INIT(1'b0)) 
     \Dual.gpio_Data_Out_reg[9] 
@@ -1697,7 +1697,7 @@ module ebaz4205_axi_gpio_1_0_address_decoder
 endmodule
 
 (* C_ALL_INPUTS = "0" *) (* C_ALL_INPUTS_2 = "0" *) (* C_ALL_OUTPUTS = "1" *) 
-(* C_ALL_OUTPUTS_2 = "1" *) (* C_DOUT_DEFAULT = "1048576" *) (* C_DOUT_DEFAULT_2 = "0" *) 
+(* C_ALL_OUTPUTS_2 = "1" *) (* C_DOUT_DEFAULT = "10485760" *) (* C_DOUT_DEFAULT_2 = "0" *) 
 (* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "1" *) (* C_GPIO_WIDTH = "32" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "1" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 

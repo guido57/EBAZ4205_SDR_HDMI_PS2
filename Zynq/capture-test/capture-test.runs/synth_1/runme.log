@@ -13,6 +13,7 @@ source ebaz4205_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EBAZ4205_SDR/Zynq/axis-capture'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1446.078 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental D:/Vivado_projects/ebaz4205/ebaz4205.srcs/utils_1/imports/synth_1/ebaz4205_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado_projects/ebaz4205/ebaz4205.srcs/utils_1/imports/synth_1/ebaz4205_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,170 +26,321 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2116
+INFO: [Synth 8-7075] Helper process launched with PID 50488
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_wrapper' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/hdl/ebaz4205_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1456]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2839]
 INFO: [Synth 8-6157] synthesizing module 'ADC_TestGen_imp_QGE54V' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:12]
-INFO: [Synth 8-6157] synthesizing module 'TestGen_imp_12Z2PFB' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1310]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_compiler_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_compiler_0_0' (2#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_1_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_1_0' (3#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_3_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/synth/ebaz4205_xlconcat_3_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (4#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_3_0' (5#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/synth/ebaz4205_xlconcat_3_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'TestGen_imp_12Z2PFB' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2577]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_compiler_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_compiler_0_0' (2#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_1_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_1_0' (3#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'ebaz4205_axi_gpio_1_0' is unconnected for instance 'axi_gpio_ADC_TEST' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2765]
+WARNING: [Synth 8-7023] instance 'axi_gpio_ADC_TEST' of module 'ebaz4205_axi_gpio_1_0' has 21 connections declared, but only 20 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2765]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_c_addsub_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_c_addsub_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_c_addsub_0_1' (4#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_c_addsub_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_axi_interface_0_2' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_axi_interface_0_2' (5#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'ctrl_m_axis_tlast' of module 'ebaz4205_dds_axi_interface_0_2' is unconnected for instance 'dds_axi_interface_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2791]
+WARNING: [Synth 8-7023] instance 'dds_axi_interface_0' of module 'ebaz4205_dds_axi_interface_0_2' has 26 connections declared, but only 25 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2791]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_compiler_0_2' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_compiler_0_2' (6#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'ebaz4205_dds_compiler_0_2' is unconnected for instance 'dds_compiler_1KHz' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2817]
+WARNING: [Synth 8-7023] instance 'dds_compiler_1KHz' of module 'ebaz4205_dds_compiler_0_2' has 3 connections declared, but only 2 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2817]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_0_2' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_0_2' (7#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_2_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_1_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_1_0/synth/ebaz4205_xlconstant_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (6#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_1_0' (7#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_1_0/synth/ebaz4205_xlconstant_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (8#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_1_0' (9#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_1_0/synth/ebaz4205_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_2_3' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_3/synth/ebaz4205_xlconstant_2_3.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_2_3' (10#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_3/synth/ebaz4205_xlconstant_2_3.v:57]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_3_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_3_0/synth/ebaz4205_xlconstant_3_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (7#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_3_0' (8#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_3_0/synth/ebaz4205_xlconstant_3_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_0_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_1/synth/ebaz4205_xlslice_0_1.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (9#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_1' (10#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_1/synth/ebaz4205_xlslice_0_1.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'TestGen_imp_12Z2PFB' (11#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1310]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axis_mux_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_mux_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axis_mux_0_0' (12#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_mux_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (10#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_3_0' (11#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_3_0/synth/ebaz4205_xlconstant_3_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'TestGen_imp_12Z2PFB' (12#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2577]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axis_mux_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_mux_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axis_mux_0_0' (13#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_mux_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_1_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_1_0/synth/ebaz4205_xlconcat_1_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' (12#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_1_0' (13#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_1_0/synth/ebaz4205_xlconcat_1_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (14#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_1_0' (15#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_1_0/synth/ebaz4205_xlconcat_1_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_2_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_2_0/synth/ebaz4205_xlconcat_2_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized1' (13#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_2_0' (14#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_2_0/synth/ebaz4205_xlconcat_2_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' (15#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_2_0' (16#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_2_0/synth/ebaz4205_xlconcat_2_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_0_0/synth/ebaz4205_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (14#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_0_0' (15#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_0_0/synth/ebaz4205_xlconstant_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (16#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_0_0' (17#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_0_0/synth/ebaz4205_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_2_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_0/synth/ebaz4205_xlconstant_2_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' (15#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_2_0' (16#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_0/synth/ebaz4205_xlconstant_2_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'ADC_TestGen_imp_QGE54V' (17#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:12]
-INFO: [Synth 8-6157] synthesizing module 'I2S_imp_1GQSHGG' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:163]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_DivideBy2N_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy2N_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_DivideBy2N_0_0' (18#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy2N_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_I2S_Transmitter_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_I2S_Transmitter_0_1' (19#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 's00_axis_tready' of module 'ebaz4205_I2S_Transmitter_0_1' is unconnected for instance 'I2S_Transmitter_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:193]
-WARNING: [Synth 8-7023] instance 'I2S_Transmitter_0' of module 'ebaz4205_I2S_Transmitter_0_1' has 11 connections declared, but only 10 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:193]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_compiler_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_compiler_0_1' (20#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'I2S_imp_1GQSHGG' (21#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:163]
-INFO: [Synth 8-6157] synthesizing module 'LEDdriver_imp_DEC1BF' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:210]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_0_0' (22#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'gpio_io_t' of module 'ebaz4205_axi_gpio_0_0' is unconnected for instance 'axi_gpio_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:290]
-WARNING: [Synth 8-7023] instance 'axi_gpio_0' of module 'ebaz4205_axi_gpio_0_0' has 22 connections declared, but only 21 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:290]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_0_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/synth/ebaz4205_xlconcat_0_1.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized2' (22#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_0_1' (23#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/synth/ebaz4205_xlconcat_0_1.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'LEDdriver_imp_DEC1BF' (24#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:210]
-INFO: [Synth 8-6157] synthesizing module 'LocalOscillator_imp_1ERZMJH' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:318]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_RF_test_1MHz_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_RF_test_1MHz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_RF_test_1MHz_0' (25#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_RF_test_1MHz_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'ebaz4205_RF_test_1MHz_0' is unconnected for instance 'DDS_LO' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:411]
-WARNING: [Synth 8-7023] instance 'DDS_LO' of module 'ebaz4205_RF_test_1MHz_0' has 5 connections declared, but only 4 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:411]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_dds_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_dds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_dds_0' (26#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_dds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' (17#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_2_0' (18#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_0/synth/ebaz4205_xlconstant_2_0.v:57]
+WARNING: [Synth 8-3848] Net LED_GREEN in module/entity ADC_TestGen_imp_QGE54V does not have driver. [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:62]
+WARNING: [Synth 8-3848] Net gpio2_io_o_0 in module/entity ADC_TestGen_imp_QGE54V does not have driver. [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'ADC_TestGen_imp_QGE54V' (19#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:12]
+WARNING: [Synth 8-7071] port 'LED_GREEN' of module 'ADC_TestGen_imp_QGE54V' is unconnected for instance 'ADC_TestGen' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3160]
+WARNING: [Synth 8-7071] port 'gpio2_io_o_0' of module 'ADC_TestGen_imp_QGE54V' is unconnected for instance 'ADC_TestGen' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3160]
+WARNING: [Synth 8-7023] instance 'ADC_TestGen' of module 'ADC_TestGen_imp_QGE54V' has 47 connections declared, but only 45 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3160]
+INFO: [Synth 8-6157] synthesizing module 'AM_demodulator_imp_UCGGQS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:272]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_0_1' (20#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_1_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_1_0' (21#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_c_addsub_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_c_addsub_0_0' (22#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_sqrt32_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_sqrt32_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_sqrt32_0_0' (23#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_sqrt32_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AM_demodulator_imp_UCGGQS' (24#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:272]
+INFO: [Synth 8-6157] synthesizing module 'DDC_imp_9GECP5' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:357]
+INFO: [Synth 8-6157] synthesizing module 'ComplexMult_imp_2GTPFV' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:314]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_sin_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_sin_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_sin_0' (25#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_sin_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_0_0' (26#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_0_3' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_3/synth/ebaz4205_xlslice_0_3.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (26#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_3' (27#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_3/synth/ebaz4205_xlslice_0_3.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (27#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_3' (28#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_3/synth/ebaz4205_xlslice_0_3.v:57]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_sin_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/synth/ebaz4205_xlslice_sin_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (27#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_sin_0' (28#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/synth/ebaz4205_xlslice_sin_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'LocalOscillator_imp_1ERZMJH' (29#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:318]
-INFO: [Synth 8-6157] synthesizing module 'PS_imp_1B1U9UK' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:446]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_proc_sys_reset_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_proc_sys_reset_0_0' (30#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1045]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1045]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1045]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'ebaz4205_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1045]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_processing_system7_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_processing_system7_0_0' (31#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'GPIO_O' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'GPIO_T' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'ebaz4205_processing_system7_0_0' has 127 connections declared, but only 120 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1053]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_interconnect_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1929]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_18OUB6N' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2746]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_18OUB6N' (32#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2746]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_LPPMGU' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2892]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_LPPMGU' (33#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2892]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_19PTQCC' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3024]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_19PTQCC' (34#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3024]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_KZ096L' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3156]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_KZ096L' (35#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3156]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_OGT7Q5' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3288]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_pc_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_pc_0' (36#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_OGT7Q5' (37#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3288]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xbar_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xbar_0' (38#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (12) of module 'ebaz4205_xbar_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2707]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (12) of module 'ebaz4205_xbar_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2711]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_interconnect_0_0' (39#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1929]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' (40#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
-WARNING: [Synth 8-7023] instance 'rst_ENET0_GMII_RX_CLK_0_100M' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' has 10 connections declared, but only 5 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1295]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (28#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_sin_0' (29#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/synth/ebaz4205_xlslice_sin_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ComplexMult_imp_2GTPFV' (30#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:314]
+INFO: [Synth 8-6157] synthesizing module 'LO_imp_1P3EDMO' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1025]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_RF_test_1MHz_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_RF_test_1MHz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_RF_test_1MHz_0' (31#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_RF_test_1MHz_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'ebaz4205_RF_test_1MHz_0' is unconnected for instance 'DDS_LO' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1119]
+WARNING: [Synth 8-7023] instance 'DDS_LO' of module 'ebaz4205_RF_test_1MHz_0' has 5 connections declared, but only 4 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1119]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_axi_interface_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_axi_interface_0_0' (32#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ctrl_m_axis_tlast' of module 'ebaz4205_dds_axi_interface_0_0' is unconnected for instance 'DDS_LO_axi_interface' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1124]
+WARNING: [Synth 8-7023] instance 'DDS_LO_axi_interface' of module 'ebaz4205_dds_axi_interface_0_0' has 26 connections declared, but only 25 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1124]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_2_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_1/synth/ebaz4205_xlconstant_2_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_2_1' (33#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_1/synth/ebaz4205_xlconstant_2_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'LO_imp_1P3EDMO' (34#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1025]
+INFO: [Synth 8-6155] done synthesizing module 'DDC_imp_9GECP5' (35#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:357]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_DivideBy10_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_DivideBy10_0' (36#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'FILTER_imp_WBNR09' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:488]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_cic_compiler_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_cic_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_cic_compiler_0_0' (37#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_cic_compiler_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_config_tready' of module 'ebaz4205_cic_compiler_0_0' is unconnected for instance 'CIC_I_1024' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:759]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'ebaz4205_cic_compiler_0_0' is unconnected for instance 'CIC_I_1024' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:759]
+WARNING: [Synth 8-7023] instance 'CIC_I_1024' of module 'ebaz4205_cic_compiler_0_0' has 9 connections declared, but only 7 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:759]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_cic_compiler_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_cic_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_cic_compiler_0_1' (38#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_cic_compiler_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_config_tready' of module 'ebaz4205_cic_compiler_0_1' is unconnected for instance 'CIC_Q_1024' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:767]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'ebaz4205_cic_compiler_0_1' is unconnected for instance 'CIC_Q_1024' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:767]
+WARNING: [Synth 8-7023] instance 'CIC_Q_1024' of module 'ebaz4205_cic_compiler_0_1' has 9 connections declared, but only 7 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:767]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_fir_compiler_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_fir_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_fir_compiler_0_0' (39#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_fir_compiler_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'ebaz4205_fir_compiler_0_0' is unconnected for instance 'FIR_I_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:775]
+WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'ebaz4205_fir_compiler_0_0' is unconnected for instance 'FIR_I_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:775]
+WARNING: [Synth 8-7023] instance 'FIR_I_2' of module 'ebaz4205_fir_compiler_0_0' has 6 connections declared, but only 4 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:775]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_fir_compiler_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_fir_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_fir_compiler_0_1' (40#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_fir_compiler_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'ebaz4205_fir_compiler_0_1' is unconnected for instance 'FIR_Q_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:780]
+WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'ebaz4205_fir_compiler_0_1' is unconnected for instance 'FIR_Q_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:780]
+WARNING: [Synth 8-7023] instance 'FIR_Q_2' of module 'ebaz4205_fir_compiler_0_1' has 6 connections declared, but only 4 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_0_1' (41#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_interface_DEC_RATE_Q_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_interface_DEC_RATE_Q_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_interface_DEC_RATE_Q_0' (42#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_interface_DEC_RATE_Q_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ctrl_m_axis_tlast' of module 'ebaz4205_axi_interface_DEC_RATE_Q_0' is unconnected for instance 'axi_interface_DEC_RATE_I' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:806]
+WARNING: [Synth 8-7023] instance 'axi_interface_DEC_RATE_I' of module 'ebaz4205_axi_interface_DEC_RATE_Q_0' has 26 connections declared, but only 25 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:806]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_axi_interface_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_axi_interface_0_1' (43#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_axi_interface_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'ctrl_m_axis_tlast' of module 'ebaz4205_dds_axi_interface_0_1' is unconnected for instance 'axi_interface_DEC_RATE_Q' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:832]
+WARNING: [Synth 8-7023] instance 'axi_interface_DEC_RATE_Q' of module 'ebaz4205_dds_axi_interface_0_1' has 26 connections declared, but only 25 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:832]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_0_3' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_0_3' (44#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_by_4_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_by_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_by_4_0' (45#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_by_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_2_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_2/synth/ebaz4205_xlconstant_2_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_2_2' (46#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_2_2/synth/ebaz4205_xlconstant_2_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'FILTER_imp_WBNR09' (47#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:488]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3305]
+INFO: [Synth 8-6157] synthesizing module 'I2S_imp_1GQSHGG' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:870]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_DivideBy2N_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy2N_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_DivideBy2N_0_0' (48#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_DivideBy2N_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_I2S_Transmitter_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_I2S_Transmitter_0_1' (49#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's00_axis_tready' of module 'ebaz4205_I2S_Transmitter_0_1' is unconnected for instance 'I2S_Transmitter_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:900]
+WARNING: [Synth 8-7023] instance 'I2S_Transmitter_0' of module 'ebaz4205_I2S_Transmitter_0_1' has 11 connections declared, but only 10 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:900]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_dds_compiler_0_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_dds_compiler_0_1' (50#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_dds_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'I2S_imp_1GQSHGG' (51#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:870]
+WARNING: [Synth 8-7071] port 'I2SDATA' of module 'I2S_imp_1GQSHGG' is unconnected for instance 'I2S' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3305]
+WARNING: [Synth 8-7071] port 'LRCLK' of module 'I2S_imp_1GQSHGG' is unconnected for instance 'I2S' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3305]
+WARNING: [Synth 8-7071] port 'SCLK' of module 'I2S_imp_1GQSHGG' is unconnected for instance 'I2S' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3305]
+WARNING: [Synth 8-7023] instance 'I2S' of module 'I2S_imp_1GQSHGG' has 5 connections declared, but only 2 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3305]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_I2S_Transmitter_0_2' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_I2S_Transmitter_0_2' (52#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_I2S_Transmitter_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 's00_axis_tready' of module 'ebaz4205_I2S_Transmitter_0_2' is unconnected for instance 'I2S_Transmitter_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3308]
+WARNING: [Synth 8-7023] instance 'I2S_Transmitter_0' of module 'ebaz4205_I2S_Transmitter_0_2' has 11 connections declared, but only 10 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3308]
+INFO: [Synth 8-6157] synthesizing module 'LEDdriver_imp_DEC1BF' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:917]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_gpio_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_gpio_0_0' (53#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_gpio_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpio_io_t' of module 'ebaz4205_axi_gpio_0_0' is unconnected for instance 'axi_gpio_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:997]
+WARNING: [Synth 8-7023] instance 'axi_gpio_0' of module 'ebaz4205_axi_gpio_0_0' has 22 connections declared, but only 21 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:997]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_0_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/synth/ebaz4205_xlconcat_0_1.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized1' (53#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_0_1' (54#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_1/synth/ebaz4205_xlconcat_0_1.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'LEDdriver_imp_DEC1BF' (55#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:917]
+WARNING: [Synth 8-7071] port 'LED' of module 'LEDdriver_imp_DEC1BF' is unconnected for instance 'LEDdriver' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3319]
+WARNING: [Synth 8-7023] instance 'LEDdriver' of module 'LEDdriver_imp_DEC1BF' has 19 connections declared, but only 18 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3319]
+INFO: [Synth 8-6157] synthesizing module 'PS_imp_1B1U9UK' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1154]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_proc_sys_reset_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_proc_sys_reset_0_0' (56#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2192]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2192]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'ebaz4205_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2192]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'ebaz4205_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2192]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_processing_system7_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_processing_system7_0_0' (57#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'GPIO_O' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'GPIO_T' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'ebaz4205_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'ebaz4205_processing_system7_0_0' has 127 connections declared, but only 120 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2200]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_interconnect_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3641]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_18OUB6N' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5321]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_18OUB6N' (58#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5321]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_LPPMGU' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5467]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_cc_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_cc_0' (59#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_LPPMGU' (60#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5467]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_19PTQCC' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5683]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_19PTQCC' (61#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5683]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_KZ096L' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5815]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_KZ096L' (62#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5815]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1BD9HQX' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5947]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_cc_1' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_cc_1' (63#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1BD9HQX' (64#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5947]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_JEDPTK' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6163]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_cc_2' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_cc_2' (65#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_JEDPTK' (66#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6163]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1CO96E2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6379]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1CO96E2' (67#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6379]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_HTQA2J' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6504]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_cc_3' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_cc_3' (68#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'ebaz4205_auto_cc_3' is unconnected for instance 'auto_cc' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6663]
+WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'ebaz4205_auto_cc_3' is unconnected for instance 'auto_cc' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6663]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'ebaz4205_auto_cc_3' is unconnected for instance 'auto_cc' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6663]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'ebaz4205_auto_cc_3' has 42 connections declared, but only 39 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6663]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_HTQA2J' (69#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6504]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1EKI13N' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6705]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_cc_4' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_cc_4' (70#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_cc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1EKI13N' (71#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6705]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_OPRMR6' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6921]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_OPRMR6' (72#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:6921]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_OGT7Q5' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:7053]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_auto_pc_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_auto_pc_0' (73#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_OGT7Q5' (74#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:7053]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xbar_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xbar_0' (75#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (27) of port connection 'm_axi_arprot' does not match port width (30) of module 'ebaz4205_xbar_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5282]
+WARNING: [Synth 8-689] width (27) of port connection 'm_axi_awprot' does not match port width (30) of module 'ebaz4205_xbar_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:5286]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_interconnect_0_0' (76#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3641]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' (77#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' is unconnected for instance 'rst_ENET0_GMII_RX_CLK_0_100M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
+WARNING: [Synth 8-7023] instance 'rst_ENET0_GMII_RX_CLK_0_100M' of module 'ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0' has 10 connections declared, but only 5 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2562]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_0/synth/ebaz4205_xlconcat_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized3' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized3' (40#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_0_0' (41#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_0/synth/ebaz4205_xlconcat_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized2' (77#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_0_0' (78#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_0/synth/ebaz4205_xlconcat_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_0/synth/ebaz4205_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (41#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_0' (42#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_0/synth/ebaz4205_xlslice_0_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'PS_imp_1B1U9UK' (43#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:446]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_arready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_awready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_bid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_bresp' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_bvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_rdata' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_rid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_rlast' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_rresp' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_rvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_wready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-WARNING: [Synth 8-7023] instance 'PS' of module 'PS_imp_1B1U9UK' has 144 connections declared, but only 132 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1756]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axis_capture_0_4' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_capture_0_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axis_capture_0_4' (44#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_capture_0_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_sin_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_sin_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_sin_0' (45#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_sin_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ebaz4205_mult_gen_0_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_mult_gen_0_0' (46#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-1988-DESKTOP-SQGSJV7/realtime/ebaz4205_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (78#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_0' (79#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_0/synth/ebaz4205_xlslice_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'PS_imp_1B1U9UK' (80#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1154]
+WARNING: [Synth 8-7071] port 'M06_AXI_araddr' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_arvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_awaddr' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_awvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_bready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_rready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_wdata' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'M06_AXI_wvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_arready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_awready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_bid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_bresp' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_bvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_rdata' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_rid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_rlast' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_rresp' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_rvalid' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_wready' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'PS_imp_1B1U9UK' is unconnected for instance 'PS' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+WARNING: [Synth 8-7023] instance 'PS' of module 'PS_imp_1B1U9UK' has 254 connections declared, but only 234 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3338]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axi_axis_writer_DDS_GEN_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_axis_writer_DDS_GEN_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axi_axis_writer_DDS_GEN_0' (81#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axi_axis_writer_DDS_GEN_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tvalid' of module 'ebaz4205_axi_axis_writer_DDS_GEN_0' is unconnected for instance 'axi_axis_writer_LED_RED' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3573]
+WARNING: [Synth 8-7023] instance 'axi_axis_writer_LED_RED' of module 'ebaz4205_axi_axis_writer_DDS_GEN_0' has 20 connections declared, but only 19 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3573]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_axis_capture_0_4' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_capture_0_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_axis_capture_0_4' (82#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_axis_capture_0_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_rst_ps7_0_64M_0' [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ps7_0_64M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_rst_ps7_0_64M_0' (83#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/.Xil/Vivado-54604-DESKTOP-SQGSJV7/realtime/ebaz4205_rst_ps7_0_64M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'ebaz4205_rst_ps7_0_64M_0' is unconnected for instance 'rst_ps7_0_64M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3618]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'ebaz4205_rst_ps7_0_64M_0' is unconnected for instance 'rst_ps7_0_64M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3618]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'ebaz4205_rst_ps7_0_64M_0' is unconnected for instance 'rst_ps7_0_64M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3618]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'ebaz4205_rst_ps7_0_64M_0' is unconnected for instance 'rst_ps7_0_64M' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3618]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_64M' of module 'ebaz4205_rst_ps7_0_64M_0' has 10 connections declared, but only 6 given [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:3618]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconcat_0_2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_2/synth/ebaz4205_xlconcat_0_2.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconcat_0_2' (84#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconcat_0_2/synth/ebaz4205_xlconcat_0_2.v:60]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_0_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_0_1/synth/ebaz4205_xlconstant_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_0_1' (85#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_0_1/synth/ebaz4205_xlconstant_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlconstant_1_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_1_1/synth/ebaz4205_xlconstant_1_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlconstant_1_1' (86#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlconstant_1_1/synth/ebaz4205_xlconstant_1_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_0_4' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_4/synth/ebaz4205_xlslice_0_4.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (86#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_4' (87#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_4/synth/ebaz4205_xlslice_0_4.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ebaz4205_xlslice_1_1' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_1_1/synth/ebaz4205_xlslice_1_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (46#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_0_4' (47#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_0_4/synth/ebaz4205_xlslice_0_4.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205' (48#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:1456]
-INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_wrapper' (49#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/hdl/ebaz4205_wrapper.v:12]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (87#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_xlslice_1_1' (88#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xlslice_1_1/synth/ebaz4205_xlslice_1_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205' (89#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/synth/ebaz4205.v:2839]
+INFO: [Synth 8-6155] done synthesizing module 'ebaz4205_wrapper' (90#1) [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/hdl/ebaz4205_wrapper.v:12]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
@@ -208,101 +360,89 @@ WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameteri
 WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1446.078 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -317,16 +457,34 @@ Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/b
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_xbar_0/ebaz4205_xbar_0/ebaz4205_xbar_0_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/xbar'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_0/ebaz4205_auto_cc_0/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m01_couplers/auto_cc'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_0/ebaz4205_auto_cc_0/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m01_couplers/auto_cc'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_1/ebaz4205_auto_cc_1/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m04_couplers/auto_cc'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_1/ebaz4205_auto_cc_1/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m04_couplers/auto_cc'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_2/ebaz4205_auto_cc_2/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m05_couplers/auto_cc'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_2/ebaz4205_auto_cc_2/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m05_couplers/auto_cc'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3/ebaz4205_auto_cc_0_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m07_couplers/auto_cc'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3/ebaz4205_auto_cc_0_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m07_couplers/auto_cc'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m08_couplers/auto_cc'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4/ebaz4205_auto_cc_4_in_context.xdc] for cell 'ebaz4205_i/PS/ps7_axi_periph/m08_couplers/auto_cc'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_proc_sys_reset_0_0_in_context.xdc] for cell 'ebaz4205_i/PS/rst_ENET0_GMII_RX_CLK_0_100M'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_proc_sys_reset_0_0_in_context.xdc] for cell 'ebaz4205_i/PS/rst_ENET0_GMII_RX_CLK_0_100M'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4_in_context.xdc] for cell 'ebaz4205_i/axis_capture_RF'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4_in_context.xdc] for cell 'ebaz4205_i/axis_capture_RF'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/axis_mux_0'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/axis_mux_0'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/RF_test_1MHz'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/RF_test_1MHz'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_dds'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_dds'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/RF_test_10MHz'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0/ebaz4205_dds_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/RF_test_10MHz'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_ADC_TEST'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_ADC_TEST'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/ebaz4205_dds_compiler_0_2/ebaz4205_dds_compiler_0_2_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/dds_compiler_1KHz'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/ebaz4205_dds_compiler_0_2/ebaz4205_dds_compiler_0_2_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/dds_compiler_1KHz'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/ebaz4205_c_addsub_0_1/ebaz4205_c_addsub_0_1_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/c_addsub_0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/ebaz4205_c_addsub_0_1/ebaz4205_c_addsub_0_1_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/c_addsub_0'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/ebaz4205_mult_gen_0_2/ebaz4205_mult_gen_0_2_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/mult_gen_AM_modulator'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/ebaz4205_mult_gen_0_2/ebaz4205_mult_gen_0_2_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/mult_gen_AM_modulator'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_2/ebaz4205_dds_axi_interface_0_2/ebaz4205_dds_axi_interface_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/dds_axi_interface_0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_2/ebaz4205_dds_axi_interface_0_2/ebaz4205_dds_axi_interface_0_0_in_context.xdc] for cell 'ebaz4205_i/ADC_TestGen/TestGen/dds_axi_interface_0'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0_in_context.xdc] for cell 'ebaz4205_i/LEDdriver/axi_gpio_0'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0/ebaz4205_axi_gpio_0_0_in_context.xdc] for cell 'ebaz4205_i/LEDdriver/axi_gpio_0'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_DivideBy2N_0_0/ebaz4205_DivideBy2N_0_0/ebaz4205_DivideBy2N_0_0_in_context.xdc] for cell 'ebaz4205_i/I2S/DivideBy10'
@@ -335,14 +493,48 @@ Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/b
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_1/ebaz4205_dds_compiler_0_1/ebaz4205_dds_compiler_0_1_in_context.xdc] for cell 'ebaz4205_i/I2S/dds_compiler_1KHz_sin_cos'
 Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_1/ebaz4205_I2S_Transmitter_0_1/ebaz4205_I2S_Transmitter_0_1_in_context.xdc] for cell 'ebaz4205_i/I2S/I2S_Transmitter_0'
 Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_1/ebaz4205_I2S_Transmitter_0_1/ebaz4205_I2S_Transmitter_0_1_in_context.xdc] for cell 'ebaz4205_i/I2S/I2S_Transmitter_0'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/mult_sin'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/mult_sin'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_in_context.xdc] for cell 'ebaz4205_i/LocalOscillator/DDS_LO'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_in_context.xdc] for cell 'ebaz4205_i/LocalOscillator/DDS_LO'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/LocalOscillator/axi_gpio_dds'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_dds_0/ebaz4205_axi_gpio_1_0_in_context.xdc] for cell 'ebaz4205_i/LocalOscillator/axi_gpio_dds'
-Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_sin_0/ebaz4205_mult_sin_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/mult_cos'
-Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_sin_0/ebaz4205_mult_sin_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/mult_cos'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_in_context.xdc] for cell 'ebaz4205_i/DDC/LO/DDS_LO'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0/ebaz4205_RF_test_1MHz_0_in_context.xdc] for cell 'ebaz4205_i/DDC/LO/DDS_LO'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_0/ebaz4205_dds_axi_interface_0_0/ebaz4205_dds_axi_interface_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/LO/DDS_LO_axi_interface'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_0/ebaz4205_dds_axi_interface_0_0/ebaz4205_dds_axi_interface_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/LO/DDS_LO_axi_interface'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_sin_0/ebaz4205_mult_sin_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/ComplexMult/mult_cos'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_sin_0/ebaz4205_mult_sin_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/ComplexMult/mult_cos'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/ComplexMult/mult_sin'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0/ebaz4205_mult_gen_0_0_in_context.xdc] for cell 'ebaz4205_i/DDC/ComplexMult/mult_sin'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/sqrt32_0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/sqrt32_0'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/ebaz4205_mult_gen_0_1/ebaz4205_mult_gen_1_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/I_square'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/ebaz4205_mult_gen_0_1/ebaz4205_mult_gen_1_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/I_square'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/ebaz4205_c_addsub_0_0/ebaz4205_c_addsub_0_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/c_addsub_0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/ebaz4205_c_addsub_0_0/ebaz4205_c_addsub_0_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/c_addsub_0'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/ebaz4205_mult_gen_1_0/ebaz4205_mult_gen_1_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/Q_square'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/ebaz4205_mult_gen_1_0/ebaz4205_mult_gen_1_0_in_context.xdc] for cell 'ebaz4205_i/AM_demodulator/Q_square'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_2/ebaz4205_I2S_Transmitter_0_2/ebaz4205_I2S_Transmitter_0_1_in_context.xdc] for cell 'ebaz4205_i/I2S_Transmitter_0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_2/ebaz4205_I2S_Transmitter_0_2/ebaz4205_I2S_Transmitter_0_1_in_context.xdc] for cell 'ebaz4205_i/I2S_Transmitter_0'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_DivideBy10_0/ebaz4205_DivideBy10_0/ebaz4205_DivideBy2N_0_0_in_context.xdc] for cell 'ebaz4205_i/DivideBy10'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_DivideBy10_0/ebaz4205_DivideBy10_0/ebaz4205_DivideBy2N_0_0_in_context.xdc] for cell 'ebaz4205_i/DivideBy10'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/ebaz4205_rst_ps7_0_64M_0/ebaz4205_proc_sys_reset_0_0_in_context.xdc] for cell 'ebaz4205_i/rst_ps7_0_64M'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/ebaz4205_rst_ps7_0_64M_0/ebaz4205_proc_sys_reset_0_0_in_context.xdc] for cell 'ebaz4205_i/rst_ps7_0_64M'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/ebaz4205_fir_compiler_0_1/ebaz4205_fir_compiler_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/FIR_Q_2'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/ebaz4205_fir_compiler_0_1/ebaz4205_fir_compiler_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/FIR_Q_2'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/CIC_I_1024'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/CIC_I_1024'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/ebaz4205_cic_compiler_0_1/ebaz4205_cic_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/CIC_Q_1024'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/ebaz4205_cic_compiler_0_1/ebaz4205_cic_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/CIC_Q_1024'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/FIR_I_2'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/FIR_I_2'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_by_4_0/ebaz4205_mult_by_4_0/ebaz4205_mult_by_4_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/mult_by_GAIN_Q'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_by_4_0/ebaz4205_mult_by_4_0/ebaz4205_mult_by_4_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/mult_by_GAIN_Q'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/ebaz4205_mult_gen_0_3/ebaz4205_mult_by_4_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/mult_by_GAIN_I'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/ebaz4205_mult_gen_0_3/ebaz4205_mult_by_4_0_in_context.xdc] for cell 'ebaz4205_i/FILTER/mult_by_GAIN_I'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1/ebaz4205_axi_gpio_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_1/ebaz4205_dds_axi_interface_0_1/ebaz4205_dds_axi_interface_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_interface_DEC_RATE_Q'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_dds_axi_interface_0_1/ebaz4205_dds_axi_interface_0_1/ebaz4205_dds_axi_interface_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_interface_DEC_RATE_Q'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_interface_DEC_RATE_Q_0/ebaz4205_axi_interface_DEC_RATE_Q_0/ebaz4205_dds_axi_interface_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_interface_DEC_RATE_I'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_interface_DEC_RATE_Q_0/ebaz4205_axi_interface_DEC_RATE_Q_0/ebaz4205_dds_axi_interface_0_1_in_context.xdc] for cell 'ebaz4205_i/FILTER/axi_interface_DEC_RATE_I'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_axis_writer_DDS_GEN_0/ebaz4205_axi_axis_writer_DDS_GEN_0/ebaz4205_axi_axis_writer_0_0_in_context.xdc] for cell 'ebaz4205_i/axi_axis_writer_LED_RED'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_axis_writer_DDS_GEN_0/ebaz4205_axi_axis_writer_DDS_GEN_0/ebaz4205_axi_axis_writer_0_0_in_context.xdc] for cell 'ebaz4205_i/axi_axis_writer_LED_RED'
 Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.srcs/constrs_1/imports/new/ebaz4205.xdc]
 Finished Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.srcs/constrs_1/imports/new/ebaz4205.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.srcs/constrs_1/imports/new/ebaz4205.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ebaz4205_wrapper_propImpl.xdc].
@@ -351,23 +543,23 @@ Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/do
 Finished Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1446.078 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1446.078 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -639,6 +831,11 @@ Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/processing_system7_
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/m01_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/m04_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/m05_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/m07_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph/m08_couplers/auto_cc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/ps7_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/PS/rst_ENET0_GMII_RX_CLK_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/axis_capture_RF. (constraint file  auto generated constraint).
@@ -648,28 +845,54 @@ Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/xlconstant
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/axis_mux_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/xlconcat_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlconstant_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlconstant_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/RF_test_1MHz. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_dds. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlslice_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlconcat_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlconstant_2048. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/RF_test_10MHz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_ADC_TEST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/dds_compiler_1KHz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/c_addsub_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/mult_gen_AM_modulator. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/dds_axi_interface_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/ADC_TestGen/TestGen/xlconstant_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LEDdriver/axi_gpio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LEDdriver/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/I2S/DivideBy10. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/I2S/dds_compiler_1KHz_sin_cos. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/I2S/I2S_Transmitter_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/mult_sin. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LocalOscillator/xlslice_cos. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LocalOscillator/DDS_LO. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LocalOscillator/axi_gpio_dds. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/LocalOscillator/xlslice_sin. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/mult_cos. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/LO/DDS_LO. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/LO/DDS_LO_axi_interface. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/LO/xlconstant_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/ComplexMult/xlslice_sin. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/ComplexMult/mult_cos. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/ComplexMult/mult_sin. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DDC/ComplexMult/xlslice_cos. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/AM_demodulator/sqrt32_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/AM_demodulator/I_square. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/AM_demodulator/c_addsub_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/AM_demodulator/Q_square. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/I2S_Transmitter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/DivideBy10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/xlconstant_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/rst_ps7_0_64M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/FIR_Q_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/CIC_I_1024. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/CIC_Q_1024. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/FIR_I_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/mult_by_GAIN_Q. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/mult_by_GAIN_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/axi_interface_DEC_RATE_Q. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/xlconstant_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/FILTER/axi_interface_DEC_RATE_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/axi_axis_writer_LED_RED. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ebaz4205_i/xlslice_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -692,25 +915,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.078 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1447.469 ; gain = 1.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -728,37 +951,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -768,71 +991,108 @@ Report BlackBoxes:
 +------+----------------------------------------+----------+
 |      |BlackBox name                           |Instances |
 +------+----------------------------------------+----------+
-|1     |ebaz4205_axis_capture_0_4               |         1|
-|2     |ebaz4205_mult_sin_0                     |         1|
-|3     |ebaz4205_mult_gen_0_0                   |         1|
-|4     |ebaz4205_axis_mux_0_0                   |         1|
-|5     |ebaz4205_dds_compiler_0_0               |         1|
-|6     |ebaz4205_axi_gpio_1_0                   |         1|
-|7     |ebaz4205_DivideBy2N_0_0                 |         1|
-|8     |ebaz4205_I2S_Transmitter_0_1            |         1|
-|9     |ebaz4205_dds_compiler_0_1               |         1|
-|10    |ebaz4205_axi_gpio_0_0                   |         1|
-|11    |ebaz4205_RF_test_1MHz_0                 |         1|
-|12    |ebaz4205_axi_gpio_dds_0                 |         1|
-|13    |ebaz4205_xbar_0                         |         1|
-|14    |ebaz4205_auto_pc_0                      |         1|
-|15    |ebaz4205_proc_sys_reset_0_0             |         1|
-|16    |ebaz4205_processing_system7_0_0         |         1|
-|17    |ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0 |         1|
+|1     |ebaz4205_DivideBy10_0                   |         1|
+|2     |ebaz4205_I2S_Transmitter_0_2            |         1|
+|3     |ebaz4205_axi_axis_writer_DDS_GEN_0      |         1|
+|4     |ebaz4205_axis_capture_0_4               |         1|
+|5     |ebaz4205_rst_ps7_0_64M_0                |         1|
+|6     |ebaz4205_axis_mux_0_0                   |         1|
+|7     |ebaz4205_dds_compiler_0_0               |         1|
+|8     |ebaz4205_axi_gpio_1_0                   |         1|
+|9     |ebaz4205_c_addsub_0_1                   |         1|
+|10    |ebaz4205_dds_axi_interface_0_2          |         1|
+|11    |ebaz4205_dds_compiler_0_2               |         1|
+|12    |ebaz4205_mult_gen_0_2                   |         1|
+|13    |ebaz4205_mult_gen_0_1                   |         1|
+|14    |ebaz4205_mult_gen_1_0                   |         1|
+|15    |ebaz4205_c_addsub_0_0                   |         1|
+|16    |ebaz4205_sqrt32_0_0                     |         1|
+|17    |ebaz4205_mult_sin_0                     |         1|
+|18    |ebaz4205_mult_gen_0_0                   |         1|
+|19    |ebaz4205_RF_test_1MHz_0                 |         1|
+|20    |ebaz4205_dds_axi_interface_0_0          |         1|
+|21    |ebaz4205_cic_compiler_0_0               |         1|
+|22    |ebaz4205_cic_compiler_0_1               |         1|
+|23    |ebaz4205_fir_compiler_0_0               |         1|
+|24    |ebaz4205_fir_compiler_0_1               |         1|
+|25    |ebaz4205_axi_gpio_0_1                   |         1|
+|26    |ebaz4205_axi_interface_DEC_RATE_Q_0     |         1|
+|27    |ebaz4205_dds_axi_interface_0_1          |         1|
+|28    |ebaz4205_mult_gen_0_3                   |         1|
+|29    |ebaz4205_mult_by_4_0                    |         1|
+|30    |ebaz4205_DivideBy2N_0_0                 |         1|
+|31    |ebaz4205_I2S_Transmitter_0_1            |         1|
+|32    |ebaz4205_dds_compiler_0_1               |         1|
+|33    |ebaz4205_axi_gpio_0_0                   |         1|
+|34    |ebaz4205_xbar_0                         |         1|
+|35    |ebaz4205_auto_cc_0                      |         1|
+|36    |ebaz4205_auto_cc_1                      |         1|
+|37    |ebaz4205_auto_cc_2                      |         1|
+|38    |ebaz4205_auto_cc_3                      |         1|
+|39    |ebaz4205_auto_cc_4                      |         1|
+|40    |ebaz4205_auto_pc_0                      |         1|
+|41    |ebaz4205_proc_sys_reset_0_0             |         1|
+|42    |ebaz4205_processing_system7_0_0         |         1|
+|43    |ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0 |         1|
 +------+----------------------------------------+----------+
 
 Report Cell Usage: 
 +------+--------------------------------------+------+
 |      |Cell                                  |Count |
 +------+--------------------------------------+------+
-|1     |ebaz4205_DivideBy2N_0                 |     1|
-|2     |ebaz4205_I2S_Transmitter_0            |     1|
-|3     |ebaz4205_RF_test_1MHz                 |     1|
-|4     |ebaz4205_auto_pc                      |     1|
-|5     |ebaz4205_axi_gpio_0                   |     1|
-|6     |ebaz4205_axi_gpio_1                   |     1|
-|7     |ebaz4205_axi_gpio_dds                 |     1|
-|8     |ebaz4205_axis_capture_0               |     1|
-|9     |ebaz4205_axis_mux_0                   |     1|
-|10    |ebaz4205_dds_compiler_0               |     2|
-|12    |ebaz4205_mult_gen_0                   |     1|
-|13    |ebaz4205_mult_sin                     |     1|
-|14    |ebaz4205_proc_sys_reset_0             |     1|
-|15    |ebaz4205_processing_system7_0         |     1|
-|16    |ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M |     1|
-|17    |ebaz4205_xbar                         |     1|
-|18    |IBUF                                  |    20|
-|19    |IOBUF                                 |     1|
-|20    |OBUF                                  |    78|
+|1     |ebaz4205_DivideBy10                   |     1|
+|2     |ebaz4205_DivideBy2N_0                 |     1|
+|3     |ebaz4205_I2S_Transmitter_0            |     2|
+|5     |ebaz4205_RF_test_1MHz                 |     1|
+|6     |ebaz4205_auto_cc                      |     5|
+|11    |ebaz4205_auto_pc                      |     1|
+|12    |ebaz4205_axi_axis_writer_DDS_GEN      |     1|
+|13    |ebaz4205_axi_gpio_0                   |     2|
+|15    |ebaz4205_axi_gpio_1                   |     1|
+|16    |ebaz4205_axi_interface_DEC_RATE_Q     |     1|
+|17    |ebaz4205_axis_capture_0               |     1|
+|18    |ebaz4205_axis_mux_0                   |     1|
+|19    |ebaz4205_c_addsub_0                   |     2|
+|21    |ebaz4205_cic_compiler_0               |     2|
+|23    |ebaz4205_dds_axi_interface_0          |     3|
+|26    |ebaz4205_dds_compiler_0               |     3|
+|29    |ebaz4205_fir_compiler_0               |     2|
+|31    |ebaz4205_mult_by_4                    |     1|
+|32    |ebaz4205_mult_gen_0                   |     4|
+|36    |ebaz4205_mult_gen_1                   |     1|
+|37    |ebaz4205_mult_sin                     |     1|
+|38    |ebaz4205_proc_sys_reset_0             |     1|
+|39    |ebaz4205_processing_system7_0         |     1|
+|40    |ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M |     1|
+|41    |ebaz4205_rst_ps7_0_64M                |     1|
+|42    |ebaz4205_sqrt32_0                     |     1|
+|43    |ebaz4205_xbar                         |     1|
+|44    |IBUF                                  |    20|
+|45    |IOBUF                                 |     1|
+|46    |OBUF                                  |    13|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1452.836 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 192 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1451.863 ; gain = 5.785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1451.863 ; gain = 5.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1452.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1451.863 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1480.797 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Synth Design complete, checksum: 7a9b202c
+Synth Design complete, checksum: 7db098b0
 INFO: [Common 17-83] Releasing license: Synthesis
-145 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
+227 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1469.223 ; gain = 16.387
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1480.797 ; gain = 34.719
 INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/synth_1/ebaz4205_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_wrapper_utilization_synth.rpt -pb ebaz4205_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 13 15:31:08 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 28 22:19:17 2022...

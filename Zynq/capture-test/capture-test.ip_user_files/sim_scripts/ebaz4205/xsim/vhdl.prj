@@ -7,11 +7,23 @@ vhdl xil_defaultlib  \
 "../../../bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/sim/ebaz4205_axis_capture_0_4.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/sim/ebaz4205_dds_compiler_0_0.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/sim/ebaz4205_axi_gpio_1_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/sim/ebaz4205_dds_compiler_0_2.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/sim/ebaz4205_c_addsub_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/sim/ebaz4205_mult_gen_0_2.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/sim/ebaz4205_axi_gpio_0_0.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_dds_compiler_0_1/sim/ebaz4205_dds_compiler_0_1.vhd" \
-"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/sim/ebaz4205_RF_test_1MHz_0.vhd" \
-"../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/sim/ebaz4205_axi_gpio_dds_0.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_mult_sin_0/sim/ebaz4205_mult_sin_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/sim/ebaz4205_fir_compiler_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/sim/ebaz4205_cic_compiler_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/sim/ebaz4205_cic_compiler_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/sim/ebaz4205_fir_compiler_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/sim/ebaz4205_mult_gen_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/sim/ebaz4205_c_addsub_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/sim/ebaz4205_mult_gen_1_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/sim/ebaz4205_rst_ps7_0_64M_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/sim/ebaz4205_mult_gen_0_3.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_by_4_0/sim/ebaz4205_mult_by_4_0.vhd" \
 
 nosort

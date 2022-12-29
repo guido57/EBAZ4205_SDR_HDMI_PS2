@@ -1,0 +1,368 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Dec 27 18:47:53 2022
+# Process ID: 75988
+# Current directory: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1
+# Command line: vivado.exe -log ebaz4205_cic_compiler_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_cic_compiler_0_0.tcl
+# Log file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/ebaz4205_cic_compiler_0_0.vds
+# Journal file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-SQGSJV7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33741 MB
+#-----------------------------------------------------------
+source ebaz4205_cic_compiler_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EBAZ4205_SDR/Zynq/axis-capture'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top ebaz4205_cic_compiler_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 73960
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1451.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ebaz4205_cic_compiler_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/synth/ebaz4205_cic_compiler_0_0.vhd:73]
+	Parameter C_COMPONENT_NAME bound to: ebaz4205_cic_compiler_0_0 - type: string 
+	Parameter C_FILTER_TYPE bound to: 1 - type: integer 
+	Parameter C_NUM_STAGES bound to: 6 - type: integer 
+	Parameter C_DIFF_DELAY bound to: 1 - type: integer 
+	Parameter C_RATE bound to: 1024 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_USE_DSP bound to: 0 - type: integer 
+	Parameter C_HAS_ROUNDING bound to: 0 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_RATE_TYPE bound to: 1 - type: integer 
+	Parameter C_MIN_RATE bound to: 4 - type: integer 
+	Parameter C_MAX_RATE bound to: 8192 - type: integer 
+	Parameter C_SAMPLE_FREQ bound to: 1 - type: integer 
+	Parameter C_CLK_FREQ bound to: 1 - type: integer 
+	Parameter C_USE_STREAMING_INTERFACE bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_C1 bound to: 23 - type: integer 
+	Parameter C_C2 bound to: 22 - type: integer 
+	Parameter C_C3 bound to: 21 - type: integer 
+	Parameter C_C4 bound to: 20 - type: integer 
+	Parameter C_C5 bound to: 20 - type: integer 
+	Parameter C_C6 bound to: 19 - type: integer 
+	Parameter C_I1 bound to: 89 - type: integer 
+	Parameter C_I2 bound to: 76 - type: integer 
+	Parameter C_I3 bound to: 64 - type: integer 
+	Parameter C_I4 bound to: 52 - type: integer 
+	Parameter C_I5 bound to: 40 - type: integer 
+	Parameter C_I6 bound to: 29 - type: integer 
+	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_AXIS_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_AXIS_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_DOUT_TREADY bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'cic_compiler_v4_0_15' declared at 'd:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/0aa2/hdl/cic_compiler_v4_0_vh_rfs.vhd:16133' bound to instance 'U0' of component 'cic_compiler_v4_0_15' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/synth/ebaz4205_cic_compiler_0_0.vhd:166]
+INFO: [Synth 8-256] done synthesizing module 'ebaz4205_cic_compiler_0_0' (13#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/synth/ebaz4205_cic_compiler_0_0.vhd:73]
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay_bit__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_bit__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_bit__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_bit__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay_bit__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_bit__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_bit__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[29] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[28] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[27] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[26] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[25] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[24] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[23] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[22] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[21] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[20] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[19] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[18] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[17] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[16] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[15] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[14] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[13] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[12] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[11] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[10] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[9] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[8] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[7] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[6] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[5] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[4] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[3] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[2] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[1] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[0] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PAT_DET in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PAT_DET_B in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[19] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[18] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[17] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[16] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[15] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[14] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[13] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[12] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[11] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[10] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[9] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[8] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[7] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[6] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[5] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[4] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[3] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[2] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[1] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PCIN[0] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PRE_ADDSUB in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PRE_ADD_BYPASS in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN_SEL[2] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CIN_SEL[1] in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRYCASCIN in module emb_calc__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[29] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[28] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[27] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[26] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[25] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[24] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[23] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[22] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[21] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[20] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[19] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[18] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[17] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[16] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[15] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[14] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[13] in module emb_calc__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AC[12] in module emb_calc__parameterized5 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1825.625 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1195 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/ebaz4205_cic_compiler_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1825.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 794 instances were transformed.
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 401 instances
+  MUXCY_L => MUXCY: 393 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1825.625 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/decimator.decimation_filter/gen_prog_rate_ip.gen_int_en_in' (delay_bit) to 'U0/i_synth/decimator.decimation_filter/gen_prog_rate_ip.gen_int_nd_in'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_en_dly' (delay_bit__parameterized1) to 'U0/i_synth/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_mem_we'
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/decimator.decimation_filter/comb/gen_stages[1].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_en_dly' (delay_bit__parameterized1) to 'U0/i_synth/decimator.decimation_filter/comb/gen_stages[1].gen_folded.int_comb_stage/gen_split_accum[0].gen_mem_we'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     9|
+|2     |LUT1    |    46|
+|3     |LUT2    |   343|
+|4     |LUT3    |    68|
+|5     |LUT4    |    53|
+|6     |LUT5    |   158|
+|7     |LUT6    |   597|
+|8     |MUXCY_L |   393|
+|9     |MUXF7   |    10|
+|10    |MUXF8   |     2|
+|11    |SRL16E  |    66|
+|12    |XORCY   |   393|
+|13    |FDRE    |  1104|
+|14    |FDSE    |     6|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:01 . Memory (MB): peak = 1825.625 ; gain = 374.559
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 1825.625 ; gain = 374.559
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1825.625 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 807 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1825.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 105 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 105 instances
+
+Synth Design complete, checksum: 158a256d
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 1825.625 ; gain = 374.559
+INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/ebaz4205_cic_compiler_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ebaz4205_cic_compiler_0_0, cache-ID = 5bfe14a48fe69b95
+INFO: [Coretcl 2-1174] Renamed 56 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_cic_compiler_0_0_synth_1/ebaz4205_cic_compiler_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_cic_compiler_0_0_utilization_synth.rpt -pb ebaz4205_cic_compiler_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 27 18:49:10 2022...

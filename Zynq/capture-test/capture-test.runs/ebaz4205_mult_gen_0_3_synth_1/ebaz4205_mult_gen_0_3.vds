@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Dec 27 21:16:26 2022
+# Process ID: 81628
+# Current directory: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_3_synth_1
+# Command line: vivado.exe -log ebaz4205_mult_gen_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_mult_gen_0_3.tcl
+# Log file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_3_synth_1/ebaz4205_mult_gen_0_3.vds
+# Journal file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_3_synth_1\vivado.jou
+# Running On: DESKTOP-SQGSJV7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33741 MB
+#-----------------------------------------------------------
+source ebaz4205_mult_gen_0_3.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EBAZ4205_SDR/Zynq/axis-capture'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ebaz4205_mult_gen_0_3, cache-ID = 2344c2d9e96e2d8c.
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 27 21:16:31 2022...

@@ -63,7 +63,7 @@ typedef bit bit_as_bool;
 
 (* SC_MODULE_EXPORT *)
 module ebaz4205_xlconstant_3_0 (
-  output bit [3 : 0 ] dout
+  output bit [15 : 0 ] dout
 );
 endmodule
 `endif
@@ -73,14 +73,14 @@ endmodule
 module ebaz4205_xlconstant_3_0 (dout)
 (* integer foreign = "SystemC";
 *);
- output wire [3 : 0 ] dout;  
+ output wire [15 : 0 ] dout;  
 endmodule
 `endif
 
 `ifdef RIVIERA
 (* SC_MODULE_EXPORT *)
 module ebaz4205_xlconstant_3_0 (dout)
-  output wire [3 : 0 ] dout;
+  output wire [15 : 0 ] dout;
 endmodule
 `endif
 

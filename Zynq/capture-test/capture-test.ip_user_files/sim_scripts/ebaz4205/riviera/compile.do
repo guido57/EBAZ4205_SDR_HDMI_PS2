@@ -29,7 +29,13 @@ vlib riviera/dds_compiler_v6_0_21
 vlib riviera/axi_lite_ipif_v3_0_4
 vlib riviera/interrupt_control_v3_1_4
 vlib riviera/axi_gpio_v2_0_27
+vlib riviera/c_reg_fd_v12_0_6
+vlib riviera/xbip_addsub_v3_0_6
+vlib riviera/c_addsub_v12_0_14
+vlib riviera/fir_compiler_v7_2_17
+vlib riviera/cic_compiler_v4_0_15
 vlib riviera/axi_protocol_converter_v2_1_25
+vlib riviera/axi_clock_converter_v2_1_24
 
 vmap xilinx_vip riviera/xilinx_vip
 vmap xpm riviera/xpm
@@ -59,7 +65,13 @@ vmap dds_compiler_v6_0_21 riviera/dds_compiler_v6_0_21
 vmap axi_lite_ipif_v3_0_4 riviera/axi_lite_ipif_v3_0_4
 vmap interrupt_control_v3_1_4 riviera/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_27 riviera/axi_gpio_v2_0_27
+vmap c_reg_fd_v12_0_6 riviera/c_reg_fd_v12_0_6
+vmap xbip_addsub_v3_0_6 riviera/xbip_addsub_v3_0_6
+vmap c_addsub_v12_0_14 riviera/c_addsub_v12_0_14
+vmap fir_compiler_v7_2_17 riviera/fir_compiler_v7_2_17
+vmap cic_compiler_v4_0_15 riviera/cic_compiler_v4_0_15
 vmap axi_protocol_converter_v2_1_25 riviera/axi_protocol_converter_v2_1_25
+vmap axi_clock_converter_v2_1_24 riviera/axi_clock_converter_v2_1_24
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
 "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -198,12 +210,20 @@ vcom -work axi_gpio_v2_0_27 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/sim/ebaz4205_axi_gpio_1_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/sim/ebaz4205_dds_compiler_0_2.vhd" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_1/sim/ebaz4205_xlslice_0_1.v" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/sim/ebaz4205_xlconcat_3_0.v" \
+vcom -work c_reg_fd_v12_0_6 -93 \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/edec/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+
+vcom -work xbip_addsub_v3_0_6 -93 \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/cfdd/hdl/xbip_addsub_v3_0_vh_rfs.vhd" \
+
+vcom -work c_addsub_v12_0_14 -93 \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ebb8/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/sim/ebaz4205_c_addsub_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/sim/ebaz4205_mult_gen_0_2.vhd" \
 "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/sim/ebaz4205_axi_gpio_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
@@ -217,30 +237,71 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1
 "../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_1/sim/ebaz4205_I2S_Transmitter_0_1.v" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
-
-vcom -work xil_defaultlib -93 \
 "../../../bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/sim/ebaz4205_RF_test_1MHz_0.vhd" \
-"../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/sim/ebaz4205_axi_gpio_dds_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_axi_axis_writer_0_0/sim/ebaz4205_axi_axis_writer_0_0.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/sim/ebaz4205_xlslice_sin_0.v" \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/ebaz4205/ip/ebaz4205_mult_sin_0/sim/ebaz4205_mult_sin_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
 "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_4/sim/ebaz4205_xlslice_0_4.v" \
+
+vcom -work fir_compiler_v7_2_17 -93 \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/cf11/hdl/fir_compiler_v7_2_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/sim/ebaz4205_fir_compiler_0_0.vhd" \
+
+vcom -work cic_compiler_v4_0_15 -93 \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/0aa2/hdl/cic_compiler_v4_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/sim/ebaz4205_cic_compiler_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/sim/ebaz4205_cic_compiler_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/sim/ebaz4205_fir_compiler_0_1.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_0_1/sim/ebaz4205_xlconstant_0_1.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_sqrt32_0_0/sim/ebaz4205_sqrt32_0_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/sim/ebaz4205_mult_gen_0_1.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/sim/ebaz4205_c_addsub_0_0.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/sim/ebaz4205_mult_gen_1_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_2/sim/ebaz4205_I2S_Transmitter_0_2.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconcat_0_2/sim/ebaz4205_xlconcat_0_2.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_DivideBy10_0/sim/ebaz4205_DivideBy10_0.v" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_1_1/sim/ebaz4205_xlconstant_1_1.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/sim/ebaz4205_rst_ps7_0_64M_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_xlconstant_2_1/sim/ebaz4205_xlconstant_2_1.v" \
 "../../../bd/ebaz4205/sim/ebaz4205.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/sim/ebaz4205_mult_gen_0_3.vhd" \
+"../../../bd/ebaz4205/ip/ebaz4205_mult_by_4_0/sim/ebaz4205_mult_by_4_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_25  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/8fe4/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../bd/ebaz4205/ip/ebaz4205_auto_pc_0/sim/ebaz4205_auto_pc_0.v" \
+
+vlog -work axi_clock_converter_v2_1_24  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/23c0/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ec67/hdl" "+incdir+../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/3007/hdl" "+incdir+D:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../bd/ebaz4205/ip/ebaz4205_auto_cc_0/sim/ebaz4205_auto_cc_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

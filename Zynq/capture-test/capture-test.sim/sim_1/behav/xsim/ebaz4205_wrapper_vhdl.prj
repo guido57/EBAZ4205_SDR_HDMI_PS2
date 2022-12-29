@@ -1,6 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../capture-test.srcs/sources_1/new/axis_mux_v_1_0.vhd" \
+"../../../../capture-test.srcs/sources_1/new/sqrt32.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_proc_sys_reset_0_0/sim/ebaz4205_proc_sys_reset_0_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/sim/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ipshared/2c69/dp_ram_1r_1w_2clk.vhd" \
@@ -9,12 +10,24 @@ vhdl xil_defaultlib  \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/sim/ebaz4205_axis_capture_0_4.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_0/sim/ebaz4205_dds_compiler_0_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/sim/ebaz4205_axi_gpio_1_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/sim/ebaz4205_dds_compiler_0_2.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/sim/ebaz4205_c_addsub_0_1.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/sim/ebaz4205_mult_gen_0_2.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/sim/ebaz4205_axi_gpio_0_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_dds_compiler_0_1/sim/ebaz4205_dds_compiler_0_1.vhd" \
-"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/sim/ebaz4205_RF_test_1MHz_0.vhd" \
-"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/sim/ebaz4205_axi_gpio_dds_0.vhd" \
 "../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_sin_0/sim/ebaz4205_mult_sin_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/sim/ebaz4205_fir_compiler_0_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/sim/ebaz4205_cic_compiler_0_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/sim/ebaz4205_cic_compiler_0_1.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/sim/ebaz4205_fir_compiler_0_1.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/sim/ebaz4205_mult_gen_0_1.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/sim/ebaz4205_c_addsub_0_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/sim/ebaz4205_mult_gen_1_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/sim/ebaz4205_rst_ps7_0_64M_0.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/sim/ebaz4205_mult_gen_0_3.vhd" \
+"../../../../capture-test.ip_user_files/bd/ebaz4205/ip/ebaz4205_mult_by_4_0/sim/ebaz4205_mult_by_4_0.vhd" \
 
 # Do not sort compile order
 nosort

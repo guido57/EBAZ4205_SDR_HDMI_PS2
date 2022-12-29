@@ -1,0 +1,56 @@
+/*
+ ---------------------------------------------------------------------------------------------------
+    DDS.h
+    DDS interface driver class for the Xilinx DDS compiler
+    with AXI GPIO v2.0 as interface to the Xilinx DDS compiler
+    Guido Giorgetti, IW5ALZ, SIENA, 2022
+    forked from DC9ST, TU Kaiserslautern, 2014
+  -------------------------------------------------------
+*/
+
+#include "IP_Driver.h"
+#include "DDS.h"
+#include <iostream>
+#include <math.h> // for pow
+
+using namespace std;
+
+// constructor & deconstructor
+
+// class constructor
+DEC_RATE::DEC_RATE(int base_address, int size_in_k) {
+	cerr << "setup DEC_RATE IP core:" << endl;
+	dec_rate_iface_core_ = new IP_Driver(base_address, size_in_k);
+}
+
+// class deconstructor	
+DEC_RATE::~DEC_RATE() {
+	delete dds_iface_core_;
+}
+
+
+
+// public functions
+
+//sets Decimation Rate (4 ... 8192)
+int DEC_RATE::set_dec_rate(int dec_rate) {
+	
+	if(dec_rate < 4)    dec_rate = 4;
+	if(dec_rate > 8192) dec_rate = 8192;
+
+	// send instruction to DDS
+	dds_iface_core_ -> write(0x00, dec_rate);
+	
+	current_dec_rate_ = dec_rate;
+	
+	return current_dec_rate;
+}
+
+
+// reads the current DDS output frequency in kHz
+int DEC_RATE::get_dec_rate() {
+	return current_dec_rate;
+}
+
+
+

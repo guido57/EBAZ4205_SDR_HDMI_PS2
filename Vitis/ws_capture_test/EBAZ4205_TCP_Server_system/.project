@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>EBAZ4205_TCP_Server</project>
+		<project>EBAZ4205_axi_axis_DDS_LO</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

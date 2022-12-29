@@ -1,0 +1,396 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Dec 25 21:28:55 2022
+# Process ID: 10056
+# Current directory: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1
+# Command line: vivado.exe -log ebaz4205_fir_compiler_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_fir_compiler_0_0.tcl
+# Log file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/ebaz4205_fir_compiler_0_0.vds
+# Journal file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-SQGSJV7, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33741 MB
+#-----------------------------------------------------------
+source ebaz4205_fir_compiler_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EBAZ4205_SDR/Zynq/axis-capture'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top ebaz4205_fir_compiler_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18200
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.965 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ebaz4205_fir_compiler_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/synth/ebaz4205_fir_compiler_0_0.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: ebaz4205_fir_compiler_0_0 - type: string 
+	Parameter C_COEF_FILE bound to: ebaz4205_fir_compiler_0_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 56 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 1 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 2 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 111 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 1 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 28 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 34 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 34 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 28 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
+	Parameter C_INPUT_RATE bound to: 1 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 2 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 35 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_17' declared at 'd:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ipshared/cf11/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_17' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/synth/ebaz4205_fir_compiler_0_0.vhd:212]
+WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-256] done synthesizing module 'ebaz4205_fir_compiler_0_0' (16#1) [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/synth/ebaz4205_fir_compiler_0_0.vhd:70]
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized47 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized47 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized46 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized45 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized44 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized44 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized44 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized44 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized44 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized43 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PRE_ADDSUB in module calc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PRE_ADD_BYPASS in module calc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CED in module calc__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR_ALT in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized42 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][57] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][56] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][55] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][54] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][53] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][52] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][51] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][50] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][49] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[fab][48] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][62] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][61] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][60] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][59] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][58] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][57] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][56] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][55] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][54] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][53] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][52] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][51] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][50] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][49] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port POUT[casc][48] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][57] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][56] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][55] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][54] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][53] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][52] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][51] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][50] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][49] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][48] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][47] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][46] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][45] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][44] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][43] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][42] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][41] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][40] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][39] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][38] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][37] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][36] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][35] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][34] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][33] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][32] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][31] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][30] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][29] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][28] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][27] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][26] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][25] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][24] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][23] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][22] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][21] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][20] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][19] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][18] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][17] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][16] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][15] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][14] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][13] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][12] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][11] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][10] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][9] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][8] in module add_accum is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PIN[fab][7] in module add_accum is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 1586.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/ebaz4205_fir_compiler_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1586.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.192 . Memory (MB): peak = 1586.699 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |DSP48E1  |    29|
+|3     |LUT1     |    27|
+|4     |LUT2     |     6|
+|5     |LUT3     |    10|
+|6     |LUT4     |    20|
+|7     |LUT5     |     1|
+|8     |LUT6     |     3|
+|9     |RAM16X1D |    16|
+|10    |SRL16E   |  1137|
+|11    |SRLC32E  |   163|
+|12    |FDRE     |  1578|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 520 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1586.699 ; gain = 140.734
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1586.699 ; gain = 140.734
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 1586.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1586.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+Synth Design complete, checksum: 1becb89c
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1586.699 ; gain = 140.734
+INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/ebaz4205_fir_compiler_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ebaz4205_fir_compiler_0_0, cache-ID = e1bc4b817a0325a2
+INFO: [Coretcl 2-1174] Renamed 253 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_fir_compiler_0_0_synth_1/ebaz4205_fir_compiler_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_fir_compiler_0_0_utilization_synth.rpt -pb ebaz4205_fir_compiler_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 25 21:30:00 2022...

@@ -61,7 +61,7 @@ ENTITY ebaz4205_mult_gen_0_0 IS
     CLK : IN STD_LOGIC;
     A : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    P : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END ebaz4205_mult_gen_0_0;
 
@@ -97,7 +97,7 @@ ARCHITECTURE ebaz4205_mult_gen_0_0_arch OF ebaz4205_mult_gen_0_0 IS
       B : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       CE : IN STD_LOGIC;
       SCLR : IN STD_LOGIC;
-      P : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+      P : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
   END COMPONENT mult_gen_v12_0_17;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -105,11 +105,11 @@ ARCHITECTURE ebaz4205_mult_gen_0_0_arch OF ebaz4205_mult_gen_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF ebaz4205_mult_gen_0_0_arch : ARCHITECTURE IS "ebaz4205_mult_gen_0_0,mult_gen_v12_0_17,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF ebaz4205_mult_gen_0_0_arch: ARCHITECTURE IS "ebaz4205_mult_gen_0_0,mult_gen_v12_0_17,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mult_gen,x_ipVersion=12.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_VERBOSITY=0,C_MODEL_TYPE=0,C_OPTIMIZE_GOAL=1,C_XDEVICEFAMILY=zynq,C_HAS_CE=0,C_HAS_SCLR=0,C_LATENCY=1,C_A_WIDTH=12,C_A_TYPE=0,C_B_WIDTH=16,C_B_TYPE=0,C_OUT_HIGH=31,C_OUT_LOW=0,C_MULT_TYPE=0,C_CE_OVERRIDES_SCLR=0,C_CCM_IMP=0,C_B_VALUE=10000001,C_HAS_ZERO_DETECT=0,C_ROUND_OUTPUT=0,C_ROUND_PT=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF ebaz4205_mult_gen_0_0_arch: ARCHITECTURE IS "ebaz4205_mult_gen_0_0,mult_gen_v12_0_17,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mult_gen,x_ipVersion=12.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_VERBOSITY=0,C_MODEL_TYPE=0,C_OPTIMIZE_GOAL=1,C_XDEVICEFAMILY=zynq,C_HAS_CE=0,C_HAS_SCLR=0,C_LATENCY=1,C_A_WIDTH=12,C_A_TYPE=0,C_B_WIDTH=16,C_B_TYPE=0,C_OUT_HIGH=26,C_OUT_LOW=11,C_MULT_TYPE=0,C_CE_OVERRIDES_SCLR=0,C_CCM_IMP=0,C_B_VALUE=10000001,C_HAS_ZERO_DETECT=0,C_ROUND_OUTPUT=0,C_ROUND_PT=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximu" & 
-"m {}} value TRUE}}}} DATA_WIDTH 32}";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF P: SIGNAL IS "XIL_INTERFACENAME p_intf, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximu" & 
+"m {}} value TRUE}}}} DATA_WIDTH 16}";
   ATTRIBUTE X_INTERFACE_INFO OF P: SIGNAL IS "xilinx.com:signal:data:1.0 p_intf DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF B: SIGNAL IS "XIL_INTERFACENAME b_intf, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF B: SIGNAL IS "xilinx.com:signal:data:1.0 b_intf DATA";
@@ -131,8 +131,8 @@ BEGIN
       C_A_TYPE => 0,
       C_B_WIDTH => 16,
       C_B_TYPE => 0,
-      C_OUT_HIGH => 31,
-      C_OUT_LOW => 0,
+      C_OUT_HIGH => 26,
+      C_OUT_LOW => 11,
       C_MULT_TYPE => 0,
       C_CE_OVERRIDES_SCLR => 0,
       C_CCM_IMP => 0,

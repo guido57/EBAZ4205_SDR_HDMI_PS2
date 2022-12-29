@@ -1,0 +1,74 @@
+/*
+ ---------------------------------------------------------------------------------------------------
+    DDS.h
+    DDS interface driver class for the Xilinx DDS compiler
+    with AXI GPIO v2.0 as interface to the Xilinx DDS compiler
+    Guido Giorgetti, IW5ALZ, SIENA, 2022
+    forked from DC9ST, TU Kaiserslautern, 2014
+  -------------------------------------------------------
+*/
+
+#include "IP_Driver.h"
+#include <iostream>
+#include <math.h> // for pow
+
+#include "dec_rate.h"
+
+using namespace std;
+
+// constructor & deconstructor
+
+// class constructor
+DEC_RATE::DEC_RATE(int base_address, int size_in_k) {
+	cerr << "setup DEC_RATE IP core:" << endl;
+	dec_rate_iface_core_ = new IP_Driver(base_address, size_in_k);
+}
+
+// class deconstructor	
+DEC_RATE::~DEC_RATE() {
+	delete dec_rate_iface_core_;
+}
+
+
+
+// public functions
+
+//sets Decimation Rate (4 ... 8192)
+int DEC_RATE::set_dec_rate(int dec_rate) {
+	
+	if(dec_rate < 4)    dec_rate = 4;
+	if(dec_rate > 8192) dec_rate = 8192;
+
+	// send Decimation Rate instruction to CIC
+	//dec_rate_iface_core_ -> write(0x00, dec_rate);
+
+
+	int cic_instruction = 0x80000000 | dec_rate;					// add "valid" bit to instruction
+
+    // send instruction to CIC
+	dec_rate_iface_core_ -> write(0x00, cic_instruction);
+
+	// wait for transaction to complete
+	int timeout_counter = 1000000;
+	do { timeout_counter--;}
+	while ( (dec_rate_iface_core_ -> read(0x04) != 1) && (timeout_counter > 0) );
+
+	// reset instruction
+	dec_rate_iface_core_ -> write(0x00, dec_rate); 	  // first: clear valid bit, but keep dec_rate to avoid its reset while valid is still asserted
+	dec_rate_iface_core_ -> write(0x00, 0x00000000);  // second: clear complete instruction
+
+	if (timeout_counter <= 0) return -1;  		  	  // catch timeout
+
+	current_dec_rate = dec_rate;
+	
+	return current_dec_rate;
+}
+
+
+// reads the current Decimation Rate
+int DEC_RATE::get_dec_rate() {
+	return current_dec_rate;
+}
+
+
+

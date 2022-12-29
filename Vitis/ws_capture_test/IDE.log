@@ -14,3 +14,40 @@
 18:53:17 INFO  : Result from executing command 'removePlatformRepo': 
 18:53:24 INFO  : Result from executing command 'getProjects': EBAZ4205_Spectrum
 18:53:24 INFO  : Result from executing command 'getPlatforms': 
+09:47:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\EBAZ4205_SDR\Vitis\ws_capture_test\temp_xsdb_launch_script.tcl
+09:47:31 INFO  : XSCT server has started successfully.
+09:47:31 INFO  : Successfully done setting XSCT server connection channel  
+09:47:31 INFO  : plnx-install-location is set to ''
+09:47:31 INFO  : Successfully done setting workspace for the tool. 
+09:47:32 INFO  : Platform repository initialization has completed.
+09:47:33 INFO  : Successfully done query RDI_DATADIR 
+09:47:33 INFO  : Registering command handlers for Vitis TCF services
+10:14:41 ERROR : Could not connect to host '192.168.0.1' specified in the target 'Linux Agent'
+10:18:15 ERROR : Could not connect to host '192.168.1.87' specified in the target 'EBAZ4205'
+10:18:27 ERROR : Could not connect to host '192.168.1.87' specified in the target 'EBAZ4205'
+11:13:40 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\EBAZ4205_SDR\Vitis\ws_capture_test\temp_xsdb_launch_script.tcl
+11:13:43 INFO  : XSCT server has started successfully.
+11:13:43 INFO  : Successfully done setting XSCT server connection channel  
+11:13:43 INFO  : plnx-install-location is set to ''
+11:13:43 INFO  : Successfully done setting workspace for the tool. 
+11:13:44 INFO  : Platform repository initialization has completed.
+11:13:44 INFO  : Registering command handlers for Vitis TCF services
+11:13:47 INFO  : Successfully done query RDI_DATADIR 
+20:06:02 ERROR : Could not connect to host '192.168.1.87' specified in the target 'EBAZ4205'
+20:08:12 ERROR : Could not connect to host '192.168.1.87' specified in the target 'EBAZ4205'
+12:30:03 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\EBAZ4205_SDR\Vitis\ws_capture_test\temp_xsdb_launch_script.tcl
+12:30:06 INFO  : XSCT server has started successfully.
+12:30:06 INFO  : Successfully done setting XSCT server connection channel  
+12:30:06 INFO  : plnx-install-location is set to ''
+12:30:06 INFO  : Successfully done setting workspace for the tool. 
+12:30:06 INFO  : Platform repository initialization has completed.
+12:30:07 INFO  : Registering command handlers for Vitis TCF services
+12:30:09 INFO  : Successfully done query RDI_DATADIR 
+12:34:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\EBAZ4205_SDR\Vitis\ws_capture_test\temp_xsdb_launch_script.tcl
+12:34:23 INFO  : XSCT server has started successfully.
+12:34:23 INFO  : plnx-install-location is set to ''
+12:34:23 INFO  : Successfully done setting XSCT server connection channel  
+12:34:23 INFO  : Successfully done setting workspace for the tool. 
+12:34:24 INFO  : Platform repository initialization has completed.
+12:34:24 INFO  : Successfully done query RDI_DATADIR 
+12:34:24 INFO  : Registering command handlers for Vitis TCF services

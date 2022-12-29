@@ -135,12 +135,20 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/sim/ebaz4205_axi_gpio_1_0.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_dds_compiler_0_2/sim/ebaz4205_dds_compiler_0_2.vhd" \
+-endlib
+-makelib xcelium_lib/c_reg_fd_v12_0_6 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/edec/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_addsub_v3_0_6 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/cfdd/hdl/xbip_addsub_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/c_addsub_v12_0_14 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/ebb8/hdl/c_addsub_v12_0_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_1/sim/ebaz4205_xlslice_0_1.v" \
-  "../../../bd/ebaz4205/ip/ebaz4205_xlconcat_3_0/sim/ebaz4205_xlconcat_3_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_1/sim/ebaz4205_c_addsub_0_1.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_2/sim/ebaz4205_mult_gen_0_2.vhd" \
   "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_0_0/sim/ebaz4205_axi_gpio_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
@@ -154,30 +162,71 @@
   "../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_1/sim/ebaz4205_I2S_Transmitter_0_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   "../../../bd/ebaz4205/ip/ebaz4205_RF_test_1MHz_0/sim/ebaz4205_RF_test_1MHz_0.vhd" \
-  "../../../bd/ebaz4205/ip/ebaz4205_axi_gpio_dds_0/sim/ebaz4205_axi_gpio_dds_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_axi_axis_writer_0_0/sim/ebaz4205_axi_axis_writer_0_0.v" \
   "../../../bd/ebaz4205/ip/ebaz4205_xlslice_sin_0/sim/ebaz4205_xlslice_sin_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/ebaz4205/ip/ebaz4205_mult_sin_0/sim/ebaz4205_mult_sin_0.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/sim/ebaz4205_mult_gen_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_3/sim/ebaz4205_xlslice_0_3.v" \
   "../../../bd/ebaz4205/ip/ebaz4205_xlslice_0_4/sim/ebaz4205_xlslice_0_4.v" \
+-endlib
+-makelib xcelium_lib/fir_compiler_v7_2_17 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/cf11/hdl/fir_compiler_v7_2_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_0/sim/ebaz4205_fir_compiler_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/cic_compiler_v4_0_15 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/0aa2/hdl/cic_compiler_v4_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_0/sim/ebaz4205_cic_compiler_0_0.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_cic_compiler_0_1/sim/ebaz4205_cic_compiler_0_1.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_fir_compiler_0_1/sim/ebaz4205_fir_compiler_0_1.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_xlconstant_0_1/sim/ebaz4205_xlconstant_0_1.v" \
+  "../../../bd/ebaz4205/ip/ebaz4205_sqrt32_0_0/sim/ebaz4205_sqrt32_0_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_1/sim/ebaz4205_mult_gen_0_1.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_c_addsub_0_0/sim/ebaz4205_c_addsub_0_0.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_1_0/sim/ebaz4205_mult_gen_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_I2S_Transmitter_0_2/sim/ebaz4205_I2S_Transmitter_0_2.v" \
+  "../../../bd/ebaz4205/ip/ebaz4205_xlconcat_0_2/sim/ebaz4205_xlconcat_0_2.v" \
+  "../../../bd/ebaz4205/ip/ebaz4205_DivideBy10_0/sim/ebaz4205_DivideBy10_0.v" \
+  "../../../bd/ebaz4205/ip/ebaz4205_xlconstant_1_1/sim/ebaz4205_xlconstant_1_1.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_rst_ps7_0_64M_0/sim/ebaz4205_rst_ps7_0_64M_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_xlconstant_2_1/sim/ebaz4205_xlconstant_2_1.v" \
   "../../../bd/ebaz4205/sim/ebaz4205.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_gen_0_3/sim/ebaz4205_mult_gen_0_3.vhd" \
+  "../../../bd/ebaz4205/ip/ebaz4205_mult_by_4_0/sim/ebaz4205_mult_by_4_0.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_25 \
   "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/8fe4/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/ebaz4205/ip/ebaz4205_auto_pc_0/sim/ebaz4205_auto_pc_0.v" \
+-endlib
+-makelib xcelium_lib/axi_clock_converter_v2_1_24 \
+  "../../../../capture-test.gen/sources_1/bd/ebaz4205/ipshared/23c0/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/ebaz4205/ip/ebaz4205_auto_cc_0/sim/ebaz4205_auto_cc_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

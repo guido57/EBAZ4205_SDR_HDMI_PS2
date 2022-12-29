@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Sat Nov  5 19:52:50 2022
+-- Date        : Sun Dec 25 20:49:22 2022
 -- Host        : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0_sim_netlist.vhdl
@@ -378,27 +378,27 @@ begin
       Q => \^gpio_io_o\(31),
       R => bus2ip_reset
     );
-\Dual.gpio_Data_Out_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(21),
-      Q => \^gpio_io_o\(21),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[11]\: unisim.vcomponents.FDSE
+\Dual.gpio_Data_Out_reg[10]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
+      D => D(21),
+      Q => \^gpio_io_o\(21),
+      S => bus2ip_reset
+    );
+\Dual.gpio_Data_Out_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => E(0),
       D => D(20),
       Q => \^gpio_io_o\(20),
-      S => bus2ip_reset
+      R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[12]\: unisim.vcomponents.FDRE
     generic map(
@@ -697,16 +697,16 @@ begin
       Q => \^gpio_io_o\(24),
       R => bus2ip_reset
     );
-\Dual.gpio_Data_Out_reg[8]\: unisim.vcomponents.FDRE
+\Dual.gpio_Data_Out_reg[8]\: unisim.vcomponents.FDSE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => s_axi_aclk,
       CE => E(0),
       D => D(23),
       Q => \^gpio_io_o\(23),
-      R => bus2ip_reset
+      S => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[9]\: unisim.vcomponents.FDRE
     generic map(
@@ -3050,7 +3050,7 @@ entity ebaz4205_axi_gpio_1_0_axi_gpio is
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of ebaz4205_axi_gpio_1_0_axi_gpio : entity is 1;
   attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of ebaz4205_axi_gpio_1_0_axi_gpio : entity is 1048576;
+  attribute C_DOUT_DEFAULT of ebaz4205_axi_gpio_1_0_axi_gpio : entity is 10485760;
   attribute C_DOUT_DEFAULT_2 : integer;
   attribute C_DOUT_DEFAULT_2 of ebaz4205_axi_gpio_1_0_axi_gpio : entity is 0;
   attribute C_FAMILY : string;
@@ -3780,7 +3780,7 @@ architecture STRUCTURE of ebaz4205_axi_gpio_1_0 is
   attribute C_ALL_OUTPUTS_2 : integer;
   attribute C_ALL_OUTPUTS_2 of U0 : label is 1;
   attribute C_DOUT_DEFAULT : integer;
-  attribute C_DOUT_DEFAULT of U0 : label is 1048576;
+  attribute C_DOUT_DEFAULT of U0 : label is 10485760;
   attribute C_DOUT_DEFAULT_2 : integer;
   attribute C_DOUT_DEFAULT_2 of U0 : label is 0;
   attribute C_FAMILY : string;

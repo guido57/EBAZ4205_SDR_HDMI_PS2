@@ -1,0 +1,23 @@
++==============+===============+==================================================================================================================================================+
+| Launch Clock | Capture Clock | Pin                                                                                                                                              |
++==============+===============+==================================================================================================================================================+
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[16]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[2]/D                                                                                                |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[6]/D                                                                                                |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[23]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[28]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[12]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[29]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[13]/D                                                                                               |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[14]/D                                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[30]/D                                                                                               |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[31]/D                                                                                               |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/I2S_Transmitter_0/inst/buffer_reg[15]/D                                                                                               |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/start_sync_ff1_reg/D                                                                             |
+| clk_fpga_0   | clk_fpga_1    | ebaz4205_i/ADC_TestGen/axis_mux_0/inst/select_input_sync_ff1_reg/D                                                                               |
+| clk_fpga_1   | clk_fpga_0    | ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/finished_sync_ff1_reg/D                                                                          |
++--------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -1,0 +1,82 @@
+//Example code: A simple server side code, which echos back the received message.
+//Handle multiple socket connections with select and fd_set on Linux
+#include <stdio.h>
+#include <string.h>   //strlen
+#include <stdlib.h>
+#include <errno.h>
+#include <unistd.h>   //close
+#include <arpa/inet.h>    //close
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/time.h> //FD_SET, FD_ISSET, FD_ZERO macros
+
+#define TRUE   1
+#define FALSE  0
+#define PORT 1001
+
+#include "dds.h"
+#include "mux.h"
+
+int size_in_k = 64;
+
+// Create the DDS object acting as a Local Oscillator
+DDS *dds;
+
+// Create the MUX object to select ADC input or RF generator
+MUX *mux;
+
+// get milliseconds
+long millis(){
+
+  struct timeval tm;
+  gettimeofday(&tm, NULL);
+  long msecs = tm.tv_sec * 1000 + tm.tv_usec/1000 + 0.5;
+  return msecs;
+}
+
+
+int main(int argc , char *argv[])
+{
+    int opt = TRUE;
+    int master_socket , addrlen , new_socket , client_socket[30] ,
+          max_clients = 30 , activity, i , valread , sd;
+    int max_sd;
+    struct sockaddr_in address;
+
+    char buffer[1025];  //data buffer of 1K
+
+    // Create the DDS object with a clock frequency=64000 KHz (64MHz) and 26 bit step phase width
+    dds = new DDS(0x43C10000, size_in_k, 64000.0, 26);
+
+    // Create the MUX object to select ADC input or RF generator
+    mux = new MUX(0x41210000, size_in_k);
+
+    // sel ADC input
+	mux->select(1);
+
+
+    dds->set_frequency(7200.0); // 10004 KHz
+    dds->set_frequency(7215.0); // 10005 KHz
+    dds->set_frequency(7220.0); // 10005 KHz
+    dds->set_frequency(7225.0); // 10005 KHz
+    dds->set_frequency(7230.0); // 10005 KHz
+    mux->select(1);
+    dds->set_frequency(10007.0); // 10007 KHz
+    dds->set_frequency(10020.0); // 10020 KHz
+    dds->set_frequency(10030.0); // 10030 KHz
+    dds->set_frequency(10040.0); // 10030 KHz
+    dds->set_frequency(10040.0); // 10030 KHz
+    dds->set_frequency(10050.0); // 10030 KHz
+    dds->set_frequency(10060.0); // 10030 KHz
+    dds->set_frequency(10070.0); // 10030 KHz
+    dds->set_frequency(10080.0); // 10030 KHz
+    dds->set_frequency(10100.0); // 10100 KHz
+    dds->set_frequency(10090.0); // 10030 KHz
+    dds->set_frequency(10080.0); // 10030 KHz
+    dds->set_frequency(10070.0); // 10030 KHz
+    dds->set_frequency(10060.0); // 10030 KHz
+    dds->set_frequency(10050.0); // 10030 KHz
+
+    return 0;
+}

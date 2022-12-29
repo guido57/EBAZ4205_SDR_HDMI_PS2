@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Tue Dec 13 15:29:35 2022
+//Date        : Wed Dec 28 22:18:23 2022
 //Host        : DESKTOP-SQGSJV7 running 64-bit major release  (build 9200)
 //Command     : generate_target ebaz4205_wrapper.bd
 //Design      : ebaz4205_wrapper
@@ -39,17 +39,15 @@ module ebaz4205_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     I2SDATA,
-    LED,
+    LED_GREEN,
+    LED_RED,
     LRCLK,
     MDIO_ETHERNET_0_0_mdc,
     MDIO_ETHERNET_0_0_mdio_io,
     OTR,
-    P_0,
-    P_1,
     SCLK,
     enet0_gmii_rxd,
-    enet0_gmii_txd,
-    gpio_rtl_0_tri_o);
+    enet0_gmii_txd);
   output ADC_clk_64M;
   input [11:0]ADC_in;
   inout [14:0]DDR_addr;
@@ -79,17 +77,15 @@ module ebaz4205_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output I2SDATA;
-  output [1:0]LED;
+  output [0:0]LED_GREEN;
+  output [0:0]LED_RED;
   output LRCLK;
   output MDIO_ETHERNET_0_0_mdc;
   inout MDIO_ETHERNET_0_0_mdio_io;
   input OTR;
-  output [31:0]P_0;
-  output [31:0]P_1;
   output SCLK;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet0_gmii_txd;
-  output [0:0]gpio_rtl_0_tri_o;
 
   wire ADC_clk_64M;
   wire [11:0]ADC_in;
@@ -120,7 +116,8 @@ module ebaz4205_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire I2SDATA;
-  wire [1:0]LED;
+  wire [0:0]LED_GREEN;
+  wire [0:0]LED_RED;
   wire LRCLK;
   wire MDIO_ETHERNET_0_0_mdc;
   wire MDIO_ETHERNET_0_0_mdio_i;
@@ -128,12 +125,9 @@ module ebaz4205_wrapper
   wire MDIO_ETHERNET_0_0_mdio_o;
   wire MDIO_ETHERNET_0_0_mdio_t;
   wire OTR;
-  wire [31:0]P_0;
-  wire [31:0]P_1;
   wire SCLK;
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet0_gmii_txd;
-  wire [0:0]gpio_rtl_0_tri_o;
 
   IOBUF MDIO_ETHERNET_0_0_mdio_iobuf
        (.I(MDIO_ETHERNET_0_0_mdio_o),
@@ -170,17 +164,15 @@ module ebaz4205_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .I2SDATA(I2SDATA),
-        .LED(LED),
+        .LED_GREEN(LED_GREEN),
+        .LED_RED(LED_RED),
         .LRCLK(LRCLK),
         .MDIO_ETHERNET_0_0_mdc(MDIO_ETHERNET_0_0_mdc),
         .MDIO_ETHERNET_0_0_mdio_i(MDIO_ETHERNET_0_0_mdio_i),
         .MDIO_ETHERNET_0_0_mdio_o(MDIO_ETHERNET_0_0_mdio_o),
         .MDIO_ETHERNET_0_0_mdio_t(MDIO_ETHERNET_0_0_mdio_t),
         .OTR(OTR),
-        .P_0(P_0),
-        .P_1(P_1),
         .SCLK(SCLK),
         .enet0_gmii_rxd(enet0_gmii_rxd),
-        .enet0_gmii_txd(enet0_gmii_txd),
-        .gpio_rtl_0_tri_o(gpio_rtl_0_tri_o));
+        .enet0_gmii_txd(enet0_gmii_txd));
 endmodule

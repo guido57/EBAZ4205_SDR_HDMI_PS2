@@ -258,6 +258,10 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Constant</xilinx:displayName>
       <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CONST_VAL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CONST_WIDTH" xilinx:valueSource="user"/>
+      </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>

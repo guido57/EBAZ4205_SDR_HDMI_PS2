@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Dec 13 15:29:42 2022
-# Process ID: 15344
+# Start of session at: Sun Dec 25 20:48:36 2022
+# Process ID: 17972
 # Current directory: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1
 # Command line: vivado.exe -log ebaz4205_mult_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_mult_gen_0_0.tcl
 # Log file: D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1/ebaz4205_mult_gen_0_0.vds
@@ -21,9 +21,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7664
+INFO: [Synth 8-7075] Helper process launched with PID 18348
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.707 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'ebaz4205_mult_gen_0_0' [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/synth/ebaz4205_mult_gen_0_0.vhd:68]
 WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [d:/EBAZ4205_SDR/Zynq/capture-test/capture-test.gen/sources_1/bd/ebaz4205/ip/ebaz4205_mult_gen_0_0/synth/ebaz4205_mult_gen_0_0.vhd:71]
@@ -39,8 +39,8 @@ WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [d:/EBA
 	Parameter C_A_TYPE bound to: 0 - type: integer 
 	Parameter C_B_WIDTH bound to: 16 - type: integer 
 	Parameter C_B_TYPE bound to: 0 - type: integer 
-	Parameter C_OUT_HIGH bound to: 31 - type: integer 
-	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_OUT_HIGH bound to: 26 - type: integer 
+	Parameter C_OUT_LOW bound to: 11 - type: integer 
 	Parameter C_MULT_TYPE bound to: 0 - type: integer 
 	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
 	Parameter C_CCM_IMP bound to: 0 - type: integer 
@@ -53,18 +53,18 @@ INFO: [Synth 8-256] done synthesizing module 'ebaz4205_mult_gen_0_0' (5#1) [d:/E
 WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_17_viv is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_17_viv is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1445.707 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1445.707 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1445.707 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1445.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1450.703 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 312 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -77,31 +77,31 @@ Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_m
 Finished Parsing XDC File [D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1462.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1450.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 102 instances were transformed.
   MULT_AND => LUT2: 102 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1465.441 ; gain = 2.973
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -125,25 +125,25 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_17_viv is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_17_viv is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -161,37 +161,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -209,40 +209,40 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY4   |    26|
 |2     |LUT1     |     5|
-|3     |LUT2     |    99|
-|4     |LUT3     |    12|
+|3     |LUT2     |    97|
+|4     |LUT3     |    11|
 |5     |LUT4     |    90|
-|6     |MULT_AND |   102|
-|7     |MUXCY    |   102|
-|8     |XORCY    |   108|
-|9     |FDRE     |    28|
+|6     |MULT_AND |   101|
+|7     |MUXCY    |   101|
+|8     |XORCY    |   105|
+|9     |FDRE     |    16|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1465.441 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1465.441 ; gain = 19.734
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1450.703 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1450.703 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1465.441 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 338 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1450.703 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 333 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1465.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1450.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 132 instances were transformed.
+  A total of 131 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 30 instances
-  MULT_AND => LUT2: 102 instances
+  MULT_AND => LUT2: 101 instances
 
-Synth Design complete, checksum: 7eaa0446
+Synth Design complete, checksum: 5b52c3a5
 INFO: [Common 17-83] Releasing license: Synthesis
 22 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1465.441 ; gain = 19.734
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1450.703 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1/ebaz4205_mult_gen_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ebaz4205_mult_gen_0_0, cache-ID = bc89f8aca06597e7
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ebaz4205_mult_gen_0_0, cache-ID = 1a90d8b1070b6562
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/EBAZ4205_SDR/Zynq/capture-test/capture-test.runs/ebaz4205_mult_gen_0_0_synth_1/ebaz4205_mult_gen_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_mult_gen_0_0_utilization_synth.rpt -pb ebaz4205_mult_gen_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 13 15:30:22 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 25 20:49:24 2022...
