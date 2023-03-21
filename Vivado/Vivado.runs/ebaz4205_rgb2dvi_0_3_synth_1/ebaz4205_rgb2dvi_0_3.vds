@@ -1,0 +1,328 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Feb 18 17:57:14 2023
+# Process ID: 817615
+# Current directory: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1
+# Command line: vivado -log ebaz4205_rgb2dvi_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_rgb2dvi_0_3.tcl
+# Log file: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/ebaz4205_rgb2dvi_0_3.vds
+# Journal file: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/vivado.jou
+# Running On: guido-UM690, OS: Linux, CPU Frequency: 1600.000 MHz, CPU Physical cores: 16, Host memory: 31270 MB
+#-----------------------------------------------------------
+source ebaz4205_rgb2dvi_0_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1344.844 ; gain = 0.023 ; free physical = 4835 ; free virtual = 9650
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/axis-capture'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/PS2_mouse_IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/axi_dynclk_v1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/rgb2dvi'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/guido/Xilinx-tools/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ebaz4205_rgb2dvi_0_3
+Command: synth_design -top ebaz4205_rgb2dvi_0_3 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 818054
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/guido/Xilinx-tools/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2047.730 ; gain = 369.801 ; free physical = 5963 ; free virtual = 10905
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 126.071
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3071.773; parent = 2053.672; children = 1018.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ebaz4205_rgb2dvi_0_3' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/synth/ebaz4205_rgb2dvi_0_3.vhd:72]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: PLL - type: string 
+	Parameter kRstActiveHigh bound to: 0 - type: bool 
+	Parameter kClkRange bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/rgb2dvi.vhd:61' bound to instance 'U0' of component 'rgb2dvi' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/synth/ebaz4205_rgb2dvi_0_3.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/OutputSERDES.vhd:76]
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ipshared/e3fc/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'ebaz4205_rgb2dvi_0_3' (0#1) [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/synth/ebaz4205_rgb2dvi_0_3.vhd:72]
+WARNING: [Synth 8-7129] Port SerialClk in module TMDS_Encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aRst in module TMDS_Encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aRst in module rgb2dvi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2122.637 ; gain = 444.707 ; free physical = 6486 ; free virtual = 11426
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 126.703
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3140.742; parent = 2122.641; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2140.449 ; gain = 462.520 ; free physical = 6950 ; free virtual = 11891
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 126.703
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.555; parent = 2140.453; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2140.449 ; gain = 462.520 ; free physical = 7142 ; free virtual = 12082
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 126.703
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3158.555; parent = 2140.453; children = 1018.102
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2146.387 ; gain = 0.000 ; free physical = 7988 ; free virtual = 12928
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi_ooc.xdc] for cell 'U0'
+Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi.xdc] for cell 'U0'
+Finished Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi.xdc] for cell 'U0'
+Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/dont_touch.xdc]
+Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ip/ebaz4205_rgb2dvi_0_3/src/rgb2dvi_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.199 ; gain = 0.000 ; free physical = 9289 ; free virtual = 14251
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2296.199 ; gain = 0.000 ; free physical = 9309 ; free virtual = 14272
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/guido/Xilinx-tools/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 10116 ; free virtual = 15082
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 10034 ; free virtual = 15000
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 10024 ; free virtual = 14990
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 9972 ; free virtual = 14949
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    5 Bit       Adders := 9     
+	   4 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port aRst in module rgb2dvi is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 8558 ; free virtual = 13605
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.396; parent = 1124.324; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 6278 ; free virtual = 11408
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1324.720; parent = 1199.357; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5873 ; free virtual = 11011
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1326.215; parent = 1201.238; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5616 ; free virtual = 10749
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1327.325; parent = 1202.414; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5341 ; free virtual = 10520
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5350 ; free virtual = 10526
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5303 ; free virtual = 10481
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5289 ; free virtual = 10467
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5269 ; free virtual = 10449
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5326 ; free virtual = 10506
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |LUT1      |     5|
+|2     |LUT2      |    22|
+|3     |LUT3      |    34|
+|4     |LUT4      |    23|
+|5     |LUT5      |    43|
+|6     |LUT6      |    72|
+|7     |OSERDESE2 |     8|
+|9     |FDPE      |     2|
+|10    |FDRE      |   117|
+|11    |FDSE      |    15|
+|12    |OBUFDS    |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 5460 ; free virtual = 10640
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1330.739; parent = 1204.844; children = 128.497
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3282.289; parent = 2264.188; children = 1018.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 2296.199 ; gain = 462.520 ; free physical = 5688 ; free virtual = 10871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 2296.199 ; gain = 618.270 ; free physical = 6053 ; free virtual = 11230
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.199 ; gain = 0.000 ; free physical = 6596 ; free virtual = 11776
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.199 ; gain = 0.000 ; free physical = 6947 ; free virtual = 12131
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 88904788
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 2296.199 ; gain = 923.637 ; free physical = 7056 ; free virtual = 12240
+INFO: [Common 17-1381] The checkpoint '/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/ebaz4205_rgb2dvi_0_3.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ebaz4205_rgb2dvi_0_3, cache-ID = a5537c211628c16a
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+INFO: [Common 17-1381] The checkpoint '/media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_rgb2dvi_0_3_synth_1/ebaz4205_rgb2dvi_0_3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_rgb2dvi_0_3_utilization_synth.rpt -pb ebaz4205_rgb2dvi_0_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 18 17:58:17 2023...

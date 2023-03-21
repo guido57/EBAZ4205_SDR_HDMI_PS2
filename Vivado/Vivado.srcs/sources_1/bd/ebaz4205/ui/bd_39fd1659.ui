@@ -1,0 +1,138 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"5432,1500",
+   "ExpandedHierarchyInLayout":"",
+   "PinnedBlocks":"",
+   "PinnedPorts":"",
+   "comment_0":"PS groups:
+- Programmable System(CPU)
+- Reset
+- AXI control
+- Ethernet",
+   "commentid":"comment_0|",
+   "font_comment_0":"11",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 6300 -y 700 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 6300 -y 730 -defaultsOSRD
+preplace port MDIO_ETHERNET_0_0 -pg 1 -lvl 6 -x 6300 -y 670 -defaultsOSRD
+preplace port HDMI_HPD -pg 1 -lvl 6 -x 6300 -y 1120 -defaultsOSRD
+preplace port ps2_clock_0 -pg 1 -lvl 6 -x 6300 -y 1780 -defaultsOSRD
+preplace port ps2_dat_0 -pg 1 -lvl 6 -x 6300 -y 1760 -defaultsOSRD
+preplace port port-id_ENET0_GMII_RX_CLK_0 -pg 1 -lvl 0 -x -10 -y 660 -defaultsOSRD
+preplace port port-id_ENET0_GMII_RX_DV_0 -pg 1 -lvl 0 -x -10 -y 680 -defaultsOSRD
+preplace port port-id_ENET0_GMII_TX_CLK_0 -pg 1 -lvl 0 -x -10 -y 700 -defaultsOSRD
+preplace port port-id_CLK25M -pg 1 -lvl 6 -x 6300 -y 850 -defaultsOSRD
+preplace port port-id_ADC_clk_64M -pg 1 -lvl 6 -x 6300 -y 950 -defaultsOSRD
+preplace port port-id_OTR -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace port port-id_SCLK -pg 1 -lvl 6 -x 6300 -y 1510 -defaultsOSRD
+preplace port port-id_LRCLK -pg 1 -lvl 6 -x 6300 -y 1530 -defaultsOSRD
+preplace port port-id_I2SDATA -pg 1 -lvl 6 -x 6300 -y 1550 -defaultsOSRD
+preplace port port-id_TMDS_Clk_p_0 -pg 1 -lvl 6 -x 6300 -y 1160 -defaultsOSRD
+preplace port port-id_TMDS_Clk_n_0 -pg 1 -lvl 6 -x 6300 -y 1180 -defaultsOSRD
+preplace portBus ENET0_GMII_TX_EN_0 -pg 1 -lvl 6 -x 6300 -y 790 -defaultsOSRD
+preplace portBus enet0_gmii_rxd -pg 1 -lvl 0 -x -10 -y 720 -defaultsOSRD
+preplace portBus enet0_gmii_txd -pg 1 -lvl 6 -x 6300 -y 880 -defaultsOSRD
+preplace portBus ADC_in -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace portBus LED_GREEN -pg 1 -lvl 6 -x 6300 -y 140 -defaultsOSRD
+preplace portBus HDMI_OEN -pg 1 -lvl 6 -x 6300 -y 1140 -defaultsOSRD
+preplace portBus TMDS_Data_p_0 -pg 1 -lvl 6 -x 6300 -y 1200 -defaultsOSRD
+preplace portBus TMDS_Data_n_0 -pg 1 -lvl 6 -x 6300 -y 1220 -defaultsOSRD
+preplace inst PS -pg 1 -lvl 4 -x 4748 -y 872 -defaultsOSRD -resize 304 476
+preplace inst ADC_TestGen -pg 1 -lvl 3 -x 1104 -y 120 -defaultsOSRD
+preplace inst DDC -pg 1 -lvl 3 -x 1104 -y 560 -defaultsOSRD
+preplace inst AM_demodulator -pg 1 -lvl 4 -x 4748 -y 2404 -defaultsOSRD
+preplace inst FILTER -pg 1 -lvl 3 -x 1104 -y 3238 -defaultsOSRD -resize 327 242
+preplace inst I2S -pg 1 -lvl 5 -x 6139 -y 1530 -defaultsOSRD
+preplace inst DivideBy2_50MHz -pg 1 -lvl 1 -x 130 -y 1420 -defaultsOSRD
+preplace inst HDMI -pg 1 -lvl 3 -x 1104 -y 1173 -defaultsOSRD
+preplace inst ps7_axi_periph -pg 1 -lvl 2 -x 440 -y 1090 -defaultsOSRD
+preplace inst axis_capture_RF -pg 1 -lvl 3 -x 1104 -y 360 -defaultsOSRD
+preplace inst ps2_mouse_0 -pg 1 -lvl 5 -x 6139 -y 1820 -defaultsOSRD
+preplace netloc ADC_TestGen_LED_GREEN1 1 3 3 NJ 140 NJ 140 NJ
+preplace netloc ADC_in_1 1 0 3 NJ 140 NJ 140 NJ
+preplace netloc ADCandTestGen_output_axis_tvalid 1 2 2 740 230 1310
+preplace netloc AM_demodulator_U 1 4 1 5010 1510n
+preplace netloc ARESETN_1 1 2 3 750 973 1320J 1162 4930
+preplace netloc DDC_I 1 2 2 720 650 1360
+preplace netloc DDC_Q 1 2 2 730 690 1310
+preplace netloc DivideBy2_50MHz_clk_out 1 1 4 240 1430 NJ 1430 NJ 1430 4920J
+preplace netloc ENET0_GMII_RX_CLK_0_1 1 0 4 NJ 660 NJ 660 NJ 660 1390J
+preplace netloc ENET0_GMII_RX_DV_0_1 1 0 4 10J 670 NJ 670 NJ 670 1380J
+preplace netloc ENET0_GMII_TX_CLK_0_1 1 0 4 NJ 700 NJ 700 NJ 700 1370J
+preplace netloc FIR_I_m_axis_data_tdata 1 3 1 1320 2404n
+preplace netloc FIR_Q_m_axis_data_tdata 1 3 1 1380 2424n
+preplace netloc HDMI_dout 1 3 1 1390 992n
+preplace netloc I2S_Transmitter_0_bclk 1 5 1 NJ 1510
+preplace netloc I2S_Transmitter_0_lrclk 1 5 1 NJ 1530
+preplace netloc I2S_Transmitter_0_sdata 1 5 1 NJ 1550
+preplace netloc In0_0_1 1 0 4 NJ 720 NJ 720 NJ 720 1360J
+preplace netloc Net 1 2 3 740 963 1380J 1132 4920
+preplace netloc OTR_1 1 0 3 NJ 120 NJ 120 NJ
+preplace netloc PS_ARESETN 1 0 5 10 1340 250 1440 660 953 1330J 1212 4950
+preplace netloc PS_FCLK_CLK0 1 0 5 20 1350 240 750 650 933 1350J 1232 4970
+preplace netloc PS_FCLK_CLK1 1 1 5 260 1450 680 943 1300 1192 4990 950 NJ
+preplace netloc PS_FCLK_CLK3_0 1 4 2 4920J 850 NJ
+preplace netloc processing_system7_0_ENET0_GMII_TX_EN 1 4 2 4920J 790 NJ
+preplace netloc ps2_mouse_0_mouse_data 1 2 4 740 1370 NJ 1370 NJ 1370 6280
+preplace netloc ps2_mouse_0_state_std 1 2 4 750 1380 NJ 1380 NJ 1380 6270
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 3 3 1290J 1182 5010J 1180 NJ
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 3 3 1290J 1172 5000J 1160 NJ
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 3 3 1310J 1222 5010J 1220 NJ
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 3 3 1290J 1202 5010J 1200 NJ
+preplace netloc rst_ps7_0_64M_peripheral_aresetn 1 1 4 270 1460 700 983 1340J 1142 4940
+preplace netloc xlconcat_1_dout 1 2 2 750 240 1360
+preplace netloc xlconstant_0_dout 1 3 3 1290J 1152 4980J 1140 NJ
+preplace netloc xlslice_0_Dout 1 4 2 4920J 880 NJ
+preplace netloc S00_AXI_2 1 1 4 270 680 NJ 680 1370J 612 4920
+preplace netloc S_AXI1_1 1 2 1 590 1160n
+preplace netloc S_AXI_1 1 2 1 620 1083n
+preplace netloc S_AXI_2 1 2 1 590 60n
+preplace netloc S_AXI_HP0_1 1 3 1 1310 752n
+preplace netloc S_AXI_LITE_1 1 2 1 690 1020n
+preplace netloc axi_gpio_hdmi_GPIO 1 3 3 1370J 1122 4960J 1120 NJ
+preplace netloc ctrl_1 1 2 1 610 1100n
+preplace netloc ctrl_s_axi1_1 1 2 1 600 1080n
+preplace netloc ctrl_s_axi_1 1 2 1 600 80n
+preplace netloc ctrl_s_axi_2 1 2 1 630 520n
+preplace netloc ctrl_s_axi_3 1 2 1 640 1000n
+preplace netloc processing_system7_0_DDR 1 4 2 4970J 700 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 4 2 4970J 730 NJ
+preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 4 2 4970J 670 NJ
+preplace netloc ps2_mouse_0_ps2_clock 1 5 1 NJ 1780
+preplace netloc ps2_mouse_0_ps2_dat 1 5 1 NJ 1760
+preplace netloc ps7_axi_periph_M00_AXI 1 2 1 610 300n
+preplace netloc ps7_axi_periph_M11_AXI 1 2 1 710 1123n
+preplace netloc s00_axi_1 1 2 1 670 1063n
+preplace cgraphic comment_0 place left 105 215 textcolor 4 linecolor 3 linewidth 2
+levelinfo -pg 1 -10 130 440 1104 4748 6139 6300
+pagesize -pg 1 -db -bbox -sgen -230 0 6540 3370
+"
+}
+{
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_board_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_clkrst_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""da_clkrst_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""":"3",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""da_board_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """""""""""""""""""""""""""""""""""""""""""""""""da_clkrst_cnt""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """""""""""""""""""""""""""""""""""""""""""""""da_board_cnt""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""da_board_cnt"""""""""""""""""""""""""""""""""""""":"1",
+   """""""""""""""""""""""""""""""da_axi4_cnt""""""""""""""""""""""""""""""":"10",
+   """""""""""""""""""""""""""""""da_clkrst_cnt""""""""""""""""""""""""""""""":"1",
+   """""""""""""""""""""""""""da_axi4_cnt""""""""""""""""""""""""""":"4",
+   """""""""""""""""""""""""""da_clkrst_cnt""""""""""""""""""""""""""":"2",
+   """""""""""""""""""da_axi4_cnt""""""""""""""""""":"1",
+   """"""""""""""""""da_axi4_cnt"""""""""""""""""":"1",
+   """"""""""""""""da_axi4_cnt"""""""""""""""":"1",
+   """"""""""""""""da_board_cnt"""""""""""""""":"1"
+}
+{
+   "/comment_0":"comment_0"
+}

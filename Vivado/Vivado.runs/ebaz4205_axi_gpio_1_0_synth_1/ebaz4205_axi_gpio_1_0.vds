@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Feb 18 17:57:41 2023
+# Process ID: 818596
+# Current directory: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1
+# Command line: vivado -log ebaz4205_axi_gpio_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_axi_gpio_1_0.tcl
+# Log file: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0.vds
+# Journal file: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/vivado.jou
+# Running On: guido-UM690, OS: Linux, CPU Frequency: 3823.035 MHz, CPU Physical cores: 16, Host memory: 31270 MB
+#-----------------------------------------------------------
+source ebaz4205_axi_gpio_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1392.672 ; gain = 0.023 ; free physical = 9916 ; free virtual = 14902
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/axis-capture'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/PS2_mouse_IP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/axi_dynclk_v1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/guido/Acer/EBAZ4205_SDR_HDMI/Zynq/rgb2dvi'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/guido/Xilinx-tools/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ebaz4205_axi_gpio_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 60af70ac038a7150 to dir: /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip/2022.2/6/0/60af70ac038a7150/ebaz4205_axi_gpio_0_1.dcp to /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip/2022.2/6/0/60af70ac038a7150/ebaz4205_axi_gpio_0_1_sim_netlist.v to /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip/2022.2/6/0/60af70ac038a7150/ebaz4205_axi_gpio_0_1_sim_netlist.vhdl to /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip/2022.2/6/0/60af70ac038a7150/ebaz4205_axi_gpio_0_1_stub.v to /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip/2022.2/6/0/60af70ac038a7150/ebaz4205_axi_gpio_0_1_stub.vhdl to /media/guido/Acer/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/ebaz4205_axi_gpio_1_0_synth_1/ebaz4205_axi_gpio_1_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ebaz4205_axi_gpio_1_0, cache-ID = 60af70ac038a7150.
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 18 17:57:53 2023...
