@@ -382,26 +382,26 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_ps2_mouse_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy2N_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy4_25MHz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_gen_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy2N_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rgb2dvi_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_mux_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_interface_DEC_RATE_Q_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_sqrt32_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_by_4_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_ps2_mouse_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
 </GenRun>

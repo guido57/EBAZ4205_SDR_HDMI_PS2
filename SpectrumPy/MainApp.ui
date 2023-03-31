@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>RTL SDR Spectrum Analyzer</string>
+   <string>EBAZ4205 SDR Spectrum Analyzer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout" columnstretch="6,0">
@@ -344,38 +344,41 @@
           <x>10</x>
           <y>150</y>
           <width>234</width>
-          <height>164</height>
+          <height>291</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout">
-         <item row="0" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="label_2">
            <property name="text">
             <string>Center Frequency (Hz)</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
+         <item row="3" column="1">
           <widget class="QSpinBox" name="spinBoxFrequency">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
            <property name="minimum">
-            <number>20000000</number>
+            <number>100000</number>
            </property>
            <property name="maximum">
-            <number>2000000000</number>
+            <number>32000000</number>
            </property>
            <property name="singleStep">
-            <number>100000</number>
+            <number>1000</number>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
+         <item row="4" column="0">
           <widget class="QLabel" name="label">
            <property name="text">
             <string>Averaging</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="4" column="1">
           <widget class="QDoubleSpinBox" name="doubleSpinBoxAlfa">
            <property name="decimals">
             <number>3</number>
@@ -394,7 +397,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="5" column="0">
           <widget class="QLabel" name="label_6">
            <property name="enabled">
             <bool>true</bool>
@@ -404,7 +407,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="5" column="1">
           <widget class="QComboBox" name="comboBoxWindow">
            <property name="enabled">
             <bool>true</bool>
@@ -445,8 +448,11 @@
            </item>
           </widget>
          </item>
-         <item row="5" column="1">
+         <item row="8" column="1">
           <widget class="QSpinBox" name="spinBoxGenFrequency">
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
            <property name="minimum">
             <number>100000</number>
            </property>
@@ -461,14 +467,14 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
+         <item row="8" column="0">
           <widget class="QLabel" name="label_7">
            <property name="text">
             <string>DDS Frequency (Hz)</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="6" column="0">
           <widget class="QRadioButton" name="radioButtonADC">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
@@ -481,7 +487,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
+         <item row="7" column="0">
           <widget class="QRadioButton" name="radioButtonGenerator">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
@@ -490,6 +496,183 @@
             <string>DDS Generator</string>
            </property>
           </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Tuned Frequency (Hz)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="spinBoxTunedFrequency">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="minimum">
+            <number>100000</number>
+           </property>
+           <property name="maximum">
+            <number>32000000</number>
+           </property>
+           <property name="displayIntegerBase">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>IF Bandwidth (KHz)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBoxIFBandwidth">
+           <property name="currentText">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          
+           <item>
+            <property name="text">
+             <string>2000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>500</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>250</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>125</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>60</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>30</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>IF Gain</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+
+          <widget class="QComboBox" name="comboBoxIFGain">
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>32</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>64</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>128</string>
+            </property>
+           </item>
+          <item>
+            <property name="text">
+             <string>256</string>
+            </property>
+           </item>
+          <item>
+            <property name="text">
+             <string>512</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1024</string>
+            </property>
+           </item>
+          
+          </widget>
+
+
+
          </item>
         </layout>
        </widget>

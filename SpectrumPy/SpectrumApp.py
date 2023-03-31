@@ -1,15 +1,39 @@
+from os import putenv
+import debugpy
+import uio
+
+# 5678 is the default attach port in the VS Code debug configurations. Unless a host and port are specified, host defaults to 127.0.0.1
+#debugpy.listen(("0.0.0.0",5678))
+#print("Waiting for debugger attach")
+#debugpy.wait_for_client()
+debugpy.breakpoint()
+
 # For Args
 import sys
 import numpy as np
-from scipy.signal import find_peaks
+#from scipy.signal import find_peaks
 import time
 # for GUI 
 from PyQt5 import QtGui, QtWidgets, uic
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, QEvent
+
 # For graphs
-import pyqtgraph as pg
+import importlib
+
+# try to import pyqtgraph or install it with pip
+try:
+    import pyqtgraph as pg
+except ImportError:
+    # if not present, install it with pip
+    import subprocess
+    ret = subprocess.run("python3 -m pip install pyqtgraph",shell=True)
+    # cerca di importare di nuovo la libreria
+    import pyqtgraph as pg
+
+
 from TCPThread import TCPThread
 from matplotlib import mlab as mlab
+import pickle
 
 # Supported gain values (29): 0.0 0.9 1.4 2.7 3.7 7.7 8.7 12.5 14.4 15.7 16.6 19.7 20.7 22.9 25.4 28.0 29.7 32.8 33.8 36.4 37.2 38.6 40.2 42.1 43.4 43.9 44.5 48.0 49.6
 pg.setConfigOptions(antialias=True)
@@ -22,22 +46,57 @@ def millis():
 
 class MainWindow(QtWidgets.QMainWindow):
     TCPThread = None
+
+    # Parameters saved and restored using pickle
+    tuned_freq = 10000000    # Hz Tuned Frequency  
+    if_bandwidth = 2000      # KHz      
+    if_gain = 1              # units      
+    gen_freq = 1000000       # Hz
+    fmin = 0                 # Hz 
+    fmax  = 32000000         # Hz
+    FREQBINS = 1024
+    psd_averaging = 0.9      # units
+    waterfall_low_level = 0      # units
+    waterfall_high_level = 4e-8  # units
+       
+    #pickles = [tuned_freq,if_bandwidth,if_gain, gen_freq,center_freq]
+
+    def SaveParams(self):
+        if hasattr(self,"histogram"):
+            self.waterfall_low_level,self.waterfall_high_level = self.histogram.getLevels()
+        self.fmin,self.fmax = self.spectrumView.getAxis('bottom').range   
+        self.psd_averaging =  self.doubleSpinBoxAlfa.value()
+        pickles = [self.tuned_freq,self.if_bandwidth,self.if_gain, self.gen_freq,self.fmin,self.fmax,self.FREQBINS,self.psd_averaging,self.waterfall_low_level,self.waterfall_high_level]
+        f = open('store.pckl', 'wb')
+        pickle.dump(pickles, f)
+        f.close()
+
+    def RestoreParams(self):
+        try:
+            f = open('store.pckl', 'rb')
+            pickles = pickle.load(f)
+            f.close()
+            [self.tuned_freq,self.if_bandwidth,self.if_gain, self.gen_freq,self.fmin,self.fmax,self.FREQBINS,self.psd_averaging,self.waterfall_low_level,self.waterfall_high_level] = pickles
+        except:
+            self.SaveParams()
+
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         uic.loadUi("MainApp.ui", self)
 
+        
+        self.RestoreParams()
+
         # Variables for UI and SDR
-        self.center_freq = 0          # Hz
-        self.gen_freq = 1000000       # Hz
-        self.band_width = 32e6        # Hz
-        self.FREQBINS = 8192          # num frequency bins viewed  
         self.FFToversampling = 8      # number of frequency bins averaged to get FREQBINS
         self.doublesided = False      # if IQ are both present -> doublesided = True
                                       # if I exists but Q=0    -> doublesided = False
         self.PPM = 60                 # ppm frequency correction
         self.isRunning = False        
         self.gain= 0.0                # the gain applied to the received samples
-
+        self.center_freq = 0          # Hz
+        self.band_width = 32000000    # Hz
         self.aspect_ratio = 1.0       # FREQBINS/screen width eg. 1024/800
         self.PSDwindow = mlab.window_hanning   # can be changed by the combobox
         self.isPeaks = False          # show relative peaks on spectrumView  
@@ -95,8 +154,20 @@ class MainWindow(QtWidgets.QMainWindow):
         ay.enableAutoSIPrefix(enable=False)
         
         self.spectrumView.showButtons()
+        
+        # intercept mouse wheel events to change tuned_freq 
+        self.spectrumView.scene().installEventFilter(self)
 
-         # Create crosshair
+        # Create tuned frequency vertical line
+        self.vTunedFreqSpectrumLine = pg.InfiniteLine(angle=90, movable=False, pen='#00ff00')
+        self.vTunedFreqWaterfallLine = pg.InfiniteLine(angle=90, movable=False, pen='#00ff00')
+        self.vTunedFreqSpectrumLine.setZValue(1000)
+        self.vTunedFreqWaterfallLine.setZValue(1000)
+        self.spectrumView.addItem(self.vTunedFreqSpectrumLine, ignoreBounds=True)
+        self.waterfallView.addItem(self.vTunedFreqWaterfallLine,ignoreBounds=True)
+                
+        # Create crosshair
+        
         self.vLine = pg.InfiniteLine(angle=90, movable=False, pen='#aaaabb')
         self.vLine.setZValue(1000)
         self.hLine = pg.InfiniteLine(angle=0, movable=False, pen='#aaaabb')
@@ -118,17 +189,13 @@ class MainWindow(QtWidgets.QMainWindow):
         # Load a predefined gradient. Currently defined gradients are: 
         self.gradient_presets = ['thermal', 'flame', 'yellowy', 'bipolar', 'spectrum', 'cyclic', 'greyclip', 'grey']
         self.histogram.gradient.loadPreset(self.gradient_presets[1])
-        #self.histogram.setHistogramRange(-50, 0)
-        self.histogram.setLevels(-1.0e-3, 1.0e-2)
-        self.histogram.setHistogramRange(-2.0e-2, 2.0e-3, padding=1)
+        # set low (black) and high (white) levels for the Waterfall
+        self.histogram.setLevels(self.waterfall_low_level, self.waterfall_high_level)
+        self.histogram.setHistogramRange(-1.0e-8, 5.0e-8, padding=1)
         
         # horizontal Labels 
         self.lblFreq.setText(str(self.center_freq))
 
-        # tuner frequency: TODO
-        self.spinBoxFrequency.setValue(self.center_freq)
-        self.spinBoxPPM.setValue(self.PPM)
-        
         # Radio buttons to select ADC input or RF generator
         self.radioButtonGenerator.clicked.connect(self.selectADCorGenerator)
         self.radioButtonADC.clicked.connect(self.selectADCorGenerator)
@@ -136,8 +203,14 @@ class MainWindow(QtWidgets.QMainWindow):
         # RF generator frequency
         self.spinBoxGenFrequency.setValue(self.gen_freq)
 
+        # set IFGain and IFBandiwidth to their top value
+        self.comboBoxIFGain.currentIndex=0
+        self.comboBoxIFBandwidth.currendIndex = 0
+        self.comboBoxIFGain.currentIndexChanged.connect(self.setIFGain)       
+        self.comboBoxIFBandwidth.currentIndexChanged.connect(self.setIFBandwidth)        
+
         # averaging filter for psd
-        self.doubleSpinBoxAlfa.setValue(0.9)
+        self.doubleSpinBoxAlfa.setValue(self.psd_averaging)
         self.comboBoxGain.currentIndex=21
         self.pushButtonConnect.clicked.connect(self.initThread)
 
@@ -147,13 +220,13 @@ class MainWindow(QtWidgets.QMainWindow):
     def reset_plots(self):
         self.PPM = self.spinBoxPPM.value()
         self.gain = float(self.comboBoxGain.currentText())
-        self.FREQBINS =8192
-        self.FFToversampling = int(4*self.FREQBINS/int(self.comboBoxNFFT.currentText()))
+        #self.FFToversampling = int(4*self.FREQBINS/int(self.comboBoxNFFT.currentText()))
         self.freq = self.calc_freq(self.band_width, self.FREQBINS ,self.center_freq)
         self.data = np.random.rand(self.FREQBINS)*0.000001
         self.history = np.zeros(shape=(self.history_length, self.FREQBINS))
 
         self.waterfallView.setLimits(xMin=self.freq[0],xMax=self.freq[-1],yMin=-self.history_length,yMax=0)
+        self.waterfallView.setXRange(self.fmin,self.fmax)
 
         calc_ratio =lambda : (self.freq[-1] - self.freq[0]) / self.FREQBINS
         xFactor = calc_ratio()/self.aspect_ratio
@@ -164,31 +237,42 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.histogram.setImageItem(self.img_waterfall)
 
-        # set the curve for relative maximum values (peaks)
-        if self.isPeaks:
-            self.curvePeaks = self.spectrumView.plot(self.freq,self.freq*1.0e-5, pen=None, symbol='d',symbolBrush=(215,155,255,200))
-    
-    def initThread(self):
-        if self.isRunning:
-            self.TCPThread.isRunning = False
-            self.isRunning=False
-            self.pushButtonConnect.setText('Connect')
+    def eventFilter(self, watched, event):
+        
+        if event.type() == QEvent.GraphicsSceneWheel:
 
-        else:
-            self.reset_plots()
-            if(self.TCPThread is None):
+            # check where the Mouse Wheel has been rotated
+            #if self.spectrumView.plotItem.vb.mapSceneToView(self.mousepos).x() >=0:
+            if self.mousepos.x() >= self.spectrumView.plotItem.vb.sceneBoundingRect().x():
+                # it is on the right of y axis
+                spectrum_plot_height = self.spectrumView.plotItem.vb.sceneBoundingRect().height()
+                spectrum_plot_y = self.spectrumView.plotItem.vb.sceneBoundingRect().y()
+                
+                if( self.mousepos.y() < spectrum_plot_height + spectrum_plot_y ):
+                    tuned_freq=int(self.tuned_freq + 1000*event.delta()/120)
+                    self.setTunedFrequency(tuned_freq)
+                    return True
+        return super().eventFilter(watched, event)
+
+    def initThread(self):
+        if(self.TCPThread is None):
                 self.TCPThread = TCPThread(
                     psd_window = self.PSDwindow
                 )
-                self.TCPThread.signalRx.connect(self.updateData)
-                self.spinBoxGenFrequency.valueChanged.connect(self.sdrSetGenFrequency)        
-            if self.TCPThread.socket is not None:
-                self.TCPThread.start()
-                self.isRunning = True
-                self.pushButtonConnect.setText('Stop')
-                self.TCPThread.isRunning = True
-                #self.radioButtonGenerator.click()
-                self.selectADCorGenerator() # select ADC or Generator according to radioButtons
+        
+        if self.TCPThread.isRunning:
+            self.pushButtonConnect.setText('Connect')
+            self.TCPThread.Close()
+        else:
+            self.reset_plots()
+            self.pushButtonConnect.setText('Stop')
+            self.TCPThread.signalRx.connect(self.updateData)
+            self.spinBoxGenFrequency.valueChanged.connect(self.sdrSetGenFrequency)        
+            self.TCPThread.start()
+            self.isRunning = True
+            self.TCPThread.isRunning = True
+            #self.radioButtonGenerator.click()
+            self.selectADCorGenerator() # select ADC or Generator according to radioButtons
     
             # User interactions on plot
             self.mouseProxy = pg.SignalProxy(self.spectrumView.scene().sigMouseMoved,
@@ -196,18 +280,33 @@ class MainWindow(QtWidgets.QMainWindow):
                                             slot=self.mouse_moved)
             self.spectrumView.scene().sigMouseClicked.connect(self.mouse_clicked)
             
-            self.spinBoxFrequency.valueChanged.connect(self.sdrSetFrequency)        
+            # tuned frequency
+            self.setTunedFrequency(self.tuned_freq)
+
+            index = self.comboBoxIFBandwidth.findText(str(self.if_bandwidth))
+            if ( index != -1 ):  # -1 for not found
+                self.comboBoxIFBandwidth.setCurrentIndex(index)
+
+            index = self.comboBoxIFGain.findText(str(self.if_gain))
+            if ( index != -1 ):  # -1 for not found
+                self.comboBoxIFGain.setCurrentIndex(index)
+
+            
+            #self.spinBoxFrequency.valueChanged.connect(self.sdrSetFrequency)        
             # GUI Timer Threads for plots 
+            """
             self.render_timer = QTimer()
-            self.render_timer.setInterval(40)
+            self.render_timer.setInterval(80)
             self.render_timer.timeout.connect(self.render)
             self.render_timer.start()
-
+            
             # GUI Timer Threads for waterfall rolling data
             self.data_roll_timer = QTimer()
-            self.data_roll_timer.setInterval(50)
+            self.data_roll_timer.setInterval(100)
             self.data_roll_timer.timeout.connect(self.rollData)
             self.data_roll_timer.start()
+            """
+            #self.render()
     
     def updateData(self,data_os):
         # FFT downsample
@@ -215,49 +314,23 @@ class MainWindow(QtWidgets.QMainWindow):
         #self.FFToversampling = 8 # from 8192 to 1024
         #self.FFToversampling = int(len(data_os)/self.FREQBINS) # from 8192 to 1024
         #data_os[:] = data_os[:] / 1000000000
-        '''
-        data = np.zeros(self.FREQBINS)
-        k = 0
-        for i in range(0, 8192, int(4/self.FFToversampling)) :
-            data[int(i/4)] += data_os[i]
-            if k < self.FFToversampling - 1:
-                k += 1 
-            else:
-                data[int(i/4)]  /= self.FFToversampling
-                k = 0        
-        
-        #data[:] =data[0:8192:int(8/self.FFToversampling)]
-        '''
         data = data_os[:]
         self.data = data*(1.0-self.doubleSpinBoxAlfa.value())+self.data*(self.doubleSpinBoxAlfa.value())
-        """
-        if(self.counter%1==0):
-            self.history = np.roll(self.history, -1, axis=0)
-            self.history[-1] = data
-        """
-        
+        self.render()
+
     def rollData(self):
         self.history = np.roll(self.history, -1, axis=0)
         self.history[-1] = self.data
 
     def render(self):
-        try:
-            #self.counter += 1
-            self.curve.setData(self.freq,self.data.astype(float),autoLevels=True, autoRange=False)
-            if self.isPeaks:
-                idx, _ = find_peaks(self.data,distance=50)
-                self.curvePeaks.setData(self.freq[idx],self.data[idx])
-            
-            self.spectrumView.enableAutoRange(axis='y', enable=False)
-        
-            self.img_waterfall.setImage(self.history.T,levels=self.histogram.getLevels())
-            self.img_waterfall.setPos(self.freq[0],-self.history_length)
-            
-        except Exception as e:
-            raise(e)
+        #self.counter += 1
+        self.curve.setData(self.freq,self.data.astype(float),autoLevels=True, autoRange=False)
+        #self.spectrumView.enableAutoRange(axis='y', enable=False)
+        #self.img_waterfall.setImage(self.history.T,levels=self.histogram.getLevels())
+        #self.img_waterfall.setPos(self.freq[0],-self.history_length)
         
         # when render is finished, request a new frame
-        self.TCPThread.signalTx.emit(b'\x00\x00\x00\x20') # # request a frame
+        #self.TCPThread.signalTx.emit(b'\x00\x00\x00\x20') # # request a frame
 
     def sdrSetFrequency(self):
         if self.isRunning:
@@ -270,24 +343,27 @@ class MainWindow(QtWidgets.QMainWindow):
             self.spectrumView.setLimits(xMin=self.freq[0],xMax=self.freq[-1])
             self.waterfallView.setLimits(xMin=self.freq[0],xMax=self.freq[-1])
             
-            self.sdrThread.sdr_tune(self.center_freq)
+            #self.sdrThread.sdr_tune(self.center_freq)
 
     def sdrSetGenFrequency(self):
-            self.gen_freq = self.spinBoxGenFrequency.value()
-            cmd = 0x30000000 | self.gen_freq
-            cmd_bytes = cmd.to_bytes(4,'little')
-            #self.TCPThread.signalTx.emit(b'\x00\x00\x00\x03') # set DDS generator frequency
-            self.TCPThread.signalTx.emit(cmd_bytes) 
+        self.gen_freq = self.spinBoxGenFrequency.value()
+        cmd = 0x30000000 | self.gen_freq
+        cmd_bytes = cmd.to_bytes(4,'little')
+        #self.TCPThread.signalTx.emit(b'\x00\x00\x00\x03') # set DDS generator frequency
+        self.TCPThread.signalTx.emit(cmd_bytes) 
 
     def selectADCorGenerator(self):
-            valueADC = self.radioButtonADC.isChecked()
-            valueGenerator = self.radioButtonGenerator.isChecked()
-            if(valueADC):
-                cmd = 0x40000001
-            if(valueGenerator):
-                cmd = 0x40000000
-            cmd_bytes = cmd.to_bytes(4,'little')
-            self.TCPThread.signalTx.emit(cmd_bytes) 
+        valueADC = self.radioButtonADC.isChecked()
+        valueGenerator = self.radioButtonGenerator.isChecked()
+        ats = uio.ADC_TEST_SWITCH(uio.DEV_ADC_TEST_SWITCH)
+        if(valueADC):
+            ats.SetADC()
+            cmd = 0x40000001
+        elif(valueGenerator):
+            cmd = 0x40000000
+            ats.SetTestGen()
+        cmd_bytes = cmd.to_bytes(4,'little')
+        self.TCPThread.signalTx.emit(cmd_bytes) 
 
     def setWindow(self, index):
         
@@ -303,22 +379,57 @@ class MainWindow(QtWidgets.QMainWindow):
         elif win == "Hanning":
             self.TCPThread.PSDwindow = mlab.window_hanning
 
+    def setIFGain(self, index):
+        ifgain_text = self.comboBoxIFGain.itemText(index)
+        self.if_gain = int(ifgain_text)
+        cmd = 0x50000000 | self.if_gain
+        cmd_bytes = cmd.to_bytes(4,'little')
+        self.TCPThread.signalTx.emit(cmd_bytes) 
+        
+    def setIFBandwidth(self, index):
+        # index           0   1   2    3    4   5    6    7     8    9   10   11 
+        # cic_dec_rate    4   8  16   32   64 128  256  512  1024 2048 4096 8192
+        # IF Bandiwidth   2M 1M 500K 250K 125K 62K  31K  16K   8K   4K   sK   1K
+
+        ifbandwidth_text = self.comboBoxIFBandwidth.itemText(index)
+        self.if_bandwidth = int(ifbandwidth_text)
+        cic_dec_rate = pow(2, 2+index)   # 4 ... 8192
+        cmd = 0x10000000 | cic_dec_rate
+        cmd_bytes = cmd.to_bytes(4,'little')
+        self.TCPThread.signalTx.emit(cmd_bytes) 
+
+    def setTunedFrequency(self, tunedFrequency):
+        self.tuned_freq = tunedFrequency
+        self.spinBoxTunedFrequency.setValue(self.tuned_freq)
+        self.vTunedFreqSpectrumLine.setPos( self.tuned_freq )
+        self.vTunedFreqWaterfallLine.setPos( self.tuned_freq )
+        cmd = 0x00000000 | self.tuned_freq 
+        cmd_bytes = cmd.to_bytes(4,'little')
+        #self.TCPThread.signalTx.emit(b'\x00\x00\x00\x03') # set DDS generator frequency
+        self.TCPThread.signalTx.emit(cmd_bytes) 
+
     def mouse_clicked(self,evt):
-        self.center_freq=round(self.tmp/10e3)*10e3
-        self.spinBoxFrequency.setValue(self.center_freq)
+        tuned_freq=int(round(self.tmp/1e3)*1e3)
+        self.setTunedFrequency(tuned_freq)
+            
 
     def mouse_moved(self, evt):
-        """Update crosshair when mouse is moved"""
-        pos = evt[0]
-
-        if self.spectrumView.sceneBoundingRect().contains(pos):
-            mousePoint = self.spectrumView.plotItem.vb.mapSceneToView(pos)
-            # I think i should just update the variables and set GUI values in timer thread
-            self.vLine.setPos( round(mousePoint.x()/5e3)*5e3 )
-            self.vLine2.setPos(round(mousePoint.x()/5e3)*5e3 )
-            self.hLine.setPos( (mousePoint.y()) )
-            self.tmp=mousePoint.x()
-            self.lblFreq.setText( f'{round(mousePoint.x()/1e6,3)} MHz, {round(10*mousePoint.y(),1)}' )
+        # not more frequently than 0,1 seconds, update crosshair and frequency    
+        if not hasattr(self,"last_mouse_moved"):
+            self.last_mouse_moved = 0
+        
+        if time.time() > self.last_mouse_moved + 3:
+            self.mousepos = evt[0]
+        
+            if self.spectrumView.sceneBoundingRect().contains(self.mousepos):
+                mousePoint = self.spectrumView.plotItem.vb.mapSceneToView(self.mousepos)
+                """Update crosshair when mouse is moved"""
+                #self.vLine.setPos( round(mousePoint.x()/5e3)*5e3 ) # vertical line on spectrum view
+                #self.vLine2.setPos(round(mousePoint.x()/5e3)*5e3 ) # vertical line on waterfall view
+                #self.hLine.setPos( (mousePoint.y()) )
+                #self.tmp=mousePoint.x()
+                #self.lblFreq.setText( f'{round(mousePoint.x()/1e6,3)} MHz, {round(10*mousePoint.y(),1)}' )
+            self.last_mouse_moved = time.time()
 
     """
     self.rangeChanged = pg.SignalProxy(self.spectrumView.sigXRangeChanged, rateLimit=10, slot=self.range_changed)
@@ -327,7 +438,10 @@ class MainWindow(QtWidgets.QMainWindow):
     """
 
 if __name__ == '__main__':
+    putenv("QT_QPA_PLATFORM","linuxfb")
+    #putenv("QT_QPA_PLATFORM","vnc")
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     window.show()
     app.exec_()
+    window.SaveParams()

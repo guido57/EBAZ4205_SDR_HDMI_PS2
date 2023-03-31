@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "copyOnPi",
+            "type": "shell",
+            "command": "scp ${file} ${config:sshUser}@${config:sshEndpoint}:~/spectrumpy/${fileBasename}"
+        },
+        {
+            "label": "CopyPytoRemote",
+            "type": "shell",
+            "command": "rsync",
+            "args": [
+                "-r",
+                "-v",
+                "--include='*/'",
+                "--include='*.py'",
+                "--include='*.ui'",
+                "--exclude='*'",
+                "./",
+                //"remote-user@remote-host:/path/to/remote/location/"
+                "${config:sshUser}@${config:sshEndpoint}:/home/ebaz/spectrumpy/"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "startOnPi",
+            "type": "shell",
+            //"command": "ssh ${config:sshUser}@${config:sshEndpoint} 'nohup python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client ~/spectrumpy/${fileBasename} > /dev/null 2>&1 &'"
+            "command": "ssh ${config:sshUser}@${config:sshEndpoint} 'cd ~/spectrumpy/; python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client ${fileBasename} &'"
+            //"command": "ssh ebaz@192.168.1.250 'python3 ~/spectrumpy/test.py  &'"
+        },
+        {
+            "label": "wait",
+            "type": "shell",
+            "command": "sleep 3"
+        },
+        {
+            "label": "copyAndStartOnPi",
+            "dependsOrder": "sequence",
+            "dependsOn": ["CopyPytoRemote", "startOnPi","wait"]
+            //"dependsOn": ["startOnPi","wait"]
+        },
+        {
+            "label": "cleanupOnPi",
+            "type": "shell",
+            "command": "ssh ${config:sshUser}@${config:sshEndpoint} 'pkill -9 python'"
+        }
+    ]    
+}

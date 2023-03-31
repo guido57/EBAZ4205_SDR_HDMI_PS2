@@ -150,41 +150,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_DivideBy2N_0_0/ebaz4205_DivideBy2N_0_0.xci">
-          <Proxy FileSetName="ebaz4205_DivideBy2N_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0.xci">
-          <Proxy FileSetName="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_processing_system7_0_0/ebaz4205_processing_system7_0_0.xci">
-          <Proxy FileSetName="ebaz4205_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0.xci">
-          <Proxy FileSetName="ebaz4205_axis_mux_0_0"/>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0.xci">
+          <Proxy FileSetName="ebaz4205_sqrt32_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_dds_axi_interface_0_2/ebaz4205_dds_axi_interface_0_2.xci">
           <Proxy FileSetName="ebaz4205_dds_axi_interface_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_dynclk_0_0/ebaz4205_axi_dynclk_0_0.xci">
-          <Proxy FileSetName="ebaz4205_axi_dynclk_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_rgb2dvi_0_3/ebaz4205_rgb2dvi_0_3.xci">
-          <Proxy FileSetName="ebaz4205_rgb2dvi_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_0_2/ebaz4205_axi_gpio_0_2.xci">
-          <Proxy FileSetName="ebaz4205_axi_gpio_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_0_3/ebaz4205_axi_gpio_0_3.xci">
-          <Proxy FileSetName="ebaz4205_axi_gpio_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4.xci">
-          <Proxy FileSetName="ebaz4205_axis_capture_0_4"/>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0.xci">
+          <Proxy FileSetName="ebaz4205_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_dds_axi_interface_0_0/ebaz4205_dds_axi_interface_0_0.xci">
           <Proxy FileSetName="ebaz4205_dds_axi_interface_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_sqrt32_0_0/ebaz4205_sqrt32_0_0.xci">
-          <Proxy FileSetName="ebaz4205_sqrt32_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_dds_axi_interface_0_1/ebaz4205_dds_axi_interface_0_1.xci">
           <Proxy FileSetName="ebaz4205_dds_axi_interface_0_1"/>
@@ -210,8 +186,32 @@
         <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_DivideBy4_25MHz_0/ebaz4205_DivideBy4_25MHz_0.xci">
           <Proxy FileSetName="ebaz4205_DivideBy4_25MHz_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_1_0/ebaz4205_axi_gpio_1_0.xci">
-          <Proxy FileSetName="ebaz4205_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_processing_system7_0_0/ebaz4205_processing_system7_0_0.xci">
+          <Proxy FileSetName="ebaz4205_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0/ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0.xci">
+          <Proxy FileSetName="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_DivideBy2N_0_0/ebaz4205_DivideBy2N_0_0.xci">
+          <Proxy FileSetName="ebaz4205_DivideBy2N_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axis_mux_0_0/ebaz4205_axis_mux_0_0.xci">
+          <Proxy FileSetName="ebaz4205_axis_mux_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_dynclk_0_0/ebaz4205_axi_dynclk_0_0.xci">
+          <Proxy FileSetName="ebaz4205_axi_dynclk_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_rgb2dvi_0_3/ebaz4205_rgb2dvi_0_3.xci">
+          <Proxy FileSetName="ebaz4205_rgb2dvi_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_0_2/ebaz4205_axi_gpio_0_2.xci">
+          <Proxy FileSetName="ebaz4205_axi_gpio_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axi_gpio_0_3/ebaz4205_axi_gpio_0_3.xci">
+          <Proxy FileSetName="ebaz4205_axi_gpio_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ebaz4205.bd" FileRelPathName="ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4.xci">
+          <Proxy FileSetName="ebaz4205_axis_capture_0_4"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/ebaz4205_wrapper.v">
