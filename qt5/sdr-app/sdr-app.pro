@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     init_fft_win.cpp \
+    uio.cpp \
     window_functions.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     freqvline.h \
     crosshairs.h \
     fftw3.h \
+    uio.h \
     window_functions.h
 
 message("OUT_PWD=" )
@@ -50,3 +52,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     test.pro.user
+

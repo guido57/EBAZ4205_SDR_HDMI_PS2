@@ -33,7 +33,7 @@
         {
             "label": "wait",
             "type": "shell",
-            "command": "sleep 3"
+            "command": "sleep 8"
         },
         {
             "label": "copyAndStartOnPi",

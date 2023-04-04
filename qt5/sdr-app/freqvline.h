@@ -11,10 +11,13 @@ QT_CHARTS_END_NAMESPACE
 
 QT_CHARTS_USE_NAMESPACE
 
-class FreqVLine
+class FreqVLine : public QObject
 {
+    Q_OBJECT
 public:
     FreqVLine(QChart *chart);
+    virtual ~FreqVLine();
+
     void updatePosition(QPointF position);
     void updateFrequency_hz(float frequency);
 
@@ -29,6 +32,8 @@ private:
     QPointF actualPosition; // use x position only
     float actualFrequency_hz;
 
+signals:
+    void tunedFrequencyChanged(int freq_hz);
 };
 
 #endif // FREQVLINE_H

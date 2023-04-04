@@ -7,6 +7,7 @@
 QT_CHARTS_USE_NAMESPACE
 
 FreqVLine::FreqVLine(QChart *chart) :
+    QObject(),
     m_xLine(new QGraphicsLineItem(chart)),
     m_xText(new QGraphicsTextItem(chart)),
     m_chart(chart)
@@ -17,6 +18,8 @@ FreqVLine::FreqVLine(QChart *chart) :
     m_xText->document()->setDocumentMargin(0);
     m_xText->setDefaultTextColor(Qt::black);
 }
+
+FreqVLine::~FreqVLine() {};
 
 void FreqVLine::updateFrequency_hz(float frequency){
     QPointF freqxy(frequency,0);
@@ -31,6 +34,8 @@ void FreqVLine::updatePosition(QPointF position)
 
     actualPosition = position;                      // store the actual position
     actualFrequency_hz = m_chart->mapToValue(position).x(); // store the actual frequency
+    // emit a SIGNAL when the vline is requested to move
+    emit tunedFrequencyChanged(actualFrequency_hz);
     QString xText = QString("%1").arg(actualFrequency_hz);
     m_xText->setHtml(QString("<div style='background-color: #00ff00;'>") + xText + "</div>");
     m_xText->setPos(position.x() - m_xText->boundingRect().width() / 2.0, m_chart->plotArea().bottom());

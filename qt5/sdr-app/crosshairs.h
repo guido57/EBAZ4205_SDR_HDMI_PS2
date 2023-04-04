@@ -4,6 +4,7 @@
 #include <QtCharts/QChartGlobal>
 #include <QtWidgets/QGraphicsItem>
 
+
 QT_CHARTS_BEGIN_NAMESPACE
 class QChart;
 QT_CHARTS_END_NAMESPACE

@@ -522,19 +522,6 @@ void kaiser(double * w, unsigned n, double beta)
     }
 }
 
-static unsigned bitreverse(unsigned n, unsigned size)
-{
-    unsigned ri = 0;
-    while (size != 1)
-    {
-        ri *= 2;
-        ri |= (n & 1);
-        n >>= 1;
-        size /= 2;
-    }
-    return ri;
-}
-
 /*
 void chebwin(double * w, unsigned n, double r)
 {
