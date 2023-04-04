@@ -2,7 +2,12 @@
 
 ## Description
 
-This repository contains the Vivado project, the Vitis project and a Python app to display the 0-32 MHz radio spectrum in a full view and tune HF radio stations.
+This repository contains:
+* Vivado project
+* Vitis project
+* QT5 app
+
+to display the 0-32 MHz radio spectrum in a full view and tune HF radio stations.
 This project is the continuation of https://github.com/guido57/EBAZ4205_Spectrum which is a 0-32 MHz radio spectrum viewer only. 
 
 ## Getting Started for FPGA or EBAZ4205 beginners
@@ -29,9 +34,7 @@ The following chapters describe the three main SW sub-projects (folders of this 
 
 * Zynq: the Xilinx Vivado project to program the Zynq7010 PL (Programmable Logic)
 * Vitis: the Xilinx Vitis project to build the TCP_server Linux app running on the Zynq7010 PS (Processing System)
-* SpectrumPy: the Python software for Windows to display the spectrum and tune the radio stations
-
-The Petalinux project is not in this Repository because is the same of [my EBAZ4205 repository](https://github.com/guido57/EBAZ4205)
+* sdr-app: the QT5 C++ software for PetaLinux to display the spectrum and tune the radio stations
 
 ![block diagram](https://github.com/guido57/EBAZ4205_SDR/blob/main/docs/slide.png)
 
@@ -44,14 +47,13 @@ After programming it, the EBAZ4205 will:
 * supply a 64 MHz clock to the AD9226 board
 * receive the 12 bits samples from the AD9226
 * receive commands from the Linux TCP_server program to:
-  * capture a frame of samples (16384 samples at a time)
-  * capture a continuos stream of sampled data via DMA
+  * capture a frame of samples (2048 samples at a time)
   * switch between the ADC input and a local RF test generator  
   * change the local RF test generator frequency in the range 100 KHz - 30 MHz
 
 ## Vitis
 
-This is the Xilinx Vitis 2021.2 project that let's you to build a C++ app running on the Zynq7010 PS to:
+This is the Xilinx Vitis 2022.2 project that let's you to build a C++ app running on the Zynq7010 PS to:
 * create a TCP server to send data/receive command to/from the SpectrumPy app
 * "send commands"/"receive data" to/from the Zynq7010 PL
 
