@@ -1,6 +1,0 @@
-18:51:18 **** Incremental Build of configuration Debug for project EBAZ4205_Spectrum_TCP_Server_system ****
-make all 
-NOTE: Skipping SDCard Generation, as the platform do not have boot directory and the bif file defined.
-
-18:51:18 Build Finished (took 110ms)
-
