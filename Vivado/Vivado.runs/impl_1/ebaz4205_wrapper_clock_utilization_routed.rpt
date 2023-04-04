@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Mar 21 08:57:27 2023
-| Host         : guido-UM690 running 64-bit Ubuntu 20.04.5 LTS
+| Date         : Tue Apr  4 16:45:20 2023
+| Host         : guido-UM690 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_clock_utilization -file ebaz4205_wrapper_clock_utilization_routed.rpt
 | Design       : ebaz4205_wrapper
 | Device       : 7z010-clg400
@@ -51,8 +51,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------------+-----------------------------------------------------------------------------+---------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                  | Driver Pin                                                                  | Net                                               |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------------+-----------------------------------------------------------------------------+---------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 4 |        9839 |               1 |       15.625 | clk_fpga_1             | ebaz4205_i/PS/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 4 |        3393 |               0 |       10.000 | clk_fpga_0             | ebaz4205_i/PS/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 4 |        9840 |               1 |       15.625 | clk_fpga_1             | ebaz4205_i/PS/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 4 |        3380 |               0 |       10.000 | clk_fpga_0             | ebaz4205_i/PS/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
 | g2        | src2      | BUFR/O          | None       | BUFR_X0Y5     | X1Y1         |                 1 |        2843 |               0 |       10.000 | axi_dynclk_0_PXL_CLK_O | ebaz4205_i/HDMI/axi_dynclk_0/U0/BUFR_inst/O                                 | ebaz4205_i/HDMI/axi_dynclk_0/U0/PXL_CLK_O         |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 4 |        2102 |               0 |        6.875 | clk_fpga_2             | ebaz4205_i/PS/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
 | g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 2 |         177 |               1 |              |                        | ebaz4205_i/DivideBy2_50MHz/inst/clk_out_BUFG_inst/O                         | ebaz4205_i/DivideBy2_50MHz/inst/clk_out_BUFG      |
@@ -71,7 +71,7 @@ Table of Contents
 | src1      | g1        | PS7/FCLKCLK[0]     | PS7_X0Y0   | PS7_X0Y0        | X0Y1         |           1 |               0 |              10.000 | clk_fpga_0   | ebaz4205_i/PS/processing_system7_0/inst/PS7_i/FCLKCLK[0]              | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |
 | src2      | g2        | MMCME2_ADV/CLKOUT0 | None       | MMCME2_ADV_X0Y1 | X1Y1         |           2 |               0 |               2.000 | I            | ebaz4205_i/HDMI/axi_dynclk_0/U0/Inst_mmcme2_drp/mmcm_adv_inst/CLKOUT0 | ebaz4205_i/HDMI/axi_dynclk_0/U0/Inst_mmcme2_drp/I              |
 | src3      | g3        | PS7/FCLKCLK[2]     | PS7_X0Y0   | PS7_X0Y0        | X0Y1         |           1 |               0 |               6.875 | clk_fpga_2   | ebaz4205_i/PS/processing_system7_0/inst/PS7_i/FCLKCLK[2]              | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK_unbuffered[2] |
-| src4      | g4        | FDCE/Q             | None       | SLICE_X29Y47    | X1Y0         |           1 |               0 |                     |              | ebaz4205_i/DivideBy2_50MHz/inst/clk_track_reg/Q                       | ebaz4205_i/DivideBy2_50MHz/inst/clk_out                        |
+| src4      | g4        | FDCE/Q             | None       | SLICE_X23Y49    | X1Y0         |           1 |               0 |                     |              | ebaz4205_i/DivideBy2_50MHz/inst/clk_track_reg/Q                       | ebaz4205_i/DivideBy2_50MHz/inst/clk_out                        |
 +-----------+-----------+--------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+--------------+-----------------------------------------------------------------------+----------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -85,10 +85,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 4384 |  1100 | 3354 |   400 |    0 |    20 |    6 |    10 |   20 |    20 |
-| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4306 |  1100 | 2401 |   350 |    1 |    40 |    4 |    20 |   20 |    20 |
-| X0Y1              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2773 |  1100 | 1679 |   400 |    0 |    20 |    0 |    10 |    9 |    20 |
-| X1Y1              |    5 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 | 3844 |  1100 | 1598 |   350 |    0 |    40 |    3 |    20 |    9 |    20 |
+| X0Y0              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 4360 |  1100 | 3292 |   400 |    0 |    20 |    6 |    10 |   19 |    20 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4317 |  1100 | 2434 |   350 |    0 |    40 |    4 |    20 |   20 |    20 |
+| X0Y1              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2634 |  1100 | 1571 |   400 |    0 |    20 |    0 |    10 |   10 |    20 |
+| X1Y1              |    5 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 | 3984 |  1100 | 1606 |   350 |    0 |    40 |    3 |    20 |    9 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -111,7 +111,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                               |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_fpga_1 |      15.625 | {0.000 7.812} |        9807 |        1 |              0 |        0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g0        | BUFG/O          | n/a               | clk_fpga_1 |      15.625 | {0.000 7.812} |        9808 |        1 |              0 |        0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -122,8 +122,8 @@ All Modules
 +----+-------+-------+-----------------------+
 |    | X0    | X1    | HORIZONTAL PROG DELAY |
 +----+-------+-------+-----------------------+
-| Y1 |  1567 |  1071 |                     0 |
-| Y0 |  2792 |  4378 |                     0 |
+| Y1 |  1555 |  1033 |                     0 |
+| Y0 |  2848 |  4373 |                     0 |
 +----+-------+-------+-----------------------+
 
 
@@ -133,7 +133,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                               |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |        3392 |        0 |              1 |        0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |        3379 |        0 |              1 |        0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -144,8 +144,8 @@ All Modules
 +----+-------+------+-----------------------+
 |    | X0    | X1   | HORIZONTAL PROG DELAY |
 +----+-------+------+-----------------------+
-| Y1 |  1548 |  134 |                     0 |
-| Y0 |  1044 |  667 |                     0 |
+| Y1 |  1419 |  289 |                     0 |
+| Y0 |   975 |  697 |                     0 |
 +----+-------+------+-----------------------+
 
 
@@ -188,8 +188,8 @@ All Modules
 +----+-------+------+-----------------------+
 |    | X0    | X1   | HORIZONTAL PROG DELAY |
 +----+-------+------+-----------------------+
-| Y1 |     1 |  143 |                     0 |
-| Y0 |  1935 |   12 |                     0 |
+| Y1 |     1 |  147 |                     0 |
+| Y0 |  1901 |   42 |                     0 |
 +----+-------+------+-----------------------+
 
 
@@ -221,9 +221,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2792 |               0 | 1574 |        1198 |    0 |  20 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | n/a   | BUFG/O          | None       |        1044 |               0 |  985 |          59 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
-| g3        | n/a   | BUFG/O          | None       |        1935 |               0 | 1825 |         104 |    6 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
+| g0        | n/a   | BUFG/O          | None       |        2848 |               0 | 1644 |        1185 |    0 |  19 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g1        | n/a   | BUFG/O          | None       |         975 |               0 |  925 |          50 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g3        | n/a   | BUFG/O          | None       |        1901 |               0 | 1791 |         104 |    6 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -236,9 +236,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4377 |               1 | 3634 |         719 |    3 |  20 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | n/a   | BUFG/O          | None       |         667 |               0 |  660 |           3 |    4 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
-| g3        | n/a   | BUFG/O          | None       |          12 |               0 |   12 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
+| g0        | n/a   | BUFG/O          | None       |        4372 |               1 | 3584 |         764 |    2 |  20 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g1        | n/a   | BUFG/O          | None       |         697 |               0 |  691 |           2 |    4 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g3        | n/a   | BUFG/O          | None       |          42 |               0 |   42 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
 | g4        | n/a   | BUFG/O          | None       |           0 |               1 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/DivideBy2_50MHz/inst/clk_out_BUFG      |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -252,8 +252,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1567 |               0 | 1057 |         501 |    0 |   9 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | n/a   | BUFG/O          | None       |        1548 |               0 | 1539 |           8 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | n/a   | BUFG/O          | None       |        1555 |               0 | 1057 |         488 |    0 |  10 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g1        | n/a   | BUFG/O          | None       |        1419 |               0 | 1400 |          18 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
 | g3        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
 | g4        | n/a   | BUFG/O          | None       |         177 |               0 |  177 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/DivideBy2_50MHz/inst/clk_out_BUFG      |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
@@ -268,10 +268,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1071 |               0 |  744 |         318 |    0 |   9 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | n/a   | BUFG/O          | None       |         134 |               0 |  133 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | n/a   | BUFG/O          | None       |        1033 |               0 |  725 |         299 |    0 |   9 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK1 |
+| g1        | n/a   | BUFG/O          | None       |         289 |               0 |  288 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK0 |
 | g2        | n/a   | BUFR/O          | None       |        2843 |               0 | 2827 |           5 |    3 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/HDMI/axi_dynclk_0/U0/PXL_CLK_O         |
-| g3        | n/a   | BUFG/O          | None       |         143 |               0 |  140 |           0 |    3 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
+| g3        | n/a   | BUFG/O          | None       |         147 |               0 |  144 |           0 |    3 |   0 |  0 |    0 |   0 |       0 | ebaz4205_i/PS/processing_system7_0/inst/FCLK_CLK2 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads

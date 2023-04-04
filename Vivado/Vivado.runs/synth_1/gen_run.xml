@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1679346280" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ebaz4205_wrapper.dcp" LaunchWriteIncrSynthDcp="true">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1680619306" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ebaz4205_wrapper.dcp" LaunchWriteIncrSynthDcp="true">
+  <File Type="VDS-TIMING-PB" Name="ebaz4205_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ebaz4205_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ebaz4205_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="ebaz4205_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="ebaz4205_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ebaz4205_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="ebaz4205_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="ebaz4205_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="ebaz4205_wrapper.tcl"/>
-  <File Type="RDS-DCP" Name="ebaz4205_wrapper.dcp"/>
-  <File Type="RDS-UTIL" Name="ebaz4205_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ebaz4205_wrapper_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DivideBy2N.v">
@@ -382,26 +385,25 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_ps2_mouse_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rgb2dvi_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy2N_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy4_25MHz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy2N_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_gen_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rgb2dvi_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_interface_DEC_RATE_Q_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_by_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_sqrt32_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_interface_DEC_RATE_Q_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_sqrt32_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_by_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_mux_0_0"/>
 </GenRun>

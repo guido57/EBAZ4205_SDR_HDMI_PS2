@@ -117,16 +117,203 @@ OPTRACE "impl_1" END { }
 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
+OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  set_param chipscope.maxJobs 4
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7z010clg400-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
+  set_property webtalk.parent_dir /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/wt [current_project]
+  set_property parent.project_path /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.xpr [current_project]
+  set_property ip_repo_paths {
+  /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/IP_ps2_mouse
+  /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/IP_rgb2dvi
+  /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/IP_axis_capture
+  /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/IP_axi_dynclk
+} [current_project]
+  update_ip_catalog
+  set_property ip_output_repo /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.runs/synth_1/ebaz4205_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.srcs/sources_1/bd/ebaz4205/ebaz4205.bd
+  set_param project.isImplRun false
+OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.srcs/constrs_1/imports/new/ebaz4205.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  set_param project.isImplRun true
+  link_design -top ebaz4205_wrapper -part xc7z010clg400-1 
+OPTRACE "link_design" END { }
+  set_param project.isImplRun false
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
+OPTRACE "init_design_reports" START { REPORT }
+OPTRACE "init_design_reports" END { }
+OPTRACE "init_design_write_hwdef" START { }
+OPTRACE "init_design_write_hwdef" END { }
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Init Design" END { }
+OPTRACE "Phase: Opt Design" START { ROLLUP_AUTO }
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+OPTRACE "read constraints: opt_design" START { }
+OPTRACE "read constraints: opt_design" END { }
+OPTRACE "opt_design" START { }
+  opt_design 
+OPTRACE "opt_design" END { }
+OPTRACE "read constraints: opt_design_post" START { }
+OPTRACE "read constraints: opt_design_post" END { }
+OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force ebaz4205_wrapper_opt.dcp
+OPTRACE "Opt Design: write_checkpoint" END { }
+OPTRACE "opt_design reports" START { REPORT }
+  create_report "impl_1_opt_report_drc_0" "report_drc -file ebaz4205_wrapper_drc_opted.rpt -pb ebaz4205_wrapper_drc_opted.pb -rpx ebaz4205_wrapper_drc_opted.rpx"
+OPTRACE "opt_design reports" END { }
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Opt Design" END { }
+OPTRACE "Phase: Place Design" START { ROLLUP_AUTO }
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+OPTRACE "read constraints: place_design" START { }
+OPTRACE "read constraints: place_design" END { }
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+OPTRACE "implement_debug_core" START { }
+    implement_debug_core 
+OPTRACE "implement_debug_core" END { }
+  } 
+OPTRACE "place_design" START { }
+  place_design 
+OPTRACE "place_design" END { }
+OPTRACE "read constraints: place_design_post" START { }
+OPTRACE "read constraints: place_design_post" END { }
+OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force ebaz4205_wrapper_placed.dcp
+OPTRACE "Place Design: write_checkpoint" END { }
+OPTRACE "place_design reports" START { REPORT }
+  create_report "impl_1_place_report_io_0" "report_io -file ebaz4205_wrapper_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file ebaz4205_wrapper_utilization_placed.rpt -pb ebaz4205_wrapper_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file ebaz4205_wrapper_control_sets_placed.rpt"
+OPTRACE "place_design reports" END { }
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Place Design" END { }
+OPTRACE "Phase: Physical Opt Design" START { ROLLUP_AUTO }
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+OPTRACE "read constraints: phys_opt_design" START { }
+OPTRACE "read constraints: phys_opt_design" END { }
+OPTRACE "phys_opt_design" START { }
+  phys_opt_design 
+OPTRACE "phys_opt_design" END { }
+OPTRACE "read constraints: phys_opt_design_post" START { }
+OPTRACE "read constraints: phys_opt_design_post" END { }
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force ebaz4205_wrapper_physopt.dcp
+OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
+OPTRACE "phys_opt_design report" START { REPORT }
+OPTRACE "phys_opt_design report" END { }
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "Phase: Physical Opt Design" END { }
+OPTRACE "Phase: Route Design" START { ROLLUP_AUTO }
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+OPTRACE "read constraints: route_design" START { }
+OPTRACE "read constraints: route_design" END { }
+OPTRACE "route_design" START { }
+  route_design 
+OPTRACE "route_design" END { }
+OPTRACE "read constraints: route_design_post" START { }
+OPTRACE "read constraints: route_design_post" END { }
+OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
+  write_checkpoint -force ebaz4205_wrapper_routed.dcp
+OPTRACE "Route Design: write_checkpoint" END { }
+OPTRACE "route_design reports" START { REPORT }
+  create_report "impl_1_route_report_drc_0" "report_drc -file ebaz4205_wrapper_drc_routed.rpt -pb ebaz4205_wrapper_drc_routed.pb -rpx ebaz4205_wrapper_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file ebaz4205_wrapper_methodology_drc_routed.rpt -pb ebaz4205_wrapper_methodology_drc_routed.pb -rpx ebaz4205_wrapper_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file ebaz4205_wrapper_power_routed.rpt -pb ebaz4205_wrapper_power_summary_routed.pb -rpx ebaz4205_wrapper_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file ebaz4205_wrapper_route_status.rpt -pb ebaz4205_wrapper_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file ebaz4205_wrapper_timing_summary_routed.rpt -pb ebaz4205_wrapper_timing_summary_routed.pb -rpx ebaz4205_wrapper_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file ebaz4205_wrapper_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file ebaz4205_wrapper_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file ebaz4205_wrapper_bus_skew_routed.rpt -pb ebaz4205_wrapper_bus_skew_routed.pb -rpx ebaz4205_wrapper_bus_skew_routed.rpx"
+OPTRACE "route_design reports" END { }
+OPTRACE "route_design misc" START { }
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+OPTRACE "route_design write_checkpoint" END { }
+  write_checkpoint -force ebaz4205_wrapper_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "route_design misc" END { }
+OPTRACE "Phase: Route Design" END { }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
 OPTRACE "write_bitstream setup" START { }
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 4
-  open_checkpoint ebaz4205_wrapper_routed.dcp
-  set_property webtalk.parent_dir /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.cache/wt [current_project]
-set_property TOP ebaz4205_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

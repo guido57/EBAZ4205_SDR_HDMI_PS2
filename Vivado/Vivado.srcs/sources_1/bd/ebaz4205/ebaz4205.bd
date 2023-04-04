@@ -1906,6 +1906,10 @@
             "direction": "O",
             "left": "0",
             "right": "0"
+          },
+          "ctrl_s_axi_aresetn": {
+            "type": "rst",
+            "direction": "I"
           }
         },
         "components": {
@@ -2194,6 +2198,10 @@
                 "direction": "O",
                 "left": "0",
                 "right": "0"
+              },
+              "ctrl_s_axi_aresetn": {
+                "type": "rst",
+                "direction": "I"
               }
             },
             "components": {
@@ -2815,6 +2823,12 @@
                   "mult_gen_AM_modulator/B"
                 ]
               },
+              "ctrl_s_axi_aresetn_1": {
+                "ports": [
+                  "ctrl_s_axi_aresetn",
+                  "dds_axi_interface_0/ctrl_s_axi_aresetn"
+                ]
+              },
               "dds_compiler_1KHz_m_axis_data_tdata": {
                 "ports": [
                   "dds_compiler_1KHz/m_axis_data_tdata",
@@ -2842,8 +2856,7 @@
               "xlconstant_2_dout": {
                 "ports": [
                   "xlconstant_1_bis/dout",
-                  "dds_axi_interface_0/ctrl_m_axis_aresetn",
-                  "dds_axi_interface_0/ctrl_s_axi_aresetn"
+                  "dds_axi_interface_0/ctrl_m_axis_aresetn"
                 ]
               },
               "xlslice_1_Dout": {
@@ -2960,6 +2973,12 @@
             "ports": [
               "axis_mux_0/output_axis_tdata",
               "xlconcat_1/In1"
+            ]
+          },
+          "ctrl_s_axi_aresetn_1": {
+            "ports": [
+              "ctrl_s_axi_aresetn",
+              "TestGen/ctrl_s_axi_aresetn"
             ]
           },
           "s00_axis_aclk_1": {
@@ -8445,7 +8464,8 @@
           "ps7_axi_periph/M04_ARESETN",
           "ps7_axi_periph/M05_ARESETN",
           "ps7_axi_periph/M06_ARESETN",
-          "ps7_axi_periph/M01_ARESETN"
+          "ps7_axi_periph/M01_ARESETN",
+          "ADC_TestGen/ctrl_s_axi_aresetn"
         ]
       },
       "xlconcat_1_dout": {

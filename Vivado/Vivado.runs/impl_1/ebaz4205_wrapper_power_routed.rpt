@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Tue Mar 21 08:57:25 2023
-| Host             : guido-UM690 running 64-bit Ubuntu 20.04.5 LTS
+| Date             : Tue Apr  4 16:45:19 2023
+| Host             : guido-UM690 running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file ebaz4205_wrapper_power_routed.rpt -pb ebaz4205_wrapper_power_summary_routed.pb -rpx ebaz4205_wrapper_power_routed.rpx
 | Design           : ebaz4205_wrapper
 | Device           : xc7z010clg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.887        |
+| Total On-Chip Power (W)  | 1.886        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.756        |
+| Dynamic (W)              | 1.755        |
 | Device Static (W)        | 0.130        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 63.2         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.049 |        9 |       --- |             --- |
-| Slice Logic              |     0.041 |    31845 |       --- |             --- |
-|   LUT as Logic           |     0.035 |     7942 |     17600 |           45.13 |
+| Clocks                   |     0.050 |        9 |       --- |             --- |
+| Slice Logic              |     0.040 |    31814 |       --- |             --- |
+|   LUT as Logic           |     0.034 |     7917 |     17600 |           44.98 |
 |   CARRY4                 |     0.003 |      826 |      4400 |           18.77 |
-|   Register               |     0.003 |    15317 |     35200 |           43.51 |
+|   Register               |     0.002 |    15305 |     35200 |           43.48 |
 |   LUT as Shift Register  |    <0.001 |     1671 |      6000 |           27.85 |
 |   F7/F8 Muxes            |    <0.001 |      200 |     17600 |            1.14 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |    <0.001 |       74 |      6000 |            1.23 |
-|   Others                 |     0.000 |     1935 |       --- |             --- |
-| Signals                  |     0.046 |    23533 |       --- |             --- |
+|   Others                 |     0.000 |     1934 |       --- |             --- |
+| Signals                  |     0.046 |    23500 |       --- |             --- |
 | Block RAM                |     0.019 |       14 |        60 |           23.33 |
 | MMCM                     |     0.107 |        1 |         2 |           50.00 |
 | DSPs                     |     0.038 |       58 |        80 |           72.50 |
 | I/O                      |     0.170 |       45 |       100 |           45.00 |
 | PS7                      |     1.286 |        1 |       --- |             --- |
 | Static Power             |     0.130 |          |           |                 |
-| Total                    |     1.887 |          |           |                 |
+| Total                    |     1.886 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.203 |       0.194 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.202 |       0.193 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.069 |       0.060 |      0.009 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.051 |       0.050 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -92,7 +92,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.706 |       0.674 |      0.033 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.706 |       0.674 |      0.032 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |       NA    | Unspecified | NA         |
@@ -160,22 +160,22 @@ Table of Contents
 +--------------------------------+-----------+
 | Name                           | Power (W) |
 +--------------------------------+-----------+
-| ebaz4205_wrapper               |     1.756 |
+| ebaz4205_wrapper               |     1.755 |
 |   MDIO_ETHERNET_0_0_mdio_iobuf |     0.004 |
-|   ebaz4205_i                   |     1.718 |
+|   ebaz4205_i                   |     1.717 |
 |     ADC_TestGen                |     0.010 |
 |       TestGen                  |     0.009 |
-|     AM_demodulator             |     0.023 |
+|     AM_demodulator             |     0.022 |
 |       I_square                 |     0.002 |
 |       Q_square                 |     0.001 |
 |       c_addsub_0               |     0.001 |
-|       sqrt32_0                 |     0.019 |
+|       sqrt32_0                 |     0.018 |
 |     DDC                        |     0.023 |
 |       ComplexMult              |     0.008 |
 |       LO                       |     0.015 |
 |     FILTER                     |     0.077 |
 |       CIC_I_1024               |     0.014 |
-|       CIC_Q_1024               |     0.014 |
+|       CIC_Q_1024               |     0.013 |
 |       FIR_I_2                  |     0.024 |
 |       FIR_Q_2                  |     0.024 |
 |     HDMI                       |     0.278 |

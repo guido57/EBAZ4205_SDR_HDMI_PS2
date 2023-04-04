@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1679385254">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1680619313">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="ebaz4205_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="ebaz4205_wrapper_routed.rqs"/>
-  <File Type="RCFI_FILE" Name="ebaz4205_wrapper.rcfi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ebaz4205_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="ebaz4205_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ebaz4205_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ebaz4205_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ebaz4205_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ebaz4205_wrapper_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="ebaz4205_wrapper_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ebaz4205_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PWROPT-DCP" Name="ebaz4205_wrapper_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="ebaz4205_wrapper_placed.dcp"/>
-  <File Type="OPT-DCP" Name="ebaz4205_wrapper_opt.dcp"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ebaz4205_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="ebaz4205_wrapper.sysdef"/>
-  <File Type="BITSTR-MMI" Name="ebaz4205_wrapper.mmi"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ebaz4205_wrapper_bus_skew_routed.rpt"/>
-  <File Type="BITSTR-BMM" Name="ebaz4205_wrapper_bd.bmm"/>
-  <File Type="ROUTE-CLK" Name="ebaz4205_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="BITSTR-NKY" Name="ebaz4205_wrapper.nky"/>
-  <File Type="BITSTR-RBT" Name="ebaz4205_wrapper.rbt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ebaz4205_wrapper_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="ebaz4205_wrapper_reports.tcl"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ebaz4205_wrapper_timing_summary_routed.rpx"/>
-  <File Type="OPT-HWDEF" Name="ebaz4205_wrapper.hwdef"/>
-  <File Type="RBD_FILE" Name="ebaz4205_wrapper.rbd"/>
-  <File Type="BITSTR-MSK" Name="ebaz4205_wrapper.msk"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ebaz4205_wrapper_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="ebaz4205_wrapper.tcl"/>
-  <File Type="ROUTE-TIMING-PB" Name="ebaz4205_wrapper_timing_summary_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="ebaz4205_wrapper.vdi"/>
-  <File Type="OPT-DRC" Name="ebaz4205_wrapper_drc_opted.rpt"/>
-  <File Type="NPI_FILE" Name="ebaz4205_wrapper.npi"/>
-  <File Type="BG-BIN" Name="ebaz4205_wrapper.bin"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ebaz4205_wrapper_timing_summary_routed.rpt"/>
-  <File Type="CFI_FILE" Name="ebaz4205_wrapper.cfi"/>
   <File Type="BG-DRC" Name="ebaz4205_wrapper.drc"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ebaz4205_wrapper_routed_error.dcp"/>
-  <File Type="RNPI_FILE" Name="ebaz4205_wrapper.rnpi"/>
   <File Type="BG-BGN" Name="ebaz4205_wrapper.bgn"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ebaz4205_wrapper_routed_bb.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="ebaz4205_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ebaz4205_wrapper.ltx"/>
+  <File Type="RBD_FILE" Name="ebaz4205_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="ebaz4205_wrapper.npi"/>
+  <File Type="RNPI_FILE" Name="ebaz4205_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="ebaz4205_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="ebaz4205_wrapper.rcfi"/>
   <File Type="PDI-FILE" Name="ebaz4205_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="ebaz4205_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="ebaz4205_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="ebaz4205_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="ebaz4205_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="ebaz4205_wrapper.msk"/>
+  <File Type="BG-BIN" Name="ebaz4205_wrapper.bin"/>
   <File Type="BG-BIT" Name="ebaz4205_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ebaz4205_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ebaz4205_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ebaz4205_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ebaz4205_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ebaz4205_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ebaz4205_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ebaz4205_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ebaz4205_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ebaz4205_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ebaz4205_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ebaz4205_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ebaz4205_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="ebaz4205_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ebaz4205_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="ebaz4205_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ebaz4205_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="ebaz4205_wrapper_route_status.pb"/>
-  <File Type="PLACE-IO" Name="ebaz4205_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="ebaz4205_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ebaz4205_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="ebaz4205_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ebaz4205_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="ebaz4205_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ebaz4205_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="ebaz4205_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="ebaz4205_wrapper_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ebaz4205_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="ebaz4205_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="ebaz4205_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="ebaz4205_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="ebaz4205_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ebaz4205_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ebaz4205_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ebaz4205_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="ebaz4205_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="ebaz4205_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="ebaz4205_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ebaz4205_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DCP" Name="ebaz4205_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ebaz4205_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="ebaz4205_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="ebaz4205_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ebaz4205_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ebaz4205_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ebaz4205_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="ebaz4205_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ebaz4205_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ebaz4205_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="ebaz4205_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ebaz4205_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="ebaz4205_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ebaz4205_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="ebaz4205_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="ebaz4205_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="ebaz4205_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="ebaz4205_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="ebaz4205_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="ebaz4205_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ebaz4205_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ebaz4205_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="ebaz4205_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ebaz4205_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="ebaz4205_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="ebaz4205_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="ebaz4205_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DivideBy2N.v">
@@ -444,28 +462,26 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_sqrt32_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_interface_DEC_RATE_Q_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_by_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_gen_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rgb2dvi_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_ps2_mouse_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rst_ENET0_GMII_RX_CLK_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_rgb2dvi_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_capture_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_I2S_Transmitter_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy4_25MHz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy2N_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_dynclk_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_gen_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_dds_axi_interface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axi_interface_DEC_RATE_Q_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_mult_by_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_sqrt32_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_DivideBy10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ebaz4205_axis_mux_0_0"/>
 </GenRun>

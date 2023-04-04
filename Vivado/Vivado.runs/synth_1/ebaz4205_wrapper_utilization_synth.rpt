@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Mar 20 22:05:08 2023
-| Host         : guido-UM690 running 64-bit Ubuntu 20.04.5 LTS
+| Date         : Tue Apr  4 16:42:21 2023
+| Host         : guido-UM690 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file ebaz4205_wrapper_utilization_synth.rpt -pb ebaz4205_wrapper_utilization_synth.pb
 | Design       : ebaz4205_wrapper
 | Device       : xc7z010clg400-1

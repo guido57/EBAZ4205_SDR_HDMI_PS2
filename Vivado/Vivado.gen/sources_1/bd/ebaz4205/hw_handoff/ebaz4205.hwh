@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 21 10:37:27 2023" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr  4 16:41:40 2023" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="ebaz4205" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -1023,9 +1023,9 @@
             <CONNECTION INSTANCE="PS_processing_system7_0" PORT="FCLK_CLK1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ctrl_s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="ADC_TestGen_TestGen_xlconstant_1_bis_dout">
+        <PORT DIR="I" NAME="ctrl_s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="PS_rst_ps7_0_64M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_TestGen_TestGen_xlconstant_1_bis" PORT="dout"/>
+            <CONNECTION INSTANCE="PS_rst_ps7_0_64M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="ctrl_s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_TestGen_TestGen_dds_axi_interface_0_ctrl_s_axi_awaddr">
@@ -1498,7 +1498,6 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="ADC_TestGen_TestGen_xlconstant_1_bis_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_TestGen_TestGen_dds_axi_interface_0" PORT="ctrl_m_axis_aresetn"/>
-            <CONNECTION INSTANCE="ADC_TestGen_TestGen_dds_axi_interface_0" PORT="ctrl_s_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -11436,6 +11435,7 @@
             <CONNECTION INSTANCE="ps7_axi_periph" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="ps7_axi_periph" PORT="M06_ARESETN"/>
             <CONNECTION INSTANCE="ps7_axi_periph" PORT="M01_ARESETN"/>
+            <CONNECTION INSTANCE="ADC_TestGen_TestGen_dds_axi_interface_0" PORT="ctrl_s_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

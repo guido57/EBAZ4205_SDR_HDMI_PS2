@@ -186,15 +186,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_xl
 # IP: bd/ebaz4205/ip/ebaz4205_xlconcat_0_3/ebaz4205_xlconcat_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_xlconcat_0_3 || ORIG_REF_NAME==ebaz4205_xlconcat_0_3} -quiet] -quiet
 
-# IP: bd/ebaz4205/ip/ebaz4205_s00_regslice_0/ebaz4205_s00_regslice_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_s00_regslice_0 || ORIG_REF_NAME==ebaz4205_s00_regslice_0} -quiet] -quiet
-
-# IP: bd/ebaz4205/ip/ebaz4205_s00_data_fifo_0/ebaz4205_s00_data_fifo_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_s00_data_fifo_0 || ORIG_REF_NAME==ebaz4205_s00_data_fifo_0} -quiet] -quiet
-
-# IP: bd/ebaz4205/ip/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_auto_pc_0 || ORIG_REF_NAME==ebaz4205_auto_pc_0} -quiet] -quiet
-
 # IP: bd/ebaz4205/ip/ebaz4205_axi_interconnect_0_2/ebaz4205_axi_interconnect_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_axi_interconnect_0_2 || ORIG_REF_NAME==ebaz4205_axi_interconnect_0_2} -quiet] -quiet
 
@@ -206,6 +197,24 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_ax
 
 # IP: bd/ebaz4205/ip/ebaz4205_xbar_0/ebaz4205_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_xbar_0 || ORIG_REF_NAME==ebaz4205_xbar_0} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_axi_interconnect_0_0/ebaz4205_axi_interconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_axi_interconnect_0_0 || ORIG_REF_NAME==ebaz4205_axi_interconnect_0_0} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_axis_capture_0_4 || ORIG_REF_NAME==ebaz4205_axis_capture_0_4} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_ps2_mouse_0_0/ebaz4205_ps2_mouse_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_ps2_mouse_0_0 || ORIG_REF_NAME==ebaz4205_ps2_mouse_0_0} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_s00_regslice_0/ebaz4205_s00_regslice_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_s00_regslice_0 || ORIG_REF_NAME==ebaz4205_s00_regslice_0} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_s00_data_fifo_0/ebaz4205_s00_data_fifo_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_s00_data_fifo_0 || ORIG_REF_NAME==ebaz4205_s00_data_fifo_0} -quiet] -quiet
+
+# IP: bd/ebaz4205/ip/ebaz4205_auto_pc_0/ebaz4205_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_auto_pc_0 || ORIG_REF_NAME==ebaz4205_auto_pc_0} -quiet] -quiet
 
 # IP: bd/ebaz4205/ip/ebaz4205_auto_pc_1/ebaz4205_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_auto_pc_1 || ORIG_REF_NAME==ebaz4205_auto_pc_1} -quiet] -quiet
@@ -221,14 +230,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_au
 
 # IP: bd/ebaz4205/ip/ebaz4205_auto_cc_3/ebaz4205_auto_cc_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_auto_cc_3 || ORIG_REF_NAME==ebaz4205_auto_cc_3} -quiet] -quiet
-
-# IP: bd/ebaz4205/ip/ebaz4205_axi_interconnect_0_0/ebaz4205_axi_interconnect_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_axi_interconnect_0_0 || ORIG_REF_NAME==ebaz4205_axi_interconnect_0_0} -quiet] -quiet
-
-# IP: bd/ebaz4205/ip/ebaz4205_ps2_mouse_0_0/ebaz4205_ps2_mouse_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_ps2_mouse_0_0 || ORIG_REF_NAME==ebaz4205_ps2_mouse_0_0} -quiet] -quiet
-
-# IP: bd/ebaz4205/ip/ebaz4205_axis_capture_0_4/ebaz4205_axis_capture_0_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ebaz4205_axis_capture_0_4 || ORIG_REF_NAME==ebaz4205_axis_capture_0_4} -quiet] -quiet
 
 # XDC: /home/guido/GitHub/EBAZ4205_SDR_HDMI_PS2/Vivado/Vivado.gen/sources_1/bd/ebaz4205/ebaz4205_ooc.xdc

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Mar 21 08:57:22 2023
-| Host         : guido-UM690 running 64-bit Ubuntu 20.04.5 LTS
+| Date         : Tue Apr  4 16:45:16 2023
+| Host         : guido-UM690 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_methodology -file ebaz4205_wrapper_methodology_drc_routed.rpt -pb ebaz4205_wrapper_methodology_drc_routed.pb -rpx ebaz4205_wrapper_methodology_drc_routed.rpx
 | Design       : ebaz4205_wrapper
 | Device       : xc7z010clg400-1
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 322
+             Violations found: 321
 +-----------+------------------+------------------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                                      | Violations |
 +-----------+------------------+------------------------------------------------------------------+------------+
@@ -34,7 +34,7 @@ Table of Contents
 | LUTAR-1   | Warning          | LUT drives async reset alert                                     | 2          |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain                  | 1          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                                | 1          |
-| TIMING-16 | Warning          | Large setup violation                                            | 100        |
+| TIMING-16 | Warning          | Large setup violation                                            | 99         |
 | TIMING-18 | Warning          | Missing input or output delay                                    | 19         |
 | ULMTCS-1  | Warning          | Control Sets use limits recommend reduction                      | 1          |
 | XDCB-5    | Warning          | Runtime inefficient way to find pin objects                      | 1          |
@@ -1060,7 +1060,7 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell ebaz4205_i/HDMI/axi_interconnect_1/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X1Y10 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell ebaz4205_i/HDMI/axi_interconnect_1/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+The FDRE cell ebaz4205_i/HDMI/axi_interconnect_1/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X4Y6 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell ebaz4205_i/HDMI/axi_interconnect_1/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -1070,502 +1070,497 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.294 ns between ebaz4205_i/ps7_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_enc_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/ps7_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][13]_srl32/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.711 ns between ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/capture_finished_reg/C (clocked by clk_fpga_1) and ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/finished_sync_ff1_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.768 ns between ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/capture_finished_reg/C (clocked by clk_fpga_1) and ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/finished_sync_ff1_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.893 ns between ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_ADC_TEST/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/ADC_TestGen/axis_mux_0/inst/select_input_sync_ff1_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.819 ns between ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/capture_busy_reg/C (clocked by clk_fpga_0) and ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/start_sync_ff1_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.957 ns between ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/capture_busy_reg/C (clocked by clk_fpga_0) and ebaz4205_i/axis_capture_RF/U0/axis_capture_inst/start_sync_ff1_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.961 ns between ebaz4205_i/ADC_TestGen/TestGen/axi_gpio_ADC_TEST/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/ADC_TestGen/axis_mux_0/inst/select_input_sync_ff1_reg/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.677 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -10.223 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -11.205 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[24]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -11.071 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[24]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -13.143 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[23]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -12.297 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[23]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -13.346 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -12.931 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -16.247 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -14.712 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -16.319 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[22]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -15.433 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[22]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -18.318 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[21]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -17.670 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[21]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -19.309 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -18.494 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.031 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -2.093 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.172 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -2.111 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[0]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.208 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -2.215 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[29]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.349 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -2.270 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.417 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[29]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -2.288 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[1]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.425 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[31]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[31]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -2.334 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.448 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[29]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[30]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -2.490 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[31]_replica/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[31]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.551 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[31]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -2.584 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.559 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[29]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -2.595 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[30]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.739 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -20.121 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -21.528 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -20.658 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[20]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -21.536 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[20]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -23.373 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[19]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.468 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -23.710 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -24.472 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[19]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -25.937 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -27.356 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[18]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -26.451 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[18]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -27.520 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -29.135 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.459 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[2]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -29.641 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[17]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.623 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[2]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -3.387 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[31]_replica/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.636 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[3]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -3.438 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[2]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.846 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[3]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -3.526 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[2]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -30.047 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -3.684 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[3]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -30.241 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[17]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -3.731 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[28]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -31.897 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[16]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -3.740 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[3]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -32.325 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -3.797 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.039 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[28]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -32.229 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[16]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.057 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -32.605 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.796 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -4.944 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[4]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.853 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[4]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -5.053 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[4]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.978 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[27]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -5.121 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[5]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.030 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[5]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -5.228 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[5]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.218 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[4]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -5.286 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[6]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.298 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[6]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -5.381 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[7]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.395 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[5]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -5.463 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[6]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.402 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[7]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -5.512 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.518 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[6]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -5.528 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[7]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -5.644 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[7]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -5.534 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[27]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.647 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[3]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -6.561 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.648 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[8]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -6.567 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[26]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.851 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[26]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -6.616 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[8]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.870 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[9]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -6.834 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.872 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -6.953 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[9]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.881 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -6.980 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.885 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[8]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -6.999 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.923 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -7.082 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[8]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.992 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -7.091 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.041 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -7.133 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.130 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -7.190 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.152 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -7.240 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[10]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.168 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[9]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#61 Warning
 Large setup violation  
-There is a large setup violation of -7.244 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.173 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#62 Warning
 Large setup violation  
-There is a large setup violation of -7.250 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.190 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#63 Warning
 Large setup violation  
-There is a large setup violation of -7.259 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[9]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.223 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[10]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#64 Warning
 Large setup violation  
-There is a large setup violation of -7.261 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.232 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#65 Warning
 Large setup violation  
-There is a large setup violation of -7.300 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.283 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#66 Warning
 Large setup violation  
-There is a large setup violation of -7.321 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.323 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][16]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#67 Warning
 Large setup violation  
-There is a large setup violation of -7.382 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[10]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.339 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][18]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#68 Warning
 Large setup violation  
-There is a large setup violation of -7.384 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][16]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.382 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][16]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#69 Warning
 Large setup violation  
-There is a large setup violation of -7.400 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][18]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.398 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][18]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#70 Warning
 Large setup violation  
-There is a large setup violation of -7.434 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.413 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][19]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#71 Warning
 Large setup violation  
-There is a large setup violation of -7.441 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.417 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#72 Warning
 Large setup violation  
-There is a large setup violation of -7.455 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][16]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.434 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][17]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#73 Warning
 Large setup violation  
-There is a large setup violation of -7.471 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][18]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.472 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][19]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#74 Warning
 Large setup violation  
-There is a large setup violation of -7.474 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][19]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.493 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][17]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#75 Warning
 Large setup violation  
-There is a large setup violation of -7.495 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][17]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.521 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[10]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#76 Warning
 Large setup violation  
-There is a large setup violation of -7.545 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][19]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.528 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#77 Warning
 Large setup violation  
-There is a large setup violation of -7.545 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.529 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][20]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#78 Warning
 Large setup violation  
-There is a large setup violation of -7.566 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][17]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.560 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#79 Warning
 Large setup violation  
-There is a large setup violation of -7.569 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][20]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.581 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[11]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#80 Warning
 Large setup violation  
-There is a large setup violation of -7.582 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][20]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.610 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[7]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][22]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#81 Warning
 Large setup violation  
-There is a large setup violation of -7.585 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][22]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.610 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][20]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#82 Warning
 Large setup violation  
-There is a large setup violation of -7.590 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.620 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#83 Warning
 Large setup violation  
-There is a large setup violation of -7.606 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.640 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[0]_replica/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#84 Warning
 Large setup violation  
-There is a large setup violation of -7.638 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][22]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.654 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][22]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#85 Warning
 Large setup violation  
-There is a large setup violation of -7.641 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.670 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[7]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#86 Warning
 Large setup violation  
-There is a large setup violation of -7.659 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.713 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#87 Warning
 Large setup violation  
-There is a large setup violation of -7.680 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.714 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[12]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#88 Warning
 Large setup violation  
-There is a large setup violation of -7.680 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.721 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#89 Warning
 Large setup violation  
-There is a large setup violation of -7.684 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.730 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[14]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#90 Warning
 Large setup violation  
-There is a large setup violation of -7.693 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[1]_replica_2/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][21]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.804 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[7]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#91 Warning
 Large setup violation  
-There is a large setup violation of -7.698 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][23]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.804 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#92 Warning
 Large setup violation  
-There is a large setup violation of -7.701 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[30]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[15]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.820 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[7]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#93 Warning
 Large setup violation  
-There is a large setup violation of -7.701 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_I_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.825 ns between ebaz4205_i/FILTER/axi_gpio_FILTER_GAIN/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[31]/C (clocked by clk_fpga_0) and ebaz4205_i/FILTER/FIR_Q_2/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[13]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#94 Warning
 Large setup violation  
-There is a large setup violation of -7.766 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.862 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#95 Warning
 Large setup violation  
-There is a large setup violation of -7.795 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[1]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.891 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#96 Warning
 Large setup violation  
-There is a large setup violation of -7.831 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][24]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.915 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_cos_ls/opt_has_pipe.first_q_reg[7]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_sin/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#97 Warning
 Large setup violation  
-There is a large setup violation of -7.847 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][26]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -7.973 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[0]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#98 Warning
 Large setup violation  
-There is a large setup violation of -7.942 ns between ebaz4205_i/DDC/LO/DDS_LO/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C (clocked by clk_fpga_0) and ebaz4205_i/DDC/ComplexMult/mult_cos/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_3_add.stage_3_pipeline.s3_add_out_reg[0][25]/D (clocked by clk_fpga_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.550 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#99 Warning
 Large setup violation  
-There is a large setup violation of -8.136 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#100 Warning
-Large setup violation  
-There is a large setup violation of -8.277 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[27]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[25]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -8.695 ns between ebaz4205_i/AM_demodulator/c_addsub_0/U0/xst_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[30]/C (clocked by clk_fpga_1) and ebaz4205_i/I2S/I2S_Transmitter_0/inst/buffer_reg[25]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -1665,7 +1660,7 @@ Related violations: <none>
 
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 452 control sets (vs. available limit of 4400, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 453 control sets (vs. available limit of 4400, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCB-5#1 Warning

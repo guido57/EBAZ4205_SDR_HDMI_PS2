@@ -88,6 +88,7 @@
 					"ports": {
 						"ACLK": { "actual": "ADC_clk_64M"},
 						"ARADDR": { "actual": "ctrl_s_axi_araddr"},
+						"ARESETN": { "actual": "ctrl_s_axi_aresetn"},
 						"ARPROT": { "actual": "ctrl_s_axi_arprot"},
 						"ARREADY": { "actual": "ctrl_s_axi_arready"},
 						"ARVALID": { "actual": "ctrl_s_axi_arvalid"},
@@ -149,6 +150,7 @@
 					"ports": {
 						"ACLK": { "actual": "ADC_clk_64M"},
 						"ARADDR": { "actual": "ctrl_s_axi_araddr"},
+						"ARESETN": { "actual": "ctrl_s_axi_aresetn"},
 						"ARPROT": { "actual": "ctrl_s_axi_arprot"},
 						"ARREADY": { "actual": "ctrl_s_axi_arready"},
 						"ARVALID": { "actual": "ctrl_s_axi_arvalid"},
