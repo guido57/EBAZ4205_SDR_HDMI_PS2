@@ -38,7 +38,7 @@ The following chapters describe the three main SW sub-projects (folders of this 
 * Vitis: the Xilinx Vitis project to build the TCP_server Linux app running on the Zynq7010 PS (Processing System)
 * sdr-app: the QT5 C++ software for PetaLinux to display the spectrum and tune the radio stations
 
-## Zynq
+## Vivado (Zynq)
 
 This is the Xilinx Vivado 2022.2 project that let's you to program the Zynq7010 FPGA (PL side) contained in the EBAZ4205 board. 
 
@@ -58,24 +58,17 @@ After programming it, the EBAZ4205 will:
 
 ## Vitis
 
-This is the Xilinx Vitis 2022.2 project that let's you to build a C++ app running on the Zynq7010 PS to:
-* create a TCP server to send data/receive command to/from the SpectrumPy app
-* "send commands"/"receive data" to/from the Zynq7010 PL
+This is the Xilinx Vitis 2022.2 project that let's you to build a C++ app, named colorbars, running on the Zynq7010 PS to configure the HDMI IPs (Video Timing Controller, Video DMA). This app has also a menu to choose the video format e.g. 1280x720 @ 50Hz and display colorbars for testing purposes.
 
-## SpectrumPy
+## sdr-app
 
-This is the Python software receiving sampled data from EBAZ4205 and displaying spectrum and waterfall in its User Interface.
+This is the QT5 C++ software receiving sampled data from EBAZ4205 and displaying spectrum and waterfall in its User Interface.
 It lets you to send commands to EBA4205 also to:
   * switch between the ADC input and a local RF test generator  
-  * change the local RF test generator frequency in the range 100 KHz - 30 MHz
-  * change the waterfall colors
-  
-  Please note that the following UI controls don't work yet:
-  * Gain (dB)
-  * NFFT 
-  * Freq Correction
-  * Center Frequency (Hz)
-  
+  * change the local RF test generator frequency in the range 100 KHz - 32 MHz
+  * tune radio stations 
+  * change the waterfall colors (TODO)
+  * Set IF bandwith and IF gain  
   ![](https://github.com/guido57/EBAZ4205_SDR/blob/main/docs/SpectrumPy.png)
 
 
