@@ -36,7 +36,7 @@ The following chapters describe the three main SW sub-projects (folders of this 
 * Vitis: the Xilinx Vitis project to build the TCP_server Linux app running on the Zynq7010 PS (Processing System)
 * sdr-app: the QT5 C++ software for PetaLinux to display the spectrum and tune the radio stations
 
-![block diagram](https://github.com/guido57/EBAZ4205_SDR/blob/main/docs/slide.png)
+![block diagram](docs/EBAZ4205-SDR-HDMI-PS2-block-diagram.png)
 
 ## Zynq
 
