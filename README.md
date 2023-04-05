@@ -40,16 +40,21 @@ The following chapters describe the three main SW sub-projects (folders of this 
 
 ## Zynq
 
-This is the Xilinx Vivado 2021.2 project that let's you to program the Zynq7010 FPGA (PL side) contained in the EBAZ4205 board. 
+This is the Xilinx Vivado 2022.2 project that let's you to program the Zynq7010 FPGA (PL side) contained in the EBAZ4205 board. 
 
 After programming it, the EBAZ4205 will:
 
 * supply a 64 MHz clock to the AD9226 board
 * receive the 12 bits samples from the AD9226
-* receive commands from the Linux TCP_server program to:
+* receive commands from the Linux sdr-app running on the PS side of the zynq-7000 to:
   * capture a frame of samples (2048 samples at a time)
   * switch between the ADC input and a local RF test generator  
-  * change the local RF test generator frequency in the range 100 KHz - 30 MHz
+  * change the local RF test generator frequency in the range 100 KHz - 32 MHz
+  * tune a radio station 
+* down convert and filter (CIC + FIR) the received signal
+* demodulate (AM only at the moment) and send it to an external loudspeaker
+* interface a PS/2 mouse
+* send HDMI to an external monitor
 
 ## Vitis
 
