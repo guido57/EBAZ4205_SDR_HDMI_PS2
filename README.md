@@ -10,6 +10,8 @@ This repository contains:
 to display the 0-32 MHz radio spectrum in a full view and tune HF radio stations.
 This project is the continuation of https://github.com/guido57/EBAZ4205_Spectrum which is a 0-32 MHz radio spectrum viewer only. 
 
+![block diagram](docs/EBAZ4205-SDR-HDMI-PS2-block-diagram.png)
+
 ## Getting Started for FPGA or EBAZ4205 beginners
 
 Before going straight to this project, I strongly reccomend to carefully prepare your HW / SW environment, following the instructions contained in:
@@ -35,8 +37,6 @@ The following chapters describe the three main SW sub-projects (folders of this 
 * Zynq: the Xilinx Vivado project to program the Zynq7010 PL (Programmable Logic)
 * Vitis: the Xilinx Vitis project to build the TCP_server Linux app running on the Zynq7010 PS (Processing System)
 * sdr-app: the QT5 C++ software for PetaLinux to display the spectrum and tune the radio stations
-
-![block diagram](docs/EBAZ4205-SDR-HDMI-PS2-block-diagram.png)
 
 ## Zynq
 
