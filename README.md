@@ -1,5 +1,8 @@
 # EBAZ4205_SDR
 
+# This Repository is no more mantained because a new version exists at:
+https://github.com/guido57/EBAZ4205_SDR_spectrum
+
 ## Description
 
 This repository contains:
